@@ -1,0 +1,2362 @@
+rm: cannot remove ‘*.log’: No such file or directory
+/home/mkychsu/.conda/envs/LLM/lib/python3.10/site-packages/langchain/document_loaders/__init__.py:36: LangChainDeprecationWarning: Importing document loaders from langchain is deprecated. Importing from langchain will no longer be supported as of langchain==0.2.0. Please import from langchain-community instead:
+
+`from langchain_community.document_loaders import PyPDFLoader`.
+
+To install langchain-community run `pip install -U langchain-community`.
+  warnings.warn(
+/home/mkychsu/.conda/envs/LLM/lib/python3.10/site-packages/langchain/document_loaders/__init__.py:36: LangChainDeprecationWarning: Importing document loaders from langchain is deprecated. Importing from langchain will no longer be supported as of langchain==0.2.0. Please import from langchain-community instead:
+
+`from langchain_community.document_loaders import UnstructuredPDFLoader`.
+
+To install langchain-community run `pip install -U langchain-community`.
+  warnings.warn(
+/home/mkychsu/.conda/envs/LLM/lib/python3.10/site-packages/langchain/document_loaders/__init__.py:36: LangChainDeprecationWarning: Importing document loaders from langchain is deprecated. Importing from langchain will no longer be supported as of langchain==0.2.0. Please import from langchain-community instead:
+
+`from langchain_community.document_loaders import PyPDFium2Loader`.
+
+To install langchain-community run `pip install -U langchain-community`.
+  warnings.warn(
+/home/mkychsu/.conda/envs/LLM/lib/python3.10/site-packages/langchain/document_loaders/__init__.py:36: LangChainDeprecationWarning: Importing document loaders from langchain is deprecated. Importing from langchain will no longer be supported as of langchain==0.2.0. Please import from langchain-community instead:
+
+`from langchain_community.document_loaders import PyPDFDirectoryLoader`.
+
+To install langchain-community run `pip install -U langchain-community`.
+  warnings.warn(
+/home/mkychsu/.conda/envs/LLM/lib/python3.10/site-packages/langchain/document_loaders/__init__.py:36: LangChainDeprecationWarning: Importing document loaders from langchain is deprecated. Importing from langchain will no longer be supported as of langchain==0.2.0. Please import from langchain-community instead:
+
+`from langchain_community.document_loaders import DirectoryLoader`.
+
+To install langchain-community run `pip install -U langchain-community`.
+  warnings.warn(
+ggml_init_cublas: GGML_CUDA_FORCE_MMQ:   no
+ggml_init_cublas: CUDA_USE_TENSOR_CORES: yes
+ggml_init_cublas: found 1 CUDA devices:
+  Device 0: Tesla V100S-PCIE-32GB, compute capability 7.0, VMM: yes
+llama_model_loader: loaded meta data with 29 key-value pairs and 291 tensors from /home/mkychsu/pool/llm/Mistral-7B-Instruct-v0.3.Q8_0.gguf (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = llama
+llama_model_loader: - kv   1:                               general.name str              = models--mistralai--Mistral-7B-Instruc...
+llama_model_loader: - kv   2:                          llama.block_count u32              = 32
+llama_model_loader: - kv   3:                       llama.context_length u32              = 32768
+llama_model_loader: - kv   4:                     llama.embedding_length u32              = 4096
+llama_model_loader: - kv   5:                  llama.feed_forward_length u32              = 14336
+llama_model_loader: - kv   6:                 llama.attention.head_count u32              = 32
+llama_model_loader: - kv   7:              llama.attention.head_count_kv u32              = 8
+llama_model_loader: - kv   8:                       llama.rope.freq_base f32              = 1000000.000000
+llama_model_loader: - kv   9:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
+llama_model_loader: - kv  10:                          general.file_type u32              = 7
+llama_model_loader: - kv  11:                           llama.vocab_size u32              = 32768
+llama_model_loader: - kv  12:                 llama.rope.dimension_count u32              = 128
+llama_model_loader: - kv  13:                       tokenizer.ggml.model str              = llama
+llama_model_loader: - kv  14:                         tokenizer.ggml.pre str              = default
+llama_model_loader: - kv  15:                      tokenizer.ggml.tokens arr[str,32768]   = ["<unk>", "<s>", "</s>", "[INST]", "[...
+llama_model_loader: - kv  16:                      tokenizer.ggml.scores arr[f32,32768]   = [0.000000, 0.000000, 0.000000, 0.0000...
+llama_model_loader: - kv  17:                  tokenizer.ggml.token_type arr[i32,32768]   = [2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, ...
+llama_model_loader: - kv  18:                tokenizer.ggml.bos_token_id u32              = 1
+llama_model_loader: - kv  19:                tokenizer.ggml.eos_token_id u32              = 2
+llama_model_loader: - kv  20:            tokenizer.ggml.unknown_token_id u32              = 0
+llama_model_loader: - kv  21:               tokenizer.ggml.add_bos_token bool             = true
+llama_model_loader: - kv  22:               tokenizer.ggml.add_eos_token bool             = false
+llama_model_loader: - kv  23:                    tokenizer.chat_template str              = {{ bos_token }}{% for message in mess...
+llama_model_loader: - kv  24:               general.quantization_version u32              = 2
+llama_model_loader: - kv  25:                      quantize.imatrix.file str              = ./imatrix.dat
+llama_model_loader: - kv  26:                   quantize.imatrix.dataset str              = group_40.txt
+llama_model_loader: - kv  27:             quantize.imatrix.entries_count i32              = 224
+llama_model_loader: - kv  28:              quantize.imatrix.chunks_count i32              = 74
+llama_model_loader: - type  f32:   65 tensors
+llama_model_loader: - type q8_0:  226 tensors
+llm_load_vocab: special tokens definition check successful ( 1027/32768 ).
+llm_load_print_meta: format           = GGUF V3 (latest)
+llm_load_print_meta: arch             = llama
+llm_load_print_meta: vocab type       = SPM
+llm_load_print_meta: n_vocab          = 32768
+llm_load_print_meta: n_merges         = 0
+llm_load_print_meta: n_ctx_train      = 32768
+llm_load_print_meta: n_embd           = 4096
+llm_load_print_meta: n_head           = 32
+llm_load_print_meta: n_head_kv        = 8
+llm_load_print_meta: n_layer          = 32
+llm_load_print_meta: n_rot            = 128
+llm_load_print_meta: n_embd_head_k    = 128
+llm_load_print_meta: n_embd_head_v    = 128
+llm_load_print_meta: n_gqa            = 4
+llm_load_print_meta: n_embd_k_gqa     = 1024
+llm_load_print_meta: n_embd_v_gqa     = 1024
+llm_load_print_meta: f_norm_eps       = 0.0e+00
+llm_load_print_meta: f_norm_rms_eps   = 1.0e-05
+llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+llm_load_print_meta: n_ff             = 14336
+llm_load_print_meta: n_expert         = 0
+llm_load_print_meta: n_expert_used    = 0
+llm_load_print_meta: rope scaling     = linear
+llm_load_print_meta: freq_base_train  = 1000000.0
+llm_load_print_meta: freq_scale_train = 1
+llm_load_print_meta: n_yarn_orig_ctx  = 32768
+llm_load_print_meta: rope_finetuned   = unknown
+llm_load_print_meta: model type       = 7B
+llm_load_print_meta: model ftype      = Q8_0
+llm_load_print_meta: model params     = 7.25 B
+llm_load_print_meta: model size       = 7.17 GiB (8.50 BPW) 
+llm_load_print_meta: general.name     = models--mistralai--Mistral-7B-Instruct-v0.3
+llm_load_print_meta: BOS token        = 1 '<s>'
+llm_load_print_meta: EOS token        = 2 '</s>'
+llm_load_print_meta: UNK token        = 0 '<unk>'
+llm_load_print_meta: LF token         = 781 '<0x0A>'
+llm_load_tensors: ggml ctx size =    0.22 MiB
+llm_load_tensors: offloading 32 repeating layers to GPU
+llm_load_tensors: offloading non-repeating layers to GPU
+llm_load_tensors: offloaded 33/33 layers to GPU
+llm_load_tensors:        CPU buffer size =   136.00 MiB
+llm_load_tensors:      CUDA0 buffer size =  7209.02 MiB
+...................................................................................................
+llama_new_context_with_model: n_ctx      = 10000
+llama_new_context_with_model: freq_base  = 1000000.0
+llama_new_context_with_model: freq_scale = 1
+llama_kv_cache_init:      CUDA0 KV buffer size =  1250.00 MiB
+llama_new_context_with_model: KV self size  = 1250.00 MiB, K (f16):  625.00 MiB, V (f16):  625.00 MiB
+llama_new_context_with_model: graph splits (measure): 3
+llama_new_context_with_model:      CUDA0 compute buffer size =   668.53 MiB
+llama_new_context_with_model:  CUDA_Host compute buffer size =    27.54 MiB
+AVX = 1 | AVX_VNNI = 0 | AVX2 = 1 | AVX512 = 1 | AVX512_VBMI = 0 | AVX512_VNNI = 1 | FMA = 1 | NEON = 0 | ARM_FMA = 0 | F16C = 1 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 1 | SSSE3 = 1 | VSX = 0 | 
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     282.45 ms /   642 runs   (    0.44 ms per token,  2272.93 tokens per second)
+llama_print_timings: prompt eval time =      91.48 ms /    66 tokens (    1.39 ms per token,   721.50 tokens per second)
+llama_print_timings:        eval time =    7936.99 ms /   641 runs   (   12.38 ms per token,    80.76 tokens per second)
+llama_print_timings:       total time =    9686.13 ms /   707 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     276.98 ms /   635 runs   (    0.44 ms per token,  2292.59 tokens per second)
+llama_print_timings: prompt eval time =     251.39 ms /   751 tokens (    0.33 ms per token,  2987.44 tokens per second)
+llama_print_timings:        eval time =    8301.02 ms /   634 runs   (   13.09 ms per token,    76.38 tokens per second)
+llama_print_timings:       total time =   10165.89 ms /  1385 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     308.80 ms /   755 runs   (    0.41 ms per token,  2444.92 tokens per second)
+llama_print_timings: prompt eval time =     391.60 ms /  1074 tokens (    0.36 ms per token,  2742.62 tokens per second)
+llama_print_timings:        eval time =   10133.34 ms /   754 runs   (   13.44 ms per token,    74.41 tokens per second)
+llama_print_timings:       total time =   12459.49 ms /  1828 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     327.19 ms /   852 runs   (    0.38 ms per token,  2603.99 tokens per second)
+llama_print_timings: prompt eval time =     486.78 ms /  1513 tokens (    0.32 ms per token,  3108.16 tokens per second)
+llama_print_timings:        eval time =   11919.55 ms /   851 runs   (   14.01 ms per token,    71.40 tokens per second)
+llama_print_timings:       total time =   14629.57 ms /  2364 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     325.50 ms /   852 runs   (    0.38 ms per token,  2617.50 tokens per second)
+llama_print_timings: prompt eval time =     285.07 ms /   870 tokens (    0.33 ms per token,  3051.86 tokens per second)
+llama_print_timings:        eval time =   11413.71 ms /   851 runs   (   13.41 ms per token,    74.56 tokens per second)
+llama_print_timings:       total time =   13915.14 ms /  1721 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     338.35 ms /   852 runs   (    0.40 ms per token,  2518.09 tokens per second)
+llama_print_timings: prompt eval time =     283.44 ms /   865 tokens (    0.33 ms per token,  3051.85 tokens per second)
+llama_print_timings:        eval time =   11481.58 ms /   851 runs   (   13.49 ms per token,    74.12 tokens per second)
+llama_print_timings:       total time =   14058.67 ms /  1716 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     149.03 ms /   340 runs   (    0.44 ms per token,  2281.50 tokens per second)
+llama_print_timings: prompt eval time =     489.17 ms /  1424 tokens (    0.34 ms per token,  2911.04 tokens per second)
+llama_print_timings:        eval time =    4618.48 ms /   339 runs   (   13.62 ms per token,    73.40 tokens per second)
+llama_print_timings:       total time =    5895.44 ms /  1763 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     207.43 ms /   531 runs   (    0.39 ms per token,  2559.88 tokens per second)
+llama_print_timings: prompt eval time =     273.48 ms /   779 tokens (    0.35 ms per token,  2848.52 tokens per second)
+llama_print_timings:        eval time =    6886.97 ms /   530 runs   (   12.99 ms per token,    76.96 tokens per second)
+llama_print_timings:       total time =    8428.56 ms /  1309 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     212.69 ms /   565 runs   (    0.38 ms per token,  2656.50 tokens per second)
+llama_print_timings: prompt eval time =     309.69 ms /   994 tokens (    0.31 ms per token,  3209.64 tokens per second)
+llama_print_timings:        eval time =    7480.44 ms /   564 runs   (   13.26 ms per token,    75.40 tokens per second)
+llama_print_timings:       total time =    9145.06 ms /  1558 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     218.03 ms /   580 runs   (    0.38 ms per token,  2660.25 tokens per second)
+llama_print_timings: prompt eval time =     228.29 ms /   583 tokens (    0.39 ms per token,  2553.75 tokens per second)
+llama_print_timings:        eval time =    7467.63 ms /   579 runs   (   12.90 ms per token,    77.53 tokens per second)
+llama_print_timings:       total time =    9099.44 ms /  1162 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     217.41 ms /   580 runs   (    0.37 ms per token,  2667.76 tokens per second)
+llama_print_timings: prompt eval time =     231.02 ms /   594 tokens (    0.39 ms per token,  2571.22 tokens per second)
+llama_print_timings:        eval time =    7471.94 ms /   579 runs   (   12.90 ms per token,    77.49 tokens per second)
+llama_print_timings:       total time =    9102.11 ms /  1173 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     282.28 ms /   656 runs   (    0.43 ms per token,  2323.94 tokens per second)
+llama_print_timings: prompt eval time =     554.24 ms /  1553 tokens (    0.36 ms per token,  2802.03 tokens per second)
+llama_print_timings:        eval time =    9136.53 ms /   655 runs   (   13.95 ms per token,    71.69 tokens per second)
+llama_print_timings:       total time =   11358.84 ms /  2208 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     349.40 ms /   860 runs   (    0.41 ms per token,  2461.33 tokens per second)
+llama_print_timings: prompt eval time =     395.05 ms /  1095 tokens (    0.36 ms per token,  2771.78 tokens per second)
+llama_print_timings:        eval time =   11612.33 ms /   859 runs   (   13.52 ms per token,    73.97 tokens per second)
+llama_print_timings:       total time =   14284.70 ms /  1954 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     354.68 ms /   890 runs   (    0.40 ms per token,  2509.28 tokens per second)
+llama_print_timings: prompt eval time =     574.39 ms /  1639 tokens (    0.35 ms per token,  2853.45 tokens per second)
+llama_print_timings:        eval time =   12524.92 ms /   889 runs   (   14.09 ms per token,    70.98 tokens per second)
+llama_print_timings:       total time =   15471.84 ms /  2528 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     360.96 ms /   908 runs   (    0.40 ms per token,  2515.51 tokens per second)
+llama_print_timings: prompt eval time =     300.10 ms /   908 tokens (    0.33 ms per token,  3025.68 tokens per second)
+llama_print_timings:        eval time =   12181.81 ms /   907 runs   (   13.43 ms per token,    74.46 tokens per second)
+llama_print_timings:       total time =   14911.86 ms /  1815 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     361.22 ms /   908 runs   (    0.40 ms per token,  2513.68 tokens per second)
+llama_print_timings: prompt eval time =     301.88 ms /   922 tokens (    0.33 ms per token,  3054.21 tokens per second)
+llama_print_timings:        eval time =   12195.53 ms /   907 runs   (   13.45 ms per token,    74.37 tokens per second)
+llama_print_timings:       total time =   14929.32 ms /  1829 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     165.83 ms /   373 runs   (    0.44 ms per token,  2249.36 tokens per second)
+llama_print_timings: prompt eval time =     421.14 ms /  1260 tokens (    0.33 ms per token,  2991.86 tokens per second)
+llama_print_timings:        eval time =    5031.72 ms /   372 runs   (   13.53 ms per token,    73.93 tokens per second)
+llama_print_timings:       total time =    6338.63 ms /  1632 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     323.21 ms /   803 runs   (    0.40 ms per token,  2484.47 tokens per second)
+llama_print_timings: prompt eval time =     277.53 ms /   812 tokens (    0.34 ms per token,  2925.86 tokens per second)
+llama_print_timings:        eval time =   10623.63 ms /   802 runs   (   13.25 ms per token,    75.49 tokens per second)
+llama_print_timings:       total time =   13004.64 ms /  1614 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     311.35 ms /   790 runs   (    0.39 ms per token,  2537.38 tokens per second)
+llama_print_timings: prompt eval time =     445.43 ms /  1299 tokens (    0.34 ms per token,  2916.29 tokens per second)
+llama_print_timings:        eval time =   10814.96 ms /   789 runs   (   13.71 ms per token,    72.95 tokens per second)
+llama_print_timings:       total time =   13319.83 ms /  2088 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     309.89 ms /   790 runs   (    0.39 ms per token,  2549.32 tokens per second)
+llama_print_timings: prompt eval time =     278.96 ms /   808 tokens (    0.35 ms per token,  2896.45 tokens per second)
+llama_print_timings:        eval time =   10468.39 ms /   789 runs   (   13.27 ms per token,    75.37 tokens per second)
+llama_print_timings:       total time =   12803.86 ms /  1597 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     310.01 ms /   790 runs   (    0.39 ms per token,  2548.34 tokens per second)
+llama_print_timings: prompt eval time =       0.00 ms /     1 tokens (    0.00 ms per token,      inf tokens per second)
+llama_print_timings:        eval time =   10474.99 ms /   790 runs   (   13.26 ms per token,    75.42 tokens per second)
+llama_print_timings:       total time =   12529.22 ms /   791 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     166.80 ms /   378 runs   (    0.44 ms per token,  2266.20 tokens per second)
+llama_print_timings: prompt eval time =     444.96 ms /  1293 tokens (    0.34 ms per token,  2905.87 tokens per second)
+llama_print_timings:        eval time =    5114.00 ms /   377 runs   (   13.56 ms per token,    73.72 tokens per second)
+llama_print_timings:       total time =    6459.39 ms /  1670 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     269.90 ms /   669 runs   (    0.40 ms per token,  2478.67 tokens per second)
+llama_print_timings: prompt eval time =     276.59 ms /   817 tokens (    0.34 ms per token,  2953.79 tokens per second)
+llama_print_timings:        eval time =    8802.54 ms /   668 runs   (   13.18 ms per token,    75.89 tokens per second)
+llama_print_timings:       total time =   10769.62 ms /  1485 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     270.21 ms /   670 runs   (    0.40 ms per token,  2479.59 tokens per second)
+llama_print_timings: prompt eval time =     409.93 ms /  1170 tokens (    0.35 ms per token,  2854.13 tokens per second)
+llama_print_timings:        eval time =    9035.68 ms /   669 runs   (   13.51 ms per token,    74.04 tokens per second)
+llama_print_timings:       total time =   11140.46 ms /  1839 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     283.91 ms /   706 runs   (    0.40 ms per token,  2486.67 tokens per second)
+llama_print_timings: prompt eval time =     244.95 ms /   688 tokens (    0.36 ms per token,  2808.77 tokens per second)
+llama_print_timings:        eval time =    9226.11 ms /   705 runs   (   13.09 ms per token,    76.41 tokens per second)
+llama_print_timings:       total time =   11267.60 ms /  1393 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     297.69 ms /   741 runs   (    0.40 ms per token,  2489.12 tokens per second)
+llama_print_timings: prompt eval time =     250.47 ms /   716 tokens (    0.35 ms per token,  2858.59 tokens per second)
+llama_print_timings:        eval time =    9728.72 ms /   740 runs   (   13.15 ms per token,    76.06 tokens per second)
+llama_print_timings:       total time =   11886.34 ms /  1456 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     195.66 ms /   449 runs   (    0.44 ms per token,  2294.80 tokens per second)
+llama_print_timings: prompt eval time =     453.94 ms /  1352 tokens (    0.34 ms per token,  2978.34 tokens per second)
+llama_print_timings:        eval time =    6115.68 ms /   448 runs   (   13.65 ms per token,    73.25 tokens per second)
+llama_print_timings:       total time =    7658.13 ms /  1800 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     256.58 ms /   680 runs   (    0.38 ms per token,  2650.21 tokens per second)
+llama_print_timings: prompt eval time =     286.94 ms /   888 tokens (    0.32 ms per token,  3094.67 tokens per second)
+llama_print_timings:        eval time =    9007.21 ms /   679 runs   (   13.27 ms per token,    75.38 tokens per second)
+llama_print_timings:       total time =   11002.14 ms /  1567 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     267.23 ms /   696 runs   (    0.38 ms per token,  2604.51 tokens per second)
+llama_print_timings: prompt eval time =     422.31 ms /  1252 tokens (    0.34 ms per token,  2964.66 tokens per second)
+llama_print_timings:        eval time =    9458.40 ms /   695 runs   (   13.61 ms per token,    73.48 tokens per second)
+llama_print_timings:       total time =   11644.88 ms /  1947 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     303.10 ms /   785 runs   (    0.39 ms per token,  2589.95 tokens per second)
+llama_print_timings: prompt eval time =     250.14 ms /   714 tokens (    0.35 ms per token,  2854.39 tokens per second)
+llama_print_timings:        eval time =   10315.98 ms /   784 runs   (   13.16 ms per token,    76.00 tokens per second)
+llama_print_timings:       total time =   12599.22 ms /  1498 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     303.49 ms /   773 runs   (    0.39 ms per token,  2547.04 tokens per second)
+llama_print_timings: prompt eval time =     277.58 ms /   799 tokens (    0.35 ms per token,  2878.47 tokens per second)
+llama_print_timings:        eval time =   10230.15 ms /   772 runs   (   13.25 ms per token,    75.46 tokens per second)
+llama_print_timings:       total time =   12508.12 ms /  1571 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     135.13 ms /   305 runs   (    0.44 ms per token,  2257.04 tokens per second)
+llama_print_timings: prompt eval time =     420.79 ms /  1252 tokens (    0.34 ms per token,  2975.34 tokens per second)
+llama_print_timings:        eval time =    4100.43 ms /   304 runs   (   13.49 ms per token,    74.14 tokens per second)
+llama_print_timings:       total time =    5233.45 ms /  1556 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     197.92 ms /   514 runs   (    0.39 ms per token,  2596.97 tokens per second)
+llama_print_timings: prompt eval time =     251.66 ms /   744 tokens (    0.34 ms per token,  2956.32 tokens per second)
+llama_print_timings:        eval time =    6669.94 ms /   513 runs   (   13.00 ms per token,    76.91 tokens per second)
+llama_print_timings:       total time =    8157.98 ms /  1257 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     204.38 ms /   536 runs   (    0.38 ms per token,  2622.54 tokens per second)
+llama_print_timings: prompt eval time =     303.75 ms /   942 tokens (    0.32 ms per token,  3101.28 tokens per second)
+llama_print_timings:        eval time =    7085.65 ms /   535 runs   (   13.24 ms per token,    75.50 tokens per second)
+llama_print_timings:       total time =    8686.08 ms /  1477 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     204.67 ms /   536 runs   (    0.38 ms per token,  2618.85 tokens per second)
+llama_print_timings: prompt eval time =     222.55 ms /   554 tokens (    0.40 ms per token,  2489.35 tokens per second)
+llama_print_timings:        eval time =    6903.58 ms /   535 runs   (   12.90 ms per token,    77.50 tokens per second)
+llama_print_timings:       total time =    8423.75 ms /  1089 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     203.44 ms /   536 runs   (    0.38 ms per token,  2634.72 tokens per second)
+llama_print_timings: prompt eval time =     225.04 ms /   546 tokens (    0.41 ms per token,  2426.21 tokens per second)
+llama_print_timings:        eval time =    6905.62 ms /   535 runs   (   12.91 ms per token,    77.47 tokens per second)
+llama_print_timings:       total time =    8420.94 ms /  1081 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     127.67 ms /   289 runs   (    0.44 ms per token,  2263.72 tokens per second)
+llama_print_timings: prompt eval time =     407.67 ms /  1167 tokens (    0.35 ms per token,  2862.61 tokens per second)
+llama_print_timings:        eval time =    3835.06 ms /   288 runs   (   13.32 ms per token,    75.10 tokens per second)
+llama_print_timings:       total time =    4914.08 ms /  1455 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     188.44 ms /   483 runs   (    0.39 ms per token,  2563.15 tokens per second)
+llama_print_timings: prompt eval time =     250.40 ms /   728 tokens (    0.34 ms per token,  2907.37 tokens per second)
+llama_print_timings:        eval time =    6225.17 ms /   482 runs   (   12.92 ms per token,    77.43 tokens per second)
+llama_print_timings:       total time =    7630.25 ms /  1210 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     201.47 ms /   509 runs   (    0.40 ms per token,  2526.47 tokens per second)
+llama_print_timings: prompt eval time =     287.99 ms /   895 tokens (    0.32 ms per token,  3107.74 tokens per second)
+llama_print_timings:        eval time =    6666.31 ms /   508 runs   (   13.12 ms per token,    76.20 tokens per second)
+llama_print_timings:       total time =    8184.05 ms /  1403 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     199.49 ms /   509 runs   (    0.39 ms per token,  2551.56 tokens per second)
+llama_print_timings: prompt eval time =     212.72 ms /   527 tokens (    0.40 ms per token,  2477.39 tokens per second)
+llama_print_timings:        eval time =    6536.43 ms /   508 runs   (   12.87 ms per token,    77.72 tokens per second)
+llama_print_timings:       total time =    7974.57 ms /  1035 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     199.79 ms /   509 runs   (    0.39 ms per token,  2547.65 tokens per second)
+llama_print_timings: prompt eval time =       0.00 ms /     1 tokens (    0.00 ms per token,      inf tokens per second)
+llama_print_timings:        eval time =    6542.10 ms /   509 runs   (   12.85 ms per token,    77.80 tokens per second)
+llama_print_timings:       total time =    7766.78 ms /   510 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     196.81 ms /   442 runs   (    0.45 ms per token,  2245.83 tokens per second)
+llama_print_timings: prompt eval time =     415.23 ms /  1217 tokens (    0.34 ms per token,  2930.89 tokens per second)
+llama_print_timings:        eval time =    5948.51 ms /   441 runs   (   13.49 ms per token,    74.14 tokens per second)
+llama_print_timings:       total time =    7445.19 ms /  1658 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     237.99 ms /   617 runs   (    0.39 ms per token,  2592.57 tokens per second)
+llama_print_timings: prompt eval time =     286.75 ms /   881 tokens (    0.33 ms per token,  3072.34 tokens per second)
+llama_print_timings:        eval time =    8127.70 ms /   616 runs   (   13.19 ms per token,    75.79 tokens per second)
+llama_print_timings:       total time =    9948.32 ms /  1497 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     252.44 ms /   646 runs   (    0.39 ms per token,  2559.01 tokens per second)
+llama_print_timings: prompt eval time =     410.12 ms /  1182 tokens (    0.35 ms per token,  2882.12 tokens per second)
+llama_print_timings:        eval time =    8745.83 ms /   645 runs   (   13.56 ms per token,    73.75 tokens per second)
+llama_print_timings:       total time =   10773.88 ms /  1827 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     251.87 ms /   646 runs   (    0.39 ms per token,  2564.77 tokens per second)
+llama_print_timings: prompt eval time =     242.66 ms /   664 tokens (    0.37 ms per token,  2736.40 tokens per second)
+llama_print_timings:        eval time =    8435.22 ms /   645 runs   (   13.08 ms per token,    76.47 tokens per second)
+llama_print_timings:       total time =   10295.49 ms /  1309 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     251.64 ms /   646 runs   (    0.39 ms per token,  2567.14 tokens per second)
+llama_print_timings: prompt eval time =     242.07 ms /   659 tokens (    0.37 ms per token,  2722.35 tokens per second)
+llama_print_timings:        eval time =    8435.53 ms /   645 runs   (   13.08 ms per token,    76.46 tokens per second)
+llama_print_timings:       total time =   10296.50 ms /  1304 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     186.13 ms /   425 runs   (    0.44 ms per token,  2283.29 tokens per second)
+llama_print_timings: prompt eval time =     419.03 ms /  1233 tokens (    0.34 ms per token,  2942.50 tokens per second)
+llama_print_timings:        eval time =    5708.91 ms /   424 runs   (   13.46 ms per token,    74.27 tokens per second)
+llama_print_timings:       total time =    7151.29 ms /  1657 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     258.73 ms /   657 runs   (    0.39 ms per token,  2539.30 tokens per second)
+llama_print_timings: prompt eval time =     284.62 ms /   864 tokens (    0.33 ms per token,  3035.62 tokens per second)
+llama_print_timings:        eval time =    8660.76 ms /   656 runs   (   13.20 ms per token,    75.74 tokens per second)
+llama_print_timings:       total time =   10613.29 ms /  1520 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     253.25 ms /   661 runs   (    0.38 ms per token,  2610.02 tokens per second)
+llama_print_timings: prompt eval time =     413.40 ms /  1205 tokens (    0.34 ms per token,  2914.87 tokens per second)
+llama_print_timings:        eval time =    8969.58 ms /   660 runs   (   13.59 ms per token,    73.58 tokens per second)
+llama_print_timings:       total time =   11035.49 ms /  1865 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     258.32 ms /   661 runs   (    0.39 ms per token,  2558.82 tokens per second)
+llama_print_timings: prompt eval time =     245.13 ms /   679 tokens (    0.36 ms per token,  2769.96 tokens per second)
+llama_print_timings:        eval time =    8662.51 ms /   660 runs   (   13.13 ms per token,    76.19 tokens per second)
+llama_print_timings:       total time =   10596.03 ms /  1339 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     254.08 ms /   661 runs   (    0.38 ms per token,  2601.56 tokens per second)
+llama_print_timings: prompt eval time =     244.80 ms /   674 tokens (    0.36 ms per token,  2753.28 tokens per second)
+llama_print_timings:        eval time =    8655.08 ms /   660 runs   (   13.11 ms per token,    76.26 tokens per second)
+llama_print_timings:       total time =   10564.42 ms /  1334 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     239.21 ms /   544 runs   (    0.44 ms per token,  2274.17 tokens per second)
+llama_print_timings: prompt eval time =     424.73 ms /  1280 tokens (    0.33 ms per token,  3013.71 tokens per second)
+llama_print_timings:        eval time =    7372.56 ms /   543 runs   (   13.58 ms per token,    73.65 tokens per second)
+llama_print_timings:       total time =    9163.47 ms /  1823 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     289.57 ms /   717 runs   (    0.40 ms per token,  2476.11 tokens per second)
+llama_print_timings: prompt eval time =     309.98 ms /   983 tokens (    0.32 ms per token,  3171.16 tokens per second)
+llama_print_timings:        eval time =    9552.70 ms /   716 runs   (   13.34 ms per token,    74.95 tokens per second)
+llama_print_timings:       total time =   11721.49 ms /  1699 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     296.57 ms /   731 runs   (    0.41 ms per token,  2464.84 tokens per second)
+llama_print_timings: prompt eval time =     457.29 ms /  1383 tokens (    0.33 ms per token,  3024.33 tokens per second)
+llama_print_timings:        eval time =   10113.91 ms /   730 runs   (   13.85 ms per token,    72.18 tokens per second)
+llama_print_timings:       total time =   12496.43 ms /  2113 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     294.13 ms /   751 runs   (    0.39 ms per token,  2553.32 tokens per second)
+llama_print_timings: prompt eval time =     254.54 ms /   749 tokens (    0.34 ms per token,  2942.53 tokens per second)
+llama_print_timings:        eval time =    9926.74 ms /   750 runs   (   13.24 ms per token,    75.55 tokens per second)
+llama_print_timings:       total time =   12111.16 ms /  1499 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     298.68 ms /   734 runs   (    0.41 ms per token,  2457.45 tokens per second)
+llama_print_timings: prompt eval time =     255.84 ms /   765 tokens (    0.33 ms per token,  2990.10 tokens per second)
+llama_print_timings:        eval time =    9754.97 ms /   733 runs   (   13.31 ms per token,    75.14 tokens per second)
+llama_print_timings:       total time =   11966.42 ms /  1498 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     161.41 ms /   350 runs   (    0.46 ms per token,  2168.40 tokens per second)
+llama_print_timings: prompt eval time =     409.27 ms /  1160 tokens (    0.35 ms per token,  2834.34 tokens per second)
+llama_print_timings:        eval time =    4666.92 ms /   349 runs   (   13.37 ms per token,    74.78 tokens per second)
+llama_print_timings:       total time =    5933.71 ms /  1509 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     175.55 ms /   451 runs   (    0.39 ms per token,  2569.08 tokens per second)
+llama_print_timings: prompt eval time =     274.85 ms /   789 tokens (    0.35 ms per token,  2870.71 tokens per second)
+llama_print_timings:        eval time =    5833.92 ms /   450 runs   (   12.96 ms per token,    77.14 tokens per second)
+llama_print_timings:       total time =    7175.31 ms /  1239 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     179.50 ms /   462 runs   (    0.39 ms per token,  2573.86 tokens per second)
+llama_print_timings: prompt eval time =     303.01 ms /   924 tokens (    0.33 ms per token,  3049.36 tokens per second)
+llama_print_timings:        eval time =    6052.83 ms /   461 runs   (   13.13 ms per token,    76.16 tokens per second)
+llama_print_timings:       total time =    7449.82 ms /  1385 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     186.44 ms /   485 runs   (    0.38 ms per token,  2601.35 tokens per second)
+llama_print_timings: prompt eval time =     149.85 ms /   480 tokens (    0.31 ms per token,  3203.27 tokens per second)
+llama_print_timings:        eval time =    6195.58 ms /   484 runs   (   12.80 ms per token,    78.12 tokens per second)
+llama_print_timings:       total time =    7500.37 ms /   964 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     186.38 ms /   485 runs   (    0.38 ms per token,  2602.24 tokens per second)
+llama_print_timings: prompt eval time =     152.61 ms /   499 tokens (    0.31 ms per token,  3269.79 tokens per second)
+llama_print_timings:        eval time =    6180.31 ms /   484 runs   (   12.77 ms per token,    78.31 tokens per second)
+llama_print_timings:       total time =    7486.42 ms /   983 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     174.29 ms /   392 runs   (    0.44 ms per token,  2249.16 tokens per second)
+llama_print_timings: prompt eval time =     397.03 ms /  1106 tokens (    0.36 ms per token,  2785.68 tokens per second)
+llama_print_timings:        eval time =    5218.08 ms /   391 runs   (   13.35 ms per token,    74.93 tokens per second)
+llama_print_timings:       total time =    6553.43 ms /  1497 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     423.60 ms /  1046 runs   (    0.40 ms per token,  2469.30 tokens per second)
+llama_print_timings: prompt eval time =     279.73 ms /   831 tokens (    0.34 ms per token,  2970.70 tokens per second)
+llama_print_timings:        eval time =   13989.11 ms /  1045 runs   (   13.39 ms per token,    74.70 tokens per second)
+llama_print_timings:       total time =   17181.66 ms /  1876 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     433.01 ms /  1098 runs   (    0.39 ms per token,  2535.71 tokens per second)
+llama_print_timings: prompt eval time =     579.20 ms /  1561 tokens (    0.37 ms per token,  2695.10 tokens per second)
+llama_print_timings:        eval time =   15484.41 ms /  1097 runs   (   14.12 ms per token,    70.85 tokens per second)
+llama_print_timings:       total time =   19155.67 ms /  2658 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     431.66 ms /  1098 runs   (    0.39 ms per token,  2543.65 tokens per second)
+llama_print_timings: prompt eval time =     398.86 ms /  1116 tokens (    0.36 ms per token,  2797.97 tokens per second)
+llama_print_timings:        eval time =   15141.64 ms /  1097 runs   (   13.80 ms per token,    72.45 tokens per second)
+llama_print_timings:       total time =   18625.61 ms /  2213 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     431.65 ms /  1098 runs   (    0.39 ms per token,  2543.72 tokens per second)
+llama_print_timings: prompt eval time =     391.85 ms /  1060 tokens (    0.37 ms per token,  2705.14 tokens per second)
+llama_print_timings:        eval time =   15081.00 ms /  1097 runs   (   13.75 ms per token,    72.74 tokens per second)
+llama_print_timings:       total time =   18557.40 ms /  2157 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     200.31 ms /   453 runs   (    0.44 ms per token,  2261.44 tokens per second)
+llama_print_timings: prompt eval time =     408.19 ms /  1157 tokens (    0.35 ms per token,  2834.49 tokens per second)
+llama_print_timings:        eval time =    6075.10 ms /   452 runs   (   13.44 ms per token,    74.40 tokens per second)
+llama_print_timings:       total time =    7584.68 ms /  1609 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     177.52 ms /   423 runs   (    0.42 ms per token,  2382.80 tokens per second)
+llama_print_timings: prompt eval time =     286.80 ms /   892 tokens (    0.32 ms per token,  3110.22 tokens per second)
+llama_print_timings:        eval time =    5536.22 ms /   422 runs   (   13.12 ms per token,    76.23 tokens per second)
+llama_print_timings:       total time =    6827.86 ms /  1314 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     173.53 ms /   438 runs   (    0.40 ms per token,  2524.12 tokens per second)
+llama_print_timings: prompt eval time =     309.79 ms /   999 tokens (    0.31 ms per token,  3224.79 tokens per second)
+llama_print_timings:        eval time =    5788.95 ms /   437 runs   (   13.25 ms per token,    75.49 tokens per second)
+llama_print_timings:       total time =    7131.89 ms /  1436 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     179.88 ms /   438 runs   (    0.41 ms per token,  2435.02 tokens per second)
+llama_print_timings: prompt eval time =     146.09 ms /   456 tokens (    0.32 ms per token,  3121.32 tokens per second)
+llama_print_timings:        eval time =    5565.49 ms /   437 runs   (   12.74 ms per token,    78.52 tokens per second)
+llama_print_timings:       total time =    6786.41 ms /   893 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     173.71 ms /   438 runs   (    0.40 ms per token,  2521.41 tokens per second)
+llama_print_timings: prompt eval time =       0.00 ms /     1 tokens (    0.00 ms per token,      inf tokens per second)
+llama_print_timings:        eval time =    5554.36 ms /   438 runs   (   12.68 ms per token,    78.86 tokens per second)
+llama_print_timings:       total time =    6586.39 ms /   439 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     239.69 ms /   567 runs   (    0.42 ms per token,  2365.58 tokens per second)
+llama_print_timings: prompt eval time =     450.97 ms /  1342 tokens (    0.34 ms per token,  2975.83 tokens per second)
+llama_print_timings:        eval time =    7745.80 ms /   566 runs   (   13.69 ms per token,    73.07 tokens per second)
+llama_print_timings:       total time =    9604.05 ms /  1908 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     304.55 ms /   724 runs   (    0.42 ms per token,  2377.25 tokens per second)
+llama_print_timings: prompt eval time =     311.46 ms /  1006 tokens (    0.31 ms per token,  3229.91 tokens per second)
+llama_print_timings:        eval time =    9711.12 ms /   723 runs   (   13.43 ms per token,    74.45 tokens per second)
+llama_print_timings:       total time =   11919.12 ms /  1729 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     301.23 ms /   735 runs   (    0.41 ms per token,  2439.97 tokens per second)
+llama_print_timings: prompt eval time =     473.07 ms /  1414 tokens (    0.33 ms per token,  2989.00 tokens per second)
+llama_print_timings:        eval time =   10121.68 ms /   734 runs   (   13.79 ms per token,    72.52 tokens per second)
+llama_print_timings:       total time =   12486.97 ms /  2148 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     270.32 ms /   654 runs   (    0.41 ms per token,  2419.38 tokens per second)
+llama_print_timings: prompt eval time =     255.43 ms /   753 tokens (    0.34 ms per token,  2947.97 tokens per second)
+llama_print_timings:        eval time =    8579.31 ms /   653 runs   (   13.14 ms per token,    76.11 tokens per second)
+llama_print_timings:       total time =   10497.48 ms /  1406 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     267.02 ms /   654 runs   (    0.41 ms per token,  2449.22 tokens per second)
+llama_print_timings: prompt eval time =     243.05 ms /   667 tokens (    0.36 ms per token,  2744.35 tokens per second)
+llama_print_timings:        eval time =    8509.55 ms /   653 runs   (   13.03 ms per token,    76.74 tokens per second)
+llama_print_timings:       total time =   10392.07 ms /  1320 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     181.88 ms /   426 runs   (    0.43 ms per token,  2342.26 tokens per second)
+llama_print_timings: prompt eval time =     444.38 ms /  1285 tokens (    0.35 ms per token,  2891.64 tokens per second)
+llama_print_timings:        eval time =    5770.98 ms /   425 runs   (   13.58 ms per token,    73.64 tokens per second)
+llama_print_timings:       total time =    7233.54 ms /  1710 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     271.10 ms /   672 runs   (    0.40 ms per token,  2478.81 tokens per second)
+llama_print_timings: prompt eval time =     284.21 ms /   865 tokens (    0.33 ms per token,  3043.50 tokens per second)
+llama_print_timings:        eval time =    8882.97 ms /   671 runs   (   13.24 ms per token,    75.54 tokens per second)
+llama_print_timings:       total time =   10863.81 ms /  1536 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     242.06 ms /   605 runs   (    0.40 ms per token,  2499.35 tokens per second)
+llama_print_timings: prompt eval time =     417.45 ms /  1221 tokens (    0.34 ms per token,  2924.87 tokens per second)
+llama_print_timings:        eval time =    8171.25 ms /   604 runs   (   13.53 ms per token,    73.92 tokens per second)
+llama_print_timings:       total time =   10082.36 ms /  1825 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     250.47 ms /   620 runs   (    0.40 ms per token,  2475.36 tokens per second)
+llama_print_timings: prompt eval time =     230.91 ms /   623 tokens (    0.37 ms per token,  2698.06 tokens per second)
+llama_print_timings:        eval time =    8025.98 ms /   619 runs   (   12.97 ms per token,    77.12 tokens per second)
+llama_print_timings:       total time =    9808.90 ms /  1242 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     254.75 ms /   637 runs   (    0.40 ms per token,  2500.50 tokens per second)
+llama_print_timings: prompt eval time =     233.28 ms /   634 tokens (    0.37 ms per token,  2717.79 tokens per second)
+llama_print_timings:        eval time =    8258.31 ms /   636 runs   (   12.98 ms per token,    77.01 tokens per second)
+llama_print_timings:       total time =   10084.51 ms /  1270 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     294.41 ms /   691 runs   (    0.43 ms per token,  2347.06 tokens per second)
+llama_print_timings: prompt eval time =     444.15 ms /  1292 tokens (    0.34 ms per token,  2908.95 tokens per second)
+llama_print_timings:        eval time =    9454.80 ms /   690 runs   (   13.70 ms per token,    72.98 tokens per second)
+llama_print_timings:       total time =   11677.92 ms /  1982 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     270.59 ms /   657 runs   (    0.41 ms per token,  2428.04 tokens per second)
+llama_print_timings: prompt eval time =     398.58 ms /  1130 tokens (    0.35 ms per token,  2835.04 tokens per second)
+llama_print_timings:        eval time =    8830.60 ms /   656 runs   (   13.46 ms per token,    74.29 tokens per second)
+llama_print_timings:       total time =   10894.72 ms /  1786 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     274.11 ms /   678 runs   (    0.40 ms per token,  2473.45 tokens per second)
+llama_print_timings: prompt eval time =     481.59 ms /  1471 tokens (    0.33 ms per token,  3054.45 tokens per second)
+llama_print_timings:        eval time =    9406.03 ms /   677 runs   (   13.89 ms per token,    71.98 tokens per second)
+llama_print_timings:       total time =   11612.02 ms /  2148 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     275.96 ms /   678 runs   (    0.41 ms per token,  2456.85 tokens per second)
+llama_print_timings: prompt eval time =     245.70 ms /   696 tokens (    0.35 ms per token,  2832.69 tokens per second)
+llama_print_timings:        eval time =    8909.83 ms /   677 runs   (   13.16 ms per token,    75.98 tokens per second)
+llama_print_timings:       total time =   10898.58 ms /  1373 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     273.77 ms /   678 runs   (    0.40 ms per token,  2476.50 tokens per second)
+llama_print_timings: prompt eval time =     245.51 ms /   691 tokens (    0.36 ms per token,  2814.50 tokens per second)
+llama_print_timings:        eval time =    8897.29 ms /   677 runs   (   13.14 ms per token,    76.09 tokens per second)
+llama_print_timings:       total time =   10863.36 ms /  1368 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     221.22 ms /   509 runs   (    0.43 ms per token,  2300.85 tokens per second)
+llama_print_timings: prompt eval time =     575.12 ms /  1652 tokens (    0.35 ms per token,  2872.44 tokens per second)
+llama_print_timings:        eval time =    7096.62 ms /   508 runs   (   13.97 ms per token,    71.58 tokens per second)
+llama_print_timings:       total time =    8919.07 ms /  2160 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     255.70 ms /   661 runs   (    0.39 ms per token,  2585.08 tokens per second)
+llama_print_timings: prompt eval time =     305.80 ms /   948 tokens (    0.32 ms per token,  3100.03 tokens per second)
+llama_print_timings:        eval time =    8788.05 ms /   660 runs   (   13.32 ms per token,    75.10 tokens per second)
+llama_print_timings:       total time =   10740.64 ms /  1608 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     249.02 ms /   638 runs   (    0.39 ms per token,  2562.03 tokens per second)
+llama_print_timings: prompt eval time =     445.56 ms /  1293 tokens (    0.34 ms per token,  2901.99 tokens per second)
+llama_print_timings:        eval time =    8675.62 ms /   637 runs   (   13.62 ms per token,    73.42 tokens per second)
+llama_print_timings:       total time =   10703.80 ms /  1930 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     314.37 ms /   784 runs   (    0.40 ms per token,  2493.91 tokens per second)
+llama_print_timings: prompt eval time =     241.99 ms /   656 tokens (    0.37 ms per token,  2710.86 tokens per second)
+llama_print_timings:        eval time =   10250.19 ms /   783 runs   (   13.09 ms per token,    76.39 tokens per second)
+llama_print_timings:       total time =   12525.60 ms /  1439 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     314.84 ms /   784 runs   (    0.40 ms per token,  2490.15 tokens per second)
+llama_print_timings: prompt eval time =     277.53 ms /   797 tokens (    0.35 ms per token,  2871.73 tokens per second)
+llama_print_timings:        eval time =   10378.63 ms /   783 runs   (   13.25 ms per token,    75.44 tokens per second)
+llama_print_timings:       total time =   12690.89 ms /  1580 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     252.25 ms /   594 runs   (    0.42 ms per token,  2354.83 tokens per second)
+llama_print_timings: prompt eval time =     485.73 ms /  1486 tokens (    0.33 ms per token,  3059.29 tokens per second)
+llama_print_timings:        eval time =    8211.48 ms /   593 runs   (   13.85 ms per token,    72.22 tokens per second)
+llama_print_timings:       total time =   10179.84 ms /  2079 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     231.97 ms /   596 runs   (    0.39 ms per token,  2569.25 tokens per second)
+llama_print_timings: prompt eval time =     360.21 ms /  1033 tokens (    0.35 ms per token,  2867.78 tokens per second)
+llama_print_timings:        eval time =    7958.09 ms /   595 runs   (   13.37 ms per token,    74.77 tokens per second)
+llama_print_timings:       total time =    9783.15 ms /  1628 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     237.07 ms /   605 runs   (    0.39 ms per token,  2552.00 tokens per second)
+llama_print_timings: prompt eval time =     448.25 ms /  1313 tokens (    0.34 ms per token,  2929.20 tokens per second)
+llama_print_timings:        eval time =    8225.55 ms /   604 runs   (   13.62 ms per token,    73.43 tokens per second)
+llama_print_timings:       total time =   10163.00 ms /  1917 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     236.41 ms /   605 runs   (    0.39 ms per token,  2559.10 tokens per second)
+llama_print_timings: prompt eval time =     231.92 ms /   623 tokens (    0.37 ms per token,  2686.32 tokens per second)
+llama_print_timings:        eval time =    7817.32 ms /   604 runs   (   12.94 ms per token,    77.26 tokens per second)
+llama_print_timings:       total time =    9534.61 ms /  1227 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     245.74 ms /   627 runs   (    0.39 ms per token,  2551.52 tokens per second)
+llama_print_timings: prompt eval time =     230.62 ms /   615 tokens (    0.37 ms per token,  2666.77 tokens per second)
+llama_print_timings:        eval time =    8115.07 ms /   626 runs   (   12.96 ms per token,    77.14 tokens per second)
+llama_print_timings:       total time =    9895.53 ms /  1241 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     195.24 ms /   447 runs   (    0.44 ms per token,  2289.45 tokens per second)
+llama_print_timings: prompt eval time =     457.98 ms /  1390 tokens (    0.33 ms per token,  3035.05 tokens per second)
+llama_print_timings:        eval time =    6101.15 ms /   446 runs   (   13.68 ms per token,    73.10 tokens per second)
+llama_print_timings:       total time =    7638.13 ms /  1836 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     289.47 ms /   708 runs   (    0.41 ms per token,  2445.87 tokens per second)
+llama_print_timings: prompt eval time =     286.61 ms /   886 tokens (    0.32 ms per token,  3091.29 tokens per second)
+llama_print_timings:        eval time =    9387.50 ms /   707 runs   (   13.28 ms per token,    75.31 tokens per second)
+llama_print_timings:       total time =   11476.95 ms /  1593 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     290.70 ms /   741 runs   (    0.39 ms per token,  2548.98 tokens per second)
+llama_print_timings: prompt eval time =     426.60 ms /  1278 tokens (    0.33 ms per token,  2995.81 tokens per second)
+llama_print_timings:        eval time =   10106.78 ms /   740 runs   (   13.66 ms per token,    73.22 tokens per second)
+llama_print_timings:       total time =   12426.65 ms /  2018 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     295.19 ms /   757 runs   (    0.39 ms per token,  2564.41 tokens per second)
+llama_print_timings: prompt eval time =     255.31 ms /   758 tokens (    0.34 ms per token,  2968.96 tokens per second)
+llama_print_timings:        eval time =    9971.84 ms /   756 runs   (   13.19 ms per token,    75.81 tokens per second)
+llama_print_timings:       total time =   12165.61 ms /  1514 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     296.67 ms /   756 runs   (    0.39 ms per token,  2548.29 tokens per second)
+llama_print_timings: prompt eval time =     274.57 ms /   771 tokens (    0.36 ms per token,  2808.03 tokens per second)
+llama_print_timings:        eval time =    9973.44 ms /   755 runs   (   13.21 ms per token,    75.70 tokens per second)
+llama_print_timings:       total time =   12185.08 ms /  1526 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     233.18 ms /   554 runs   (    0.42 ms per token,  2375.87 tokens per second)
+llama_print_timings: prompt eval time =     475.28 ms /  1433 tokens (    0.33 ms per token,  3015.05 tokens per second)
+llama_print_timings:        eval time =    7613.41 ms /   553 runs   (   13.77 ms per token,    72.64 tokens per second)
+llama_print_timings:       total time =    9456.01 ms /  1986 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     327.51 ms /   845 runs   (    0.39 ms per token,  2580.07 tokens per second)
+llama_print_timings: prompt eval time =     309.10 ms /   993 tokens (    0.31 ms per token,  3212.58 tokens per second)
+llama_print_timings:        eval time =   11358.36 ms /   844 runs   (   13.46 ms per token,    74.31 tokens per second)
+llama_print_timings:       total time =   13879.05 ms /  1837 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     327.16 ms /   847 runs   (    0.39 ms per token,  2588.97 tokens per second)
+llama_print_timings: prompt eval time =     488.07 ms /  1522 tokens (    0.32 ms per token,  3118.43 tokens per second)
+llama_print_timings:        eval time =   11806.31 ms /   846 runs   (   13.96 ms per token,    71.66 tokens per second)
+llama_print_timings:       total time =   14513.33 ms /  2368 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     372.66 ms /   969 runs   (    0.38 ms per token,  2600.21 tokens per second)
+llama_print_timings: prompt eval time =     286.32 ms /   865 tokens (    0.33 ms per token,  3021.08 tokens per second)
+llama_print_timings:        eval time =   12980.28 ms /   968 runs   (   13.41 ms per token,    74.57 tokens per second)
+llama_print_timings:       total time =   15887.66 ms /  1833 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     372.08 ms /   969 runs   (    0.38 ms per token,  2604.29 tokens per second)
+llama_print_timings: prompt eval time =     314.98 ms /   982 tokens (    0.32 ms per token,  3117.69 tokens per second)
+llama_print_timings:        eval time =   13105.04 ms /   968 runs   (   13.54 ms per token,    73.86 tokens per second)
+llama_print_timings:       total time =   16040.73 ms /  1950 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     221.74 ms /   519 runs   (    0.43 ms per token,  2340.56 tokens per second)
+llama_print_timings: prompt eval time =     421.28 ms /  1253 tokens (    0.34 ms per token,  2974.29 tokens per second)
+llama_print_timings:        eval time =    7034.24 ms /   518 runs   (   13.58 ms per token,    73.64 tokens per second)
+llama_print_timings:       total time =    8725.88 ms /  1771 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     267.74 ms /   708 runs   (    0.38 ms per token,  2644.34 tokens per second)
+llama_print_timings: prompt eval time =     305.86 ms /   958 tokens (    0.32 ms per token,  3132.17 tokens per second)
+llama_print_timings:        eval time =    9443.72 ms /   707 runs   (   13.36 ms per token,    74.86 tokens per second)
+llama_print_timings:       total time =   11531.61 ms /  1665 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     292.86 ms /   765 runs   (    0.38 ms per token,  2612.15 tokens per second)
+llama_print_timings: prompt eval time =     455.22 ms /  1350 tokens (    0.34 ms per token,  2965.59 tokens per second)
+llama_print_timings:        eval time =   10502.96 ms /   764 runs   (   13.75 ms per token,    72.74 tokens per second)
+llama_print_timings:       total time =   12916.06 ms /  2114 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     292.32 ms /   765 runs   (    0.38 ms per token,  2616.96 tokens per second)
+llama_print_timings: prompt eval time =     275.54 ms /   783 tokens (    0.35 ms per token,  2841.67 tokens per second)
+llama_print_timings:        eval time =   10104.88 ms /   764 runs   (   13.23 ms per token,    75.61 tokens per second)
+llama_print_timings:       total time =   12340.72 ms /  1547 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     292.20 ms /   765 runs   (    0.38 ms per token,  2618.07 tokens per second)
+llama_print_timings: prompt eval time =     275.78 ms /   778 tokens (    0.35 ms per token,  2821.09 tokens per second)
+llama_print_timings:        eval time =   10105.62 ms /   764 runs   (   13.23 ms per token,    75.60 tokens per second)
+llama_print_timings:       total time =   12337.88 ms /  1542 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     298.84 ms /   719 runs   (    0.42 ms per token,  2405.98 tokens per second)
+llama_print_timings: prompt eval time =     477.96 ms /  1454 tokens (    0.33 ms per token,  3042.12 tokens per second)
+llama_print_timings:        eval time =    9965.00 ms /   718 runs   (   13.88 ms per token,    72.05 tokens per second)
+llama_print_timings:       total time =   12294.22 ms /  2172 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     379.78 ms /   939 runs   (    0.40 ms per token,  2472.46 tokens per second)
+llama_print_timings: prompt eval time =     406.85 ms /  1158 tokens (    0.35 ms per token,  2846.24 tokens per second)
+llama_print_timings:        eval time =   12783.24 ms /   938 runs   (   13.63 ms per token,    73.38 tokens per second)
+llama_print_timings:       total time =   15728.83 ms /  2096 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     383.50 ms /   961 runs   (    0.40 ms per token,  2505.85 tokens per second)
+llama_print_timings: prompt eval time =     600.08 ms /  1781 tokens (    0.34 ms per token,  2967.95 tokens per second)
+llama_print_timings:        eval time =   13703.72 ms /   960 runs   (   14.27 ms per token,    70.05 tokens per second)
+llama_print_timings:       total time =   16913.34 ms /  2741 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     380.22 ms /   965 runs   (    0.39 ms per token,  2537.98 tokens per second)
+llama_print_timings: prompt eval time =     314.95 ms /   979 tokens (    0.32 ms per token,  3108.39 tokens per second)
+llama_print_timings:        eval time =   13047.05 ms /   964 runs   (   13.53 ms per token,    73.89 tokens per second)
+llama_print_timings:       total time =   15978.32 ms /  1943 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     380.72 ms /   965 runs   (    0.39 ms per token,  2534.66 tokens per second)
+llama_print_timings: prompt eval time =     130.59 ms /   337 tokens (    0.39 ms per token,  2580.66 tokens per second)
+llama_print_timings:        eval time =   13098.62 ms /   964 runs   (   13.59 ms per token,    73.60 tokens per second)
+llama_print_timings:       total time =   15841.60 ms /  1301 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     209.91 ms /   490 runs   (    0.43 ms per token,  2334.38 tokens per second)
+llama_print_timings: prompt eval time =     566.05 ms /  1600 tokens (    0.35 ms per token,  2826.59 tokens per second)
+llama_print_timings:        eval time =    6800.88 ms /   489 runs   (   13.91 ms per token,    71.90 tokens per second)
+llama_print_timings:       total time =    8560.40 ms /  2089 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     263.27 ms /   660 runs   (    0.40 ms per token,  2506.91 tokens per second)
+llama_print_timings: prompt eval time =     301.52 ms /   929 tokens (    0.32 ms per token,  3081.07 tokens per second)
+llama_print_timings:        eval time =    8761.57 ms /   659 runs   (   13.30 ms per token,    75.21 tokens per second)
+llama_print_timings:       total time =   10717.58 ms /  1588 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     269.03 ms /   688 runs   (    0.39 ms per token,  2557.31 tokens per second)
+llama_print_timings: prompt eval time =     423.38 ms /  1273 tokens (    0.33 ms per token,  3006.74 tokens per second)
+llama_print_timings:        eval time =    9359.17 ms /   687 runs   (   13.62 ms per token,    73.40 tokens per second)
+llama_print_timings:       total time =   11516.49 ms /  1960 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     268.53 ms /   688 runs   (    0.39 ms per token,  2562.07 tokens per second)
+llama_print_timings: prompt eval time =     248.27 ms /   706 tokens (    0.35 ms per token,  2843.63 tokens per second)
+llama_print_timings:        eval time =    8995.79 ms /   687 runs   (   13.09 ms per token,    76.37 tokens per second)
+llama_print_timings:       total time =   10973.82 ms /  1393 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     275.56 ms /   705 runs   (    0.39 ms per token,  2558.40 tokens per second)
+llama_print_timings: prompt eval time =     246.71 ms /   701 tokens (    0.35 ms per token,  2841.43 tokens per second)
+llama_print_timings:        eval time =    9224.32 ms /   704 runs   (   13.10 ms per token,    76.32 tokens per second)
+llama_print_timings:       total time =   11253.38 ms /  1405 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     246.57 ms /   567 runs   (    0.43 ms per token,  2299.55 tokens per second)
+llama_print_timings: prompt eval time =     415.32 ms /  1215 tokens (    0.34 ms per token,  2925.44 tokens per second)
+llama_print_timings:        eval time =    7677.52 ms /   566 runs   (   13.56 ms per token,    73.72 tokens per second)
+llama_print_timings:       total time =    9504.67 ms /  1781 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     324.27 ms /   838 runs   (    0.39 ms per token,  2584.23 tokens per second)
+llama_print_timings: prompt eval time =     311.04 ms /  1006 tokens (    0.31 ms per token,  3234.27 tokens per second)
+llama_print_timings:        eval time =   11275.00 ms /   837 runs   (   13.47 ms per token,    74.24 tokens per second)
+llama_print_timings:       total time =   13778.43 ms /  1843 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     330.43 ms /   851 runs   (    0.39 ms per token,  2575.47 tokens per second)
+llama_print_timings: prompt eval time =     490.33 ms /  1528 tokens (    0.32 ms per token,  3116.26 tokens per second)
+llama_print_timings:        eval time =   11869.67 ms /   850 runs   (   13.96 ms per token,    71.61 tokens per second)
+llama_print_timings:       total time =   14597.51 ms /  2378 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     328.54 ms /   851 runs   (    0.39 ms per token,  2590.29 tokens per second)
+llama_print_timings: prompt eval time =     287.16 ms /   869 tokens (    0.33 ms per token,  3026.19 tokens per second)
+llama_print_timings:        eval time =   11356.14 ms /   850 runs   (   13.36 ms per token,    74.85 tokens per second)
+llama_print_timings:       total time =   13869.30 ms /  1719 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     333.97 ms /   864 runs   (    0.39 ms per token,  2587.05 tokens per second)
+llama_print_timings: prompt eval time =     285.67 ms /   861 tokens (    0.33 ms per token,  3013.92 tokens per second)
+llama_print_timings:        eval time =   11534.04 ms /   863 runs   (   13.37 ms per token,    74.82 tokens per second)
+llama_print_timings:       total time =   14088.24 ms /  1724 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     196.47 ms /   455 runs   (    0.43 ms per token,  2315.83 tokens per second)
+llama_print_timings: prompt eval time =     453.24 ms /  1347 tokens (    0.34 ms per token,  2971.94 tokens per second)
+llama_print_timings:        eval time =    6194.49 ms /   454 runs   (   13.64 ms per token,    73.29 tokens per second)
+llama_print_timings:       total time =    7747.69 ms /  1801 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     207.86 ms /   520 runs   (    0.40 ms per token,  2501.71 tokens per second)
+llama_print_timings: prompt eval time =     287.88 ms /   894 tokens (    0.32 ms per token,  3105.42 tokens per second)
+llama_print_timings:        eval time =    6839.76 ms /   519 runs   (   13.18 ms per token,    75.88 tokens per second)
+llama_print_timings:       total time =    8382.02 ms /  1413 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     211.88 ms /   537 runs   (    0.39 ms per token,  2534.48 tokens per second)
+llama_print_timings: prompt eval time =     394.87 ms /  1098 tokens (    0.36 ms per token,  2780.67 tokens per second)
+llama_print_timings:        eval time =    7157.98 ms /   536 runs   (   13.35 ms per token,    74.88 tokens per second)
+llama_print_timings:       total time =    8851.80 ms /  1634 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     211.74 ms /   545 runs   (    0.39 ms per token,  2573.87 tokens per second)
+llama_print_timings: prompt eval time =     223.83 ms /   555 tokens (    0.40 ms per token,  2479.54 tokens per second)
+llama_print_timings:        eval time =    6989.17 ms /   544 runs   (   12.85 ms per token,    77.83 tokens per second)
+llama_print_timings:       total time =    8530.08 ms /  1099 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     211.64 ms /   545 runs   (    0.39 ms per token,  2575.15 tokens per second)
+llama_print_timings: prompt eval time =     223.53 ms /   555 tokens (    0.40 ms per token,  2482.85 tokens per second)
+llama_print_timings:        eval time =    6992.62 ms /   544 runs   (   12.85 ms per token,    77.80 tokens per second)
+llama_print_timings:       total time =    8532.00 ms /  1099 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     251.51 ms /   569 runs   (    0.44 ms per token,  2262.35 tokens per second)
+llama_print_timings: prompt eval time =     421.44 ms /  1250 tokens (    0.34 ms per token,  2966.04 tokens per second)
+llama_print_timings:        eval time =    7725.12 ms /   568 runs   (   13.60 ms per token,    73.53 tokens per second)
+llama_print_timings:       total time =    9571.22 ms /  1818 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     434.78 ms /  1061 runs   (    0.41 ms per token,  2440.30 tokens per second)
+llama_print_timings: prompt eval time =     311.10 ms /  1008 tokens (    0.31 ms per token,  3240.15 tokens per second)
+llama_print_timings:        eval time =   14396.76 ms /  1060 runs   (   13.58 ms per token,    73.63 tokens per second)
+llama_print_timings:       total time =   17669.32 ms /  2068 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     451.93 ms /  1143 runs   (    0.40 ms per token,  2529.13 tokens per second)
+llama_print_timings: prompt eval time =     598.78 ms /  1753 tokens (    0.34 ms per token,  2927.61 tokens per second)
+llama_print_timings:        eval time =   16449.31 ms /  1142 runs   (   14.40 ms per token,    69.43 tokens per second)
+llama_print_timings:       total time =   20293.98 ms /  2895 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     450.99 ms /  1143 runs   (    0.39 ms per token,  2534.44 tokens per second)
+llama_print_timings: prompt eval time =     410.50 ms /  1161 tokens (    0.35 ms per token,  2828.25 tokens per second)
+llama_print_timings:        eval time =   15782.41 ms /  1142 runs   (   13.82 ms per token,    72.36 tokens per second)
+llama_print_timings:       total time =   19423.71 ms /  2303 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     451.40 ms /  1143 runs   (    0.39 ms per token,  2532.10 tokens per second)
+llama_print_timings: prompt eval time =     409.66 ms /  1153 tokens (    0.36 ms per token,  2814.52 tokens per second)
+llama_print_timings:        eval time =   15841.36 ms /  1142 runs   (   13.87 ms per token,    72.09 tokens per second)
+llama_print_timings:       total time =   19479.01 ms /  2295 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     326.81 ms /   772 runs   (    0.42 ms per token,  2362.26 tokens per second)
+llama_print_timings: prompt eval time =     459.30 ms /  1399 tokens (    0.33 ms per token,  3045.97 tokens per second)
+llama_print_timings:        eval time =   10635.79 ms /   771 runs   (   13.79 ms per token,    72.49 tokens per second)
+llama_print_timings:       total time =   13118.10 ms /  2170 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     300.93 ms /   758 runs   (    0.40 ms per token,  2518.90 tokens per second)
+llama_print_timings: prompt eval time =     412.96 ms /  1211 tokens (    0.34 ms per token,  2932.51 tokens per second)
+llama_print_timings:        eval time =   10332.91 ms /   757 runs   (   13.65 ms per token,    73.26 tokens per second)
+llama_print_timings:       total time =   12696.00 ms /  1968 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     320.44 ms /   833 runs   (    0.38 ms per token,  2599.54 tokens per second)
+llama_print_timings: prompt eval time =     574.57 ms /  1653 tokens (    0.35 ms per token,  2876.93 tokens per second)
+llama_print_timings:        eval time =   11753.50 ms /   832 runs   (   14.13 ms per token,    70.79 tokens per second)
+llama_print_timings:       total time =   14504.33 ms /  2485 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     319.42 ms /   832 runs   (    0.38 ms per token,  2604.73 tokens per second)
+llama_print_timings: prompt eval time =     284.74 ms /   850 tokens (    0.33 ms per token,  2985.21 tokens per second)
+llama_print_timings:        eval time =   11125.20 ms /   831 runs   (   13.39 ms per token,    74.70 tokens per second)
+llama_print_timings:       total time =   13578.11 ms /  1681 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     325.17 ms /   845 runs   (    0.38 ms per token,  2598.66 tokens per second)
+llama_print_timings: prompt eval time =       0.00 ms /     1 tokens (    0.00 ms per token,      inf tokens per second)
+llama_print_timings:        eval time =   11310.21 ms /   845 runs   (   13.38 ms per token,    74.71 tokens per second)
+llama_print_timings:       total time =   13521.03 ms /   846 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     279.98 ms /   672 runs   (    0.42 ms per token,  2400.16 tokens per second)
+llama_print_timings: prompt eval time =     456.65 ms /  1371 tokens (    0.33 ms per token,  3002.31 tokens per second)
+llama_print_timings:        eval time =    9204.87 ms /   671 runs   (   13.72 ms per token,    72.90 tokens per second)
+llama_print_timings:       total time =   11373.69 ms /  2042 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     282.80 ms /   732 runs   (    0.39 ms per token,  2588.44 tokens per second)
+llama_print_timings: prompt eval time =     395.40 ms /  1111 tokens (    0.36 ms per token,  2809.81 tokens per second)
+llama_print_timings:        eval time =    9885.03 ms /   731 runs   (   13.52 ms per token,    73.95 tokens per second)
+llama_print_timings:       total time =   12147.88 ms /  1842 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     283.66 ms /   731 runs   (    0.39 ms per token,  2577.04 tokens per second)
+llama_print_timings: prompt eval time =     489.86 ms /  1527 tokens (    0.32 ms per token,  3117.22 tokens per second)
+llama_print_timings:        eval time =   10149.73 ms /   730 runs   (   13.90 ms per token,    71.92 tokens per second)
+llama_print_timings:       total time =   12503.74 ms /  2257 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     283.39 ms /   731 runs   (    0.39 ms per token,  2579.49 tokens per second)
+llama_print_timings: prompt eval time =     254.34 ms /   749 tokens (    0.34 ms per token,  2944.85 tokens per second)
+llama_print_timings:        eval time =    9612.34 ms /   730 runs   (   13.17 ms per token,    75.94 tokens per second)
+llama_print_timings:       total time =   11728.99 ms /  1479 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     284.02 ms /   731 runs   (    0.39 ms per token,  2573.74 tokens per second)
+llama_print_timings: prompt eval time =     253.24 ms /   744 tokens (    0.34 ms per token,  2937.98 tokens per second)
+llama_print_timings:        eval time =    9613.44 ms /   730 runs   (   13.17 ms per token,    75.94 tokens per second)
+llama_print_timings:       total time =   11733.38 ms /  1474 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     223.52 ms /   511 runs   (    0.44 ms per token,  2286.14 tokens per second)
+llama_print_timings: prompt eval time =     446.25 ms /  1299 tokens (    0.34 ms per token,  2910.96 tokens per second)
+llama_print_timings:        eval time =    6950.54 ms /   510 runs   (   13.63 ms per token,    73.38 tokens per second)
+llama_print_timings:       total time =    8654.61 ms /  1809 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     201.68 ms /   533 runs   (    0.38 ms per token,  2642.83 tokens per second)
+llama_print_timings: prompt eval time =     305.30 ms /   950 tokens (    0.32 ms per token,  3111.71 tokens per second)
+llama_print_timings:        eval time =    7055.86 ms /   532 runs   (   13.26 ms per token,    75.40 tokens per second)
+llama_print_timings:       total time =    8643.58 ms /  1482 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     212.92 ms /   555 runs   (    0.38 ms per token,  2606.58 tokens per second)
+llama_print_timings: prompt eval time =     408.00 ms /  1167 tokens (    0.35 ms per token,  2860.27 tokens per second)
+llama_print_timings:        eval time =    7450.20 ms /   554 runs   (   13.45 ms per token,    74.36 tokens per second)
+llama_print_timings:       total time =    9204.99 ms /  1721 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     212.62 ms /   555 runs   (    0.38 ms per token,  2610.25 tokens per second)
+llama_print_timings: prompt eval time =     225.66 ms /   573 tokens (    0.39 ms per token,  2539.16 tokens per second)
+llama_print_timings:        eval time =    7131.75 ms /   554 runs   (   12.87 ms per token,    77.68 tokens per second)
+llama_print_timings:       total time =    8704.11 ms /  1127 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     212.73 ms /   555 runs   (    0.38 ms per token,  2608.93 tokens per second)
+llama_print_timings: prompt eval time =     225.25 ms /   568 tokens (    0.40 ms per token,  2521.64 tokens per second)
+llama_print_timings:        eval time =    7132.00 ms /   554 runs   (   12.87 ms per token,    77.68 tokens per second)
+llama_print_timings:       total time =    8702.89 ms /  1122 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     257.62 ms /   587 runs   (    0.44 ms per token,  2278.51 tokens per second)
+llama_print_timings: prompt eval time =     455.89 ms /  1368 tokens (    0.33 ms per token,  3000.74 tokens per second)
+llama_print_timings:        eval time =    8046.95 ms /   586 runs   (   13.73 ms per token,    72.82 tokens per second)
+llama_print_timings:       total time =    9981.24 ms /  1954 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     296.30 ms /   770 runs   (    0.38 ms per token,  2598.76 tokens per second)
+llama_print_timings: prompt eval time =     340.12 ms /  1026 tokens (    0.33 ms per token,  3016.57 tokens per second)
+llama_print_timings:        eval time =   10346.31 ms /   769 runs   (   13.45 ms per token,    74.33 tokens per second)
+llama_print_timings:       total time =   12666.22 ms /  1795 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     299.09 ms /   776 runs   (    0.39 ms per token,  2594.51 tokens per second)
+llama_print_timings: prompt eval time =     482.50 ms /  1480 tokens (    0.33 ms per token,  3067.33 tokens per second)
+llama_print_timings:        eval time =   10753.24 ms /   775 runs   (   13.88 ms per token,    72.07 tokens per second)
+llama_print_timings:       total time =   13232.74 ms /  2255 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     298.31 ms /   776 runs   (    0.38 ms per token,  2601.33 tokens per second)
+llama_print_timings: prompt eval time =     276.03 ms /   794 tokens (    0.35 ms per token,  2876.48 tokens per second)
+llama_print_timings:        eval time =   10262.84 ms /   775 runs   (   13.24 ms per token,    75.52 tokens per second)
+llama_print_timings:       total time =   12534.04 ms /  1569 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     304.34 ms /   791 runs   (    0.38 ms per token,  2599.03 tokens per second)
+llama_print_timings: prompt eval time =       0.00 ms /     1 tokens (    0.00 ms per token,      inf tokens per second)
+llama_print_timings:        eval time =   10475.11 ms /   791 runs   (   13.24 ms per token,    75.51 tokens per second)
+llama_print_timings:       total time =   12516.02 ms /   792 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     162.97 ms /   369 runs   (    0.44 ms per token,  2264.26 tokens per second)
+llama_print_timings: prompt eval time =     419.81 ms /  1253 tokens (    0.34 ms per token,  2984.68 tokens per second)
+llama_print_timings:        eval time =    4972.58 ms /   368 runs   (   13.51 ms per token,    74.01 tokens per second)
+llama_print_timings:       total time =    6267.36 ms /  1621 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     167.78 ms /   427 runs   (    0.39 ms per token,  2545.08 tokens per second)
+llama_print_timings: prompt eval time =     277.05 ms /   808 tokens (    0.34 ms per token,  2916.48 tokens per second)
+llama_print_timings:        eval time =    5551.94 ms /   426 runs   (   13.03 ms per token,    76.73 tokens per second)
+llama_print_timings:       total time =    6831.34 ms /  1234 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     179.06 ms /   455 runs   (    0.39 ms per token,  2541.12 tokens per second)
+llama_print_timings: prompt eval time =     301.23 ms /   919 tokens (    0.33 ms per token,  3050.86 tokens per second)
+llama_print_timings:        eval time =    5984.23 ms /   454 runs   (   13.18 ms per token,    75.87 tokens per second)
+llama_print_timings:       total time =    7360.36 ms /  1373 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     178.21 ms /   455 runs   (    0.39 ms per token,  2553.14 tokens per second)
+llama_print_timings: prompt eval time =     148.97 ms /   473 tokens (    0.31 ms per token,  3175.20 tokens per second)
+llama_print_timings:        eval time =    5778.78 ms /   454 runs   (   12.73 ms per token,    78.56 tokens per second)
+llama_print_timings:       total time =    7000.71 ms /   927 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     178.30 ms /   455 runs   (    0.39 ms per token,  2551.84 tokens per second)
+llama_print_timings: prompt eval time =     147.92 ms /   465 tokens (    0.32 ms per token,  3143.68 tokens per second)
+llama_print_timings:        eval time =    5805.52 ms /   454 runs   (   12.79 ms per token,    78.20 tokens per second)
+llama_print_timings:       total time =    7026.27 ms /   919 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     256.01 ms /   585 runs   (    0.44 ms per token,  2285.08 tokens per second)
+llama_print_timings: prompt eval time =     446.19 ms /  1296 tokens (    0.34 ms per token,  2904.57 tokens per second)
+llama_print_timings:        eval time =    7940.44 ms /   584 runs   (   13.60 ms per token,    73.55 tokens per second)
+llama_print_timings:       total time =    9856.05 ms /  1880 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     303.54 ms /   785 runs   (    0.39 ms per token,  2586.12 tokens per second)
+llama_print_timings: prompt eval time =     318.91 ms /  1024 tokens (    0.31 ms per token,  3210.99 tokens per second)
+llama_print_timings:        eval time =   10511.31 ms /   784 runs   (   13.41 ms per token,    74.59 tokens per second)
+llama_print_timings:       total time =   12855.17 ms /  1808 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     322.42 ms /   827 runs   (    0.39 ms per token,  2564.98 tokens per second)
+llama_print_timings: prompt eval time =     485.94 ms /  1493 tokens (    0.33 ms per token,  3072.37 tokens per second)
+llama_print_timings:        eval time =   11538.61 ms /   826 runs   (   13.97 ms per token,    71.59 tokens per second)
+llama_print_timings:       total time =   14183.17 ms /  2319 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     321.42 ms /   827 runs   (    0.39 ms per token,  2572.94 tokens per second)
+llama_print_timings: prompt eval time =     284.64 ms /   845 tokens (    0.34 ms per token,  2968.68 tokens per second)
+llama_print_timings:        eval time =   11049.76 ms /   826 runs   (   13.38 ms per token,    74.75 tokens per second)
+llama_print_timings:       total time =   13487.95 ms /  1671 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     321.21 ms /   827 runs   (    0.39 ms per token,  2574.62 tokens per second)
+llama_print_timings: prompt eval time =     283.07 ms /   837 tokens (    0.34 ms per token,  2956.90 tokens per second)
+llama_print_timings:        eval time =   11050.35 ms /   826 runs   (   13.38 ms per token,    74.75 tokens per second)
+llama_print_timings:       total time =   13486.96 ms /  1663 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     250.47 ms /   585 runs   (    0.43 ms per token,  2335.62 tokens per second)
+llama_print_timings: prompt eval time =     658.12 ms /  1948 tokens (    0.34 ms per token,  2959.94 tokens per second)
+llama_print_timings:        eval time =    8358.61 ms /   584 runs   (   14.31 ms per token,    69.87 tokens per second)
+llama_print_timings:       total time =   10479.97 ms /  2532 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     178.97 ms /   447 runs   (    0.40 ms per token,  2497.57 tokens per second)
+llama_print_timings: prompt eval time =     318.56 ms /  1024 tokens (    0.31 ms per token,  3214.42 tokens per second)
+llama_print_timings:        eval time =    5928.91 ms /   446 runs   (   13.29 ms per token,    75.22 tokens per second)
+llama_print_timings:       total time =    7304.53 ms /  1470 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     200.24 ms /   517 runs   (    0.39 ms per token,  2581.94 tokens per second)
+llama_print_timings: prompt eval time =     408.30 ms /  1155 tokens (    0.35 ms per token,  2828.82 tokens per second)
+llama_print_timings:        eval time =    6922.51 ms /   516 runs   (   13.42 ms per token,    74.54 tokens per second)
+llama_print_timings:       total time =    8571.49 ms /  1671 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     205.34 ms /   532 runs   (    0.39 ms per token,  2590.80 tokens per second)
+llama_print_timings: prompt eval time =     225.39 ms /   535 tokens (    0.42 ms per token,  2373.66 tokens per second)
+llama_print_timings:        eval time =    6838.91 ms /   531 runs   (   12.88 ms per token,    77.64 tokens per second)
+llama_print_timings:       total time =    8345.57 ms /  1066 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     235.10 ms /   609 runs   (    0.39 ms per token,  2590.41 tokens per second)
+llama_print_timings: prompt eval time =     221.42 ms /   546 tokens (    0.41 ms per token,  2465.87 tokens per second)
+llama_print_timings:        eval time =    7861.30 ms /   608 runs   (   12.93 ms per token,    77.34 tokens per second)
+llama_print_timings:       total time =    9579.42 ms /  1154 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     222.75 ms /   535 runs   (    0.42 ms per token,  2401.75 tokens per second)
+llama_print_timings: prompt eval time =    1033.78 ms /  2933 tokens (    0.35 ms per token,  2837.16 tokens per second)
+llama_print_timings:        eval time =    8201.99 ms /   534 runs   (   15.36 ms per token,    65.11 tokens per second)
+llama_print_timings:       total time =   10559.73 ms /  3467 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     233.76 ms /   570 runs   (    0.41 ms per token,  2438.36 tokens per second)
+llama_print_timings: prompt eval time =     309.43 ms /   972 tokens (    0.32 ms per token,  3141.23 tokens per second)
+llama_print_timings:        eval time =    7565.49 ms /   569 runs   (   13.30 ms per token,    75.21 tokens per second)
+llama_print_timings:       total time =    9276.89 ms /  1541 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     240.44 ms /   593 runs   (    0.41 ms per token,  2466.31 tokens per second)
+llama_print_timings: prompt eval time =     417.79 ms /  1226 tokens (    0.34 ms per token,  2934.50 tokens per second)
+llama_print_timings:        eval time =    8007.89 ms /   592 runs   (   13.53 ms per token,    73.93 tokens per second)
+llama_print_timings:       total time =    9892.62 ms /  1818 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     244.75 ms /   608 runs   (    0.40 ms per token,  2484.20 tokens per second)
+llama_print_timings: prompt eval time =     230.38 ms /   611 tokens (    0.38 ms per token,  2652.20 tokens per second)
+llama_print_timings:        eval time =    7851.03 ms /   607 runs   (   12.93 ms per token,    77.31 tokens per second)
+llama_print_timings:       total time =    9589.33 ms /  1218 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     244.90 ms /   608 runs   (    0.40 ms per token,  2482.64 tokens per second)
+llama_print_timings: prompt eval time =     231.82 ms /   622 tokens (    0.37 ms per token,  2683.07 tokens per second)
+llama_print_timings:        eval time =    7860.83 ms /   607 runs   (   12.95 ms per token,    77.22 tokens per second)
+llama_print_timings:       total time =    9602.22 ms /  1229 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     180.36 ms /   420 runs   (    0.43 ms per token,  2328.65 tokens per second)
+llama_print_timings: prompt eval time =     589.46 ms /  1695 tokens (    0.35 ms per token,  2875.51 tokens per second)
+llama_print_timings:        eval time =    5831.11 ms /   419 runs   (   13.92 ms per token,    71.86 tokens per second)
+llama_print_timings:       total time =    7429.64 ms /  2114 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     258.63 ms /   644 runs   (    0.40 ms per token,  2490.01 tokens per second)
+llama_print_timings: prompt eval time =     282.67 ms /   859 tokens (    0.33 ms per token,  3038.91 tokens per second)
+llama_print_timings:        eval time =    8458.83 ms /   643 runs   (   13.16 ms per token,    76.02 tokens per second)
+llama_print_timings:       total time =   10355.67 ms /  1502 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     280.56 ms /   691 runs   (    0.41 ms per token,  2462.89 tokens per second)
+llama_print_timings: prompt eval time =     410.24 ms /  1187 tokens (    0.35 ms per token,  2893.43 tokens per second)
+llama_print_timings:        eval time =    9372.28 ms /   690 runs   (   13.58 ms per token,    73.62 tokens per second)
+llama_print_timings:       total time =   11540.17 ms /  1877 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     279.17 ms /   691 runs   (    0.40 ms per token,  2475.20 tokens per second)
+llama_print_timings: prompt eval time =     248.56 ms /   709 tokens (    0.35 ms per token,  2852.46 tokens per second)
+llama_print_timings:        eval time =    9076.96 ms /   690 runs   (   13.16 ms per token,    76.02 tokens per second)
+llama_print_timings:       total time =   11079.03 ms /  1399 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     279.09 ms /   691 runs   (    0.40 ms per token,  2475.89 tokens per second)
+llama_print_timings: prompt eval time =     246.23 ms /   704 tokens (    0.35 ms per token,  2859.10 tokens per second)
+llama_print_timings:        eval time =    9078.65 ms /   690 runs   (   13.16 ms per token,    76.00 tokens per second)
+llama_print_timings:       total time =   11080.77 ms /  1394 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     210.88 ms /   493 runs   (    0.43 ms per token,  2337.83 tokens per second)
+llama_print_timings: prompt eval time =     447.43 ms /  1306 tokens (    0.34 ms per token,  2918.90 tokens per second)
+llama_print_timings:        eval time =    6679.45 ms /   492 runs   (   13.58 ms per token,    73.66 tokens per second)
+llama_print_timings:       total time =    8330.73 ms /  1798 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     312.92 ms /   782 runs   (    0.40 ms per token,  2499.05 tokens per second)
+llama_print_timings: prompt eval time =     302.09 ms /   932 tokens (    0.32 ms per token,  3085.17 tokens per second)
+llama_print_timings:        eval time =   10391.99 ms /   781 runs   (   13.31 ms per token,    75.15 tokens per second)
+llama_print_timings:       total time =   12726.79 ms /  1713 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     332.19 ms /   845 runs   (    0.39 ms per token,  2543.71 tokens per second)
+llama_print_timings: prompt eval time =     458.14 ms /  1397 tokens (    0.33 ms per token,  3049.30 tokens per second)
+llama_print_timings:        eval time =   11718.53 ms /   844 runs   (   13.88 ms per token,    72.02 tokens per second)
+llama_print_timings:       total time =   14405.89 ms /  2241 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     331.88 ms /   845 runs   (    0.39 ms per token,  2546.12 tokens per second)
+llama_print_timings: prompt eval time =     285.83 ms /   863 tokens (    0.33 ms per token,  3019.26 tokens per second)
+llama_print_timings:        eval time =   11313.06 ms /   844 runs   (   13.40 ms per token,    74.60 tokens per second)
+llama_print_timings:       total time =   13825.10 ms /  1707 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     331.96 ms /   845 runs   (    0.39 ms per token,  2545.47 tokens per second)
+llama_print_timings: prompt eval time =     285.63 ms /   858 tokens (    0.33 ms per token,  3003.93 tokens per second)
+llama_print_timings:        eval time =   11313.94 ms /   844 runs   (   13.41 ms per token,    74.60 tokens per second)
+llama_print_timings:       total time =   13822.16 ms /  1702 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     164.06 ms /   387 runs   (    0.42 ms per token,  2358.91 tokens per second)
+llama_print_timings: prompt eval time =     449.06 ms /  1329 tokens (    0.34 ms per token,  2959.48 tokens per second)
+llama_print_timings:        eval time =    5227.82 ms /   386 runs   (   13.54 ms per token,    73.84 tokens per second)
+llama_print_timings:       total time =    6592.41 ms /  1715 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     210.60 ms /   527 runs   (    0.40 ms per token,  2502.35 tokens per second)
+llama_print_timings: prompt eval time =     279.58 ms /   826 tokens (    0.34 ms per token,  2954.39 tokens per second)
+llama_print_timings:        eval time =    6863.73 ms /   526 runs   (   13.05 ms per token,    76.63 tokens per second)
+llama_print_timings:       total time =    8422.08 ms /  1352 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     211.53 ms /   533 runs   (    0.40 ms per token,  2519.77 tokens per second)
+llama_print_timings: prompt eval time =     372.40 ms /  1037 tokens (    0.36 ms per token,  2784.67 tokens per second)
+llama_print_timings:        eval time =    7069.30 ms /   532 runs   (   13.29 ms per token,    75.25 tokens per second)
+llama_print_timings:       total time =    8736.27 ms /  1569 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     206.10 ms /   522 runs   (    0.39 ms per token,  2532.75 tokens per second)
+llama_print_timings: prompt eval time =     221.78 ms /   550 tokens (    0.40 ms per token,  2479.95 tokens per second)
+llama_print_timings:        eval time =    6685.28 ms /   521 runs   (   12.83 ms per token,    77.93 tokens per second)
+llama_print_timings:       total time =    8168.47 ms /  1071 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     206.42 ms /   522 runs   (    0.40 ms per token,  2528.82 tokens per second)
+llama_print_timings: prompt eval time =     237.30 ms /   537 tokens (    0.44 ms per token,  2262.94 tokens per second)
+llama_print_timings:        eval time =    6710.75 ms /   521 runs   (   12.88 ms per token,    77.64 tokens per second)
+llama_print_timings:       total time =    8209.87 ms /  1058 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     277.50 ms /   640 runs   (    0.43 ms per token,  2306.31 tokens per second)
+llama_print_timings: prompt eval time =     606.07 ms /  1792 tokens (    0.34 ms per token,  2956.75 tokens per second)
+llama_print_timings:        eval time =    9059.46 ms /   639 runs   (   14.18 ms per token,    70.53 tokens per second)
+llama_print_timings:       total time =   11300.47 ms /  2431 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     234.95 ms /   576 runs   (    0.41 ms per token,  2451.59 tokens per second)
+llama_print_timings: prompt eval time =     389.25 ms /  1079 tokens (    0.36 ms per token,  2771.97 tokens per second)
+llama_print_timings:        eval time =    7680.79 ms /   575 runs   (   13.36 ms per token,    74.86 tokens per second)
+llama_print_timings:       total time =    9491.02 ms /  1654 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     255.43 ms /   651 runs   (    0.39 ms per token,  2548.66 tokens per second)
+llama_print_timings: prompt eval time =     451.28 ms /  1339 tokens (    0.34 ms per token,  2967.15 tokens per second)
+llama_print_timings:        eval time =    8924.71 ms /   650 runs   (   13.73 ms per token,    72.83 tokens per second)
+llama_print_timings:       total time =   11008.59 ms /  1989 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     255.02 ms /   651 runs   (    0.39 ms per token,  2552.77 tokens per second)
+llama_print_timings: prompt eval time =     243.79 ms /   669 tokens (    0.36 ms per token,  2744.12 tokens per second)
+llama_print_timings:        eval time =    8502.97 ms /   650 runs   (   13.08 ms per token,    76.44 tokens per second)
+llama_print_timings:       total time =   10374.32 ms /  1319 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     254.41 ms /   651 runs   (    0.39 ms per token,  2558.90 tokens per second)
+llama_print_timings: prompt eval time =     242.02 ms /   661 tokens (    0.37 ms per token,  2731.17 tokens per second)
+llama_print_timings:        eval time =    8504.73 ms /   650 runs   (   13.08 ms per token,    76.43 tokens per second)
+llama_print_timings:       total time =   10373.79 ms /  1311 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     154.13 ms /   354 runs   (    0.44 ms per token,  2296.78 tokens per second)
+llama_print_timings: prompt eval time =     575.31 ms /  1660 tokens (    0.35 ms per token,  2885.42 tokens per second)
+llama_print_timings:        eval time =    4905.15 ms /   353 runs   (   13.90 ms per token,    71.97 tokens per second)
+llama_print_timings:       total time =    6319.80 ms /  2013 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     185.85 ms /   464 runs   (    0.40 ms per token,  2496.64 tokens per second)
+llama_print_timings: prompt eval time =     275.15 ms /   793 tokens (    0.35 ms per token,  2882.07 tokens per second)
+llama_print_timings:        eval time =    6031.70 ms /   463 runs   (   13.03 ms per token,    76.76 tokens per second)
+llama_print_timings:       total time =    7414.32 ms /  1256 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     185.62 ms /   468 runs   (    0.40 ms per token,  2521.23 tokens per second)
+llama_print_timings: prompt eval time =     302.97 ms /   941 tokens (    0.32 ms per token,  3105.97 tokens per second)
+llama_print_timings:        eval time =    6162.99 ms /   467 runs   (   13.20 ms per token,    75.77 tokens per second)
+llama_print_timings:       total time =    7581.60 ms /  1408 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     184.45 ms /   479 runs   (    0.39 ms per token,  2596.85 tokens per second)
+llama_print_timings: prompt eval time =     150.29 ms /   486 tokens (    0.31 ms per token,  3233.71 tokens per second)
+llama_print_timings:        eval time =    6096.09 ms /   478 runs   (   12.75 ms per token,    78.41 tokens per second)
+llama_print_timings:       total time =    7384.82 ms /   964 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     195.59 ms /   504 runs   (    0.39 ms per token,  2576.86 tokens per second)
+llama_print_timings: prompt eval time =     151.19 ms /   489 tokens (    0.31 ms per token,  3234.43 tokens per second)
+llama_print_timings:        eval time =    6453.71 ms /   503 runs   (   12.83 ms per token,    77.94 tokens per second)
+llama_print_timings:       total time =    7814.23 ms /   992 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     171.11 ms /   395 runs   (    0.43 ms per token,  2308.46 tokens per second)
+llama_print_timings: prompt eval time =     447.18 ms /  1309 tokens (    0.34 ms per token,  2927.25 tokens per second)
+llama_print_timings:        eval time =    5331.04 ms /   394 runs   (   13.53 ms per token,    73.91 tokens per second)
+llama_print_timings:       total time =    6721.45 ms /  1703 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     199.29 ms /   498 runs   (    0.40 ms per token,  2498.83 tokens per second)
+llama_print_timings: prompt eval time =     280.89 ms /   834 tokens (    0.34 ms per token,  2969.10 tokens per second)
+llama_print_timings:        eval time =    6482.22 ms /   497 runs   (   13.04 ms per token,    76.67 tokens per second)
+llama_print_timings:       total time =    7963.59 ms /  1331 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     188.06 ms /   483 runs   (    0.39 ms per token,  2568.38 tokens per second)
+llama_print_timings: prompt eval time =     311.89 ms /  1016 tokens (    0.31 ms per token,  3257.58 tokens per second)
+llama_print_timings:        eval time =    6379.48 ms /   482 runs   (   13.24 ms per token,    75.55 tokens per second)
+llama_print_timings:       total time =    7845.10 ms /  1498 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     191.75 ms /   496 runs   (    0.39 ms per token,  2586.63 tokens per second)
+llama_print_timings: prompt eval time =     152.63 ms /   501 tokens (    0.30 ms per token,  3282.40 tokens per second)
+llama_print_timings:        eval time =    6352.30 ms /   495 runs   (   12.83 ms per token,    77.92 tokens per second)
+llama_print_timings:       total time =    7689.60 ms /   996 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     192.03 ms /   496 runs   (    0.39 ms per token,  2582.97 tokens per second)
+llama_print_timings: prompt eval time =     153.55 ms /   510 tokens (    0.30 ms per token,  3321.48 tokens per second)
+llama_print_timings:        eval time =    6331.36 ms /   495 runs   (   12.79 ms per token,    78.18 tokens per second)
+llama_print_timings:       total time =    7671.74 ms /  1005 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     157.31 ms /   361 runs   (    0.44 ms per token,  2294.80 tokens per second)
+llama_print_timings: prompt eval time =     413.11 ms /  1193 tokens (    0.35 ms per token,  2887.88 tokens per second)
+llama_print_timings:        eval time =    4838.07 ms /   360 runs   (   13.44 ms per token,    74.41 tokens per second)
+llama_print_timings:       total time =    6104.71 ms /  1553 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     243.93 ms /   589 runs   (    0.41 ms per token,  2414.59 tokens per second)
+llama_print_timings: prompt eval time =     275.69 ms /   800 tokens (    0.34 ms per token,  2901.80 tokens per second)
+llama_print_timings:        eval time =    7709.49 ms /   588 runs   (   13.11 ms per token,    76.27 tokens per second)
+llama_print_timings:       total time =    9449.73 ms /  1388 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     259.20 ms /   619 runs   (    0.42 ms per token,  2388.13 tokens per second)
+llama_print_timings: prompt eval time =     390.46 ms /  1073 tokens (    0.36 ms per token,  2748.02 tokens per second)
+llama_print_timings:        eval time =    8266.27 ms /   618 runs   (   13.38 ms per token,    74.76 tokens per second)
+llama_print_timings:       total time =   10213.40 ms /  1691 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     257.28 ms /   619 runs   (    0.42 ms per token,  2405.94 tokens per second)
+llama_print_timings: prompt eval time =     233.71 ms /   637 tokens (    0.37 ms per token,  2725.64 tokens per second)
+llama_print_timings:        eval time =    8016.26 ms /   618 runs   (   12.97 ms per token,    77.09 tokens per second)
+llama_print_timings:       total time =    9801.41 ms /  1255 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     257.92 ms /   619 runs   (    0.42 ms per token,  2399.96 tokens per second)
+llama_print_timings: prompt eval time =     232.82 ms /   632 tokens (    0.37 ms per token,  2714.53 tokens per second)
+llama_print_timings:        eval time =    8014.37 ms /   618 runs   (   12.97 ms per token,    77.11 tokens per second)
+llama_print_timings:       total time =    9799.92 ms /  1250 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     190.84 ms /   438 runs   (    0.44 ms per token,  2295.16 tokens per second)
+llama_print_timings: prompt eval time =     415.34 ms /  1214 tokens (    0.34 ms per token,  2922.89 tokens per second)
+llama_print_timings:        eval time =    5899.80 ms /   437 runs   (   13.50 ms per token,    74.07 tokens per second)
+llama_print_timings:       total time =    7373.92 ms /  1651 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     223.91 ms /   570 runs   (    0.39 ms per token,  2545.71 tokens per second)
+llama_print_timings: prompt eval time =     285.26 ms /   877 tokens (    0.33 ms per token,  3074.41 tokens per second)
+llama_print_timings:        eval time =    7507.06 ms /   569 runs   (   13.19 ms per token,    75.80 tokens per second)
+llama_print_timings:       total time =    9190.13 ms /  1446 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     233.66 ms /   599 runs   (    0.39 ms per token,  2563.55 tokens per second)
+llama_print_timings: prompt eval time =     396.99 ms /  1131 tokens (    0.35 ms per token,  2848.97 tokens per second)
+llama_print_timings:        eval time =    8028.57 ms /   598 runs   (   13.43 ms per token,    74.48 tokens per second)
+llama_print_timings:       total time =    9905.73 ms /  1729 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     232.61 ms /   599 runs   (    0.39 ms per token,  2575.18 tokens per second)
+llama_print_timings: prompt eval time =     230.31 ms /   617 tokens (    0.37 ms per token,  2679.04 tokens per second)
+llama_print_timings:        eval time =    7735.22 ms /   598 runs   (   12.94 ms per token,    77.31 tokens per second)
+llama_print_timings:       total time =    9446.93 ms /  1215 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     238.29 ms /   614 runs   (    0.39 ms per token,  2576.68 tokens per second)
+llama_print_timings: prompt eval time =     230.34 ms /   612 tokens (    0.38 ms per token,  2656.88 tokens per second)
+llama_print_timings:        eval time =    7933.83 ms /   613 runs   (   12.94 ms per token,    77.26 tokens per second)
+llama_print_timings:       total time =    9685.51 ms /  1225 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     212.47 ms /   487 runs   (    0.44 ms per token,  2292.14 tokens per second)
+llama_print_timings: prompt eval time =     455.02 ms /  1359 tokens (    0.33 ms per token,  2986.66 tokens per second)
+llama_print_timings:        eval time =    6645.34 ms /   486 runs   (   13.67 ms per token,    73.13 tokens per second)
+llama_print_timings:       total time =    8294.97 ms /  1845 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     171.79 ms /   458 runs   (    0.38 ms per token,  2666.06 tokens per second)
+llama_print_timings: prompt eval time =     303.28 ms /   926 tokens (    0.33 ms per token,  3053.33 tokens per second)
+llama_print_timings:        eval time =    6022.51 ms /   457 runs   (   13.18 ms per token,    75.88 tokens per second)
+llama_print_timings:       total time =    7406.21 ms /  1383 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     178.81 ms /   468 runs   (    0.38 ms per token,  2617.27 tokens per second)
+llama_print_timings: prompt eval time =     389.44 ms /  1068 tokens (    0.36 ms per token,  2742.39 tokens per second)
+llama_print_timings:        eval time =    6205.03 ms /   467 runs   (   13.29 ms per token,    75.26 tokens per second)
+llama_print_timings:       total time =    7706.80 ms /  1535 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     185.00 ms /   486 runs   (    0.38 ms per token,  2627.08 tokens per second)
+llama_print_timings: prompt eval time =     150.45 ms /   486 tokens (    0.31 ms per token,  3230.37 tokens per second)
+llama_print_timings:        eval time =    6216.11 ms /   485 runs   (   12.82 ms per token,    78.02 tokens per second)
+llama_print_timings:       total time =    7525.45 ms /   971 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     185.17 ms /   486 runs   (    0.38 ms per token,  2624.64 tokens per second)
+llama_print_timings: prompt eval time =     152.25 ms /   500 tokens (    0.30 ms per token,  3284.05 tokens per second)
+llama_print_timings:        eval time =    6193.99 ms /   485 runs   (   12.77 ms per token,    78.30 tokens per second)
+llama_print_timings:       total time =    7506.89 ms /   985 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     186.71 ms /   425 runs   (    0.44 ms per token,  2276.25 tokens per second)
+llama_print_timings: prompt eval time =     444.96 ms /  1291 tokens (    0.34 ms per token,  2901.37 tokens per second)
+llama_print_timings:        eval time =    5759.43 ms /   424 runs   (   13.58 ms per token,    73.62 tokens per second)
+llama_print_timings:       total time =    7231.24 ms /  1715 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     312.48 ms /   793 runs   (    0.39 ms per token,  2537.79 tokens per second)
+llama_print_timings: prompt eval time =     283.37 ms /   864 tokens (    0.33 ms per token,  3049.05 tokens per second)
+llama_print_timings:        eval time =   10529.94 ms /   792 runs   (   13.30 ms per token,    75.21 tokens per second)
+llama_print_timings:       total time =   12878.83 ms /  1656 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     328.25 ms /   843 runs   (    0.39 ms per token,  2568.16 tokens per second)
+llama_print_timings: prompt eval time =     448.93 ms /  1341 tokens (    0.33 ms per token,  2987.11 tokens per second)
+llama_print_timings:        eval time =   11595.19 ms /   842 runs   (   13.77 ms per token,    72.62 tokens per second)
+llama_print_timings:       total time =   14264.55 ms /  2183 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     326.95 ms /   843 runs   (    0.39 ms per token,  2578.34 tokens per second)
+llama_print_timings: prompt eval time =     286.71 ms /   861 tokens (    0.33 ms per token,  3003.01 tokens per second)
+llama_print_timings:        eval time =   11240.82 ms /   842 runs   (   13.35 ms per token,    74.91 tokens per second)
+llama_print_timings:       total time =   13745.79 ms /  1703 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     326.63 ms /   843 runs   (    0.39 ms per token,  2580.88 tokens per second)
+llama_print_timings: prompt eval time =       0.00 ms /     1 tokens (    0.00 ms per token,      inf tokens per second)
+llama_print_timings:        eval time =   11242.44 ms /   843 runs   (   13.34 ms per token,    74.98 tokens per second)
+llama_print_timings:       total time =   13459.68 ms /   844 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     121.68 ms /   278 runs   (    0.44 ms per token,  2284.64 tokens per second)
+llama_print_timings: prompt eval time =     426.00 ms /  1275 tokens (    0.33 ms per token,  2992.92 tokens per second)
+llama_print_timings:        eval time =    3740.97 ms /   277 runs   (   13.51 ms per token,    74.04 tokens per second)
+llama_print_timings:       total time =    4811.46 ms /  1552 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     201.67 ms /   513 runs   (    0.39 ms per token,  2543.77 tokens per second)
+llama_print_timings: prompt eval time =     247.89 ms /   717 tokens (    0.35 ms per token,  2892.39 tokens per second)
+llama_print_timings:        eval time =    6639.76 ms /   512 runs   (   12.97 ms per token,    77.11 tokens per second)
+llama_print_timings:       total time =    8126.26 ms /  1229 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     206.30 ms /   534 runs   (    0.39 ms per token,  2588.41 tokens per second)
+llama_print_timings: prompt eval time =     300.42 ms /   914 tokens (    0.33 ms per token,  3042.37 tokens per second)
+llama_print_timings:        eval time =    7042.96 ms /   533 runs   (   13.21 ms per token,    75.68 tokens per second)
+llama_print_timings:       total time =    8635.11 ms /  1447 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     208.89 ms /   536 runs   (    0.39 ms per token,  2565.96 tokens per second)
+llama_print_timings: prompt eval time =     222.17 ms /   552 tokens (    0.40 ms per token,  2484.61 tokens per second)
+llama_print_timings:        eval time =    6921.71 ms /   535 runs   (   12.94 ms per token,    77.29 tokens per second)
+llama_print_timings:       total time =    8456.54 ms /  1087 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     218.14 ms /   536 runs   (    0.41 ms per token,  2457.18 tokens per second)
+llama_print_timings: prompt eval time =     117.42 ms /   277 tokens (    0.42 ms per token,  2358.99 tokens per second)
+llama_print_timings:        eval time =    6926.56 ms /   535 runs   (   12.95 ms per token,    77.24 tokens per second)
+llama_print_timings:       total time =    8404.20 ms /   812 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     236.02 ms /   530 runs   (    0.45 ms per token,  2245.59 tokens per second)
+llama_print_timings: prompt eval time =     423.57 ms /  1268 tokens (    0.33 ms per token,  2993.62 tokens per second)
+llama_print_timings:        eval time =    7236.81 ms /   529 runs   (   13.68 ms per token,    73.10 tokens per second)
+llama_print_timings:       total time =    9010.98 ms /  1797 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     225.93 ms /   569 runs   (    0.40 ms per token,  2518.43 tokens per second)
+llama_print_timings: prompt eval time =     308.71 ms /   969 tokens (    0.32 ms per token,  3138.88 tokens per second)
+llama_print_timings:        eval time =    7581.71 ms /   568 runs   (   13.35 ms per token,    74.92 tokens per second)
+llama_print_timings:       total time =    9315.76 ms /  1537 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     236.46 ms /   606 runs   (    0.39 ms per token,  2562.78 tokens per second)
+llama_print_timings: prompt eval time =     417.95 ms /  1222 tokens (    0.34 ms per token,  2923.77 tokens per second)
+llama_print_timings:        eval time =    8184.72 ms /   605 runs   (   13.53 ms per token,    73.92 tokens per second)
+llama_print_timings:       total time =   10104.95 ms /  1827 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     242.29 ms /   623 runs   (    0.39 ms per token,  2571.27 tokens per second)
+llama_print_timings: prompt eval time =     231.46 ms /   624 tokens (    0.37 ms per token,  2695.93 tokens per second)
+llama_print_timings:        eval time =    8058.80 ms /   622 runs   (   12.96 ms per token,    77.18 tokens per second)
+llama_print_timings:       total time =    9839.07 ms /  1246 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     236.19 ms /   609 runs   (    0.39 ms per token,  2578.40 tokens per second)
+llama_print_timings: prompt eval time =     233.79 ms /   637 tokens (    0.37 ms per token,  2724.63 tokens per second)
+llama_print_timings:        eval time =    7888.55 ms /   608 runs   (   12.97 ms per token,    77.07 tokens per second)
+llama_print_timings:       total time =    9628.83 ms /  1245 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     201.49 ms /   456 runs   (    0.44 ms per token,  2263.14 tokens per second)
+llama_print_timings: prompt eval time =     444.86 ms /  1298 tokens (    0.34 ms per token,  2917.77 tokens per second)
+llama_print_timings:        eval time =    6188.38 ms /   455 runs   (   13.60 ms per token,    73.52 tokens per second)
+llama_print_timings:       total time =    7743.79 ms /  1753 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     337.89 ms /   867 runs   (    0.39 ms per token,  2565.92 tokens per second)
+llama_print_timings: prompt eval time =     288.37 ms /   895 tokens (    0.32 ms per token,  3103.62 tokens per second)
+llama_print_timings:        eval time =   11578.86 ms /   866 runs   (   13.37 ms per token,    74.79 tokens per second)
+llama_print_timings:       total time =   14165.17 ms /  1761 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     344.92 ms /   879 runs   (    0.39 ms per token,  2548.44 tokens per second)
+llama_print_timings: prompt eval time =     477.90 ms /  1446 tokens (    0.33 ms per token,  3025.72 tokens per second)
+llama_print_timings:        eval time =   12193.95 ms /   878 runs   (   13.89 ms per token,    72.00 tokens per second)
+llama_print_timings:       total time =   15008.64 ms /  2324 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     349.17 ms /   892 runs   (    0.39 ms per token,  2554.61 tokens per second)
+llama_print_timings: prompt eval time =     299.71 ms /   897 tokens (    0.33 ms per token,  2992.92 tokens per second)
+llama_print_timings:        eval time =   11944.26 ms /   891 runs   (   13.41 ms per token,    74.60 tokens per second)
+llama_print_timings:       total time =   14621.00 ms /  1788 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     348.31 ms /   892 runs   (    0.39 ms per token,  2560.97 tokens per second)
+llama_print_timings: prompt eval time =     299.84 ms /   906 tokens (    0.33 ms per token,  3021.62 tokens per second)
+llama_print_timings:        eval time =   11955.07 ms /   891 runs   (   13.42 ms per token,    74.53 tokens per second)
+llama_print_timings:       total time =   14629.27 ms /  1797 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     250.63 ms /   588 runs   (    0.43 ms per token,  2346.06 tokens per second)
+llama_print_timings: prompt eval time =     447.76 ms /  1325 tokens (    0.34 ms per token,  2959.17 tokens per second)
+llama_print_timings:        eval time =    8028.99 ms /   587 runs   (   13.68 ms per token,    73.11 tokens per second)
+llama_print_timings:       total time =    9949.84 ms /  1912 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     231.24 ms /   595 runs   (    0.39 ms per token,  2573.14 tokens per second)
+llama_print_timings: prompt eval time =     342.50 ms /  1027 tokens (    0.33 ms per token,  2998.58 tokens per second)
+llama_print_timings:        eval time =    7940.57 ms /   594 runs   (   13.37 ms per token,    74.81 tokens per second)
+llama_print_timings:       total time =    9748.87 ms /  1621 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     237.84 ms /   609 runs   (    0.39 ms per token,  2560.59 tokens per second)
+llama_print_timings: prompt eval time =     446.92 ms /  1306 tokens (    0.34 ms per token,  2922.22 tokens per second)
+llama_print_timings:        eval time =    8278.70 ms /   608 runs   (   13.62 ms per token,    73.44 tokens per second)
+llama_print_timings:       total time =   10231.94 ms /  1914 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     237.03 ms /   609 runs   (    0.39 ms per token,  2569.27 tokens per second)
+llama_print_timings: prompt eval time =     232.31 ms /   627 tokens (    0.37 ms per token,  2699.03 tokens per second)
+llama_print_timings:        eval time =    7873.20 ms /   608 runs   (   12.95 ms per token,    77.22 tokens per second)
+llama_print_timings:       total time =    9608.61 ms /  1235 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     245.15 ms /   629 runs   (    0.39 ms per token,  2565.81 tokens per second)
+llama_print_timings: prompt eval time =     231.50 ms /   622 tokens (    0.37 ms per token,  2686.79 tokens per second)
+llama_print_timings:        eval time =    8139.48 ms /   628 runs   (   12.96 ms per token,    77.15 tokens per second)
+llama_print_timings:       total time =    9933.34 ms /  1250 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     200.94 ms /   466 runs   (    0.43 ms per token,  2319.10 tokens per second)
+llama_print_timings: prompt eval time =     457.66 ms /  1378 tokens (    0.33 ms per token,  3010.96 tokens per second)
+llama_print_timings:        eval time =    6358.04 ms /   465 runs   (   13.67 ms per token,    73.14 tokens per second)
+llama_print_timings:       total time =    7946.59 ms /  1843 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     219.75 ms /   564 runs   (    0.39 ms per token,  2566.61 tokens per second)
+llama_print_timings: prompt eval time =     299.88 ms /   905 tokens (    0.33 ms per token,  3017.91 tokens per second)
+llama_print_timings:        eval time =    7442.23 ms /   563 runs   (   13.22 ms per token,    75.65 tokens per second)
+llama_print_timings:       total time =    9115.66 ms /  1468 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     205.81 ms /   536 runs   (    0.38 ms per token,  2604.32 tokens per second)
+llama_print_timings: prompt eval time =     407.76 ms /  1153 tokens (    0.35 ms per token,  2827.62 tokens per second)
+llama_print_timings:        eval time =    7180.76 ms /   535 runs   (   13.42 ms per token,    74.50 tokens per second)
+llama_print_timings:       total time =    8886.72 ms /  1688 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     243.50 ms /   640 runs   (    0.38 ms per token,  2628.30 tokens per second)
+llama_print_timings: prompt eval time =     223.31 ms /   554 tokens (    0.40 ms per token,  2480.87 tokens per second)
+llama_print_timings:        eval time =    8234.78 ms /   639 runs   (   12.89 ms per token,    77.60 tokens per second)
+llama_print_timings:       total time =   10046.77 ms /  1193 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     249.14 ms /   653 runs   (    0.38 ms per token,  2621.03 tokens per second)
+llama_print_timings: prompt eval time =     231.66 ms /   617 tokens (    0.38 ms per token,  2663.41 tokens per second)
+llama_print_timings:        eval time =    8483.40 ms /   652 runs   (   13.01 ms per token,    76.86 tokens per second)
+llama_print_timings:       total time =   10343.08 ms /  1269 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     181.18 ms /   419 runs   (    0.43 ms per token,  2312.66 tokens per second)
+llama_print_timings: prompt eval time =     457.46 ms /  1380 tokens (    0.33 ms per token,  3016.68 tokens per second)
+llama_print_timings:        eval time =    5709.55 ms /   418 runs   (   13.66 ms per token,    73.21 tokens per second)
+llama_print_timings:       total time =    7171.24 ms /  1798 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     213.09 ms /   546 runs   (    0.39 ms per token,  2562.33 tokens per second)
+llama_print_timings: prompt eval time =     283.64 ms /   858 tokens (    0.33 ms per token,  3024.97 tokens per second)
+llama_print_timings:        eval time =    7166.64 ms /   545 runs   (   13.15 ms per token,    76.05 tokens per second)
+llama_print_timings:       total time =    8774.32 ms /  1403 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     192.45 ms /   496 runs   (    0.39 ms per token,  2577.33 tokens per second)
+llama_print_timings: prompt eval time =     390.41 ms /  1088 tokens (    0.36 ms per token,  2786.81 tokens per second)
+llama_print_timings:        eval time =    6592.51 ms /   495 runs   (   13.32 ms per token,    75.09 tokens per second)
+llama_print_timings:       total time =    8168.81 ms /  1583 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     197.28 ms /   511 runs   (    0.39 ms per token,  2590.19 tokens per second)
+llama_print_timings: prompt eval time =     176.53 ms /   514 tokens (    0.34 ms per token,  2911.62 tokens per second)
+llama_print_timings:        eval time =    6548.74 ms /   510 runs   (   12.84 ms per token,    77.88 tokens per second)
+llama_print_timings:       total time =    7949.52 ms /  1024 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     241.64 ms /   621 runs   (    0.39 ms per token,  2569.98 tokens per second)
+llama_print_timings: prompt eval time =     205.21 ms /   525 tokens (    0.39 ms per token,  2558.39 tokens per second)
+llama_print_timings:        eval time =    7969.28 ms /   620 runs   (   12.85 ms per token,    77.80 tokens per second)
+llama_print_timings:       total time =    9714.37 ms /  1145 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     203.55 ms /   473 runs   (    0.43 ms per token,  2323.78 tokens per second)
+llama_print_timings: prompt eval time =     578.27 ms /  1562 tokens (    0.37 ms per token,  2701.17 tokens per second)
+llama_print_timings:        eval time =    6537.67 ms /   472 runs   (   13.85 ms per token,    72.20 tokens per second)
+llama_print_timings:       total time =    8265.79 ms /  2034 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     212.19 ms /   537 runs   (    0.40 ms per token,  2530.81 tokens per second)
+llama_print_timings: prompt eval time =     299.26 ms /   912 tokens (    0.33 ms per token,  3047.47 tokens per second)
+llama_print_timings:        eval time =    7078.90 ms /   536 runs   (   13.21 ms per token,    75.72 tokens per second)
+llama_print_timings:       total time =    8681.22 ms /  1448 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     219.60 ms /   563 runs   (    0.39 ms per token,  2563.74 tokens per second)
+llama_print_timings: prompt eval time =     398.07 ms /  1133 tokens (    0.35 ms per token,  2846.25 tokens per second)
+llama_print_timings:        eval time =    7532.97 ms /   562 runs   (   13.40 ms per token,    74.61 tokens per second)
+llama_print_timings:       total time =    9302.57 ms /  1695 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     218.94 ms /   563 runs   (    0.39 ms per token,  2571.45 tokens per second)
+llama_print_timings: prompt eval time =     227.84 ms /   581 tokens (    0.39 ms per token,  2550.05 tokens per second)
+llama_print_timings:        eval time =    7236.62 ms /   562 runs   (   12.88 ms per token,    77.66 tokens per second)
+llama_print_timings:       total time =    8833.95 ms /  1143 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     223.93 ms /   576 runs   (    0.39 ms per token,  2572.22 tokens per second)
+llama_print_timings: prompt eval time =     225.71 ms /   576 tokens (    0.39 ms per token,  2551.90 tokens per second)
+llama_print_timings:        eval time =    7406.59 ms /   575 runs   (   12.88 ms per token,    77.63 tokens per second)
+llama_print_timings:       total time =    9037.13 ms /  1151 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     162.42 ms /   371 runs   (    0.44 ms per token,  2284.24 tokens per second)
+llama_print_timings: prompt eval time =     422.80 ms /  1255 tokens (    0.34 ms per token,  2968.33 tokens per second)
+llama_print_timings:        eval time =    4999.58 ms /   370 runs   (   13.51 ms per token,    74.01 tokens per second)
+llama_print_timings:       total time =    6299.97 ms /  1625 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     227.29 ms /   573 runs   (    0.40 ms per token,  2521.05 tokens per second)
+llama_print_timings: prompt eval time =     277.23 ms /   810 tokens (    0.34 ms per token,  2921.73 tokens per second)
+llama_print_timings:        eval time =    7497.49 ms /   572 runs   (   13.11 ms per token,    76.29 tokens per second)
+llama_print_timings:       total time =    9181.71 ms /  1382 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     245.35 ms /   616 runs   (    0.40 ms per token,  2510.72 tokens per second)
+llama_print_timings: prompt eval time =     386.69 ms /  1067 tokens (    0.36 ms per token,  2759.32 tokens per second)
+llama_print_timings:        eval time =    8215.79 ms /   615 runs   (   13.36 ms per token,    74.86 tokens per second)
+llama_print_timings:       total time =   10132.11 ms /  1682 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     250.91 ms /   647 runs   (    0.39 ms per token,  2578.58 tokens per second)
+llama_print_timings: prompt eval time =     233.01 ms /   634 tokens (    0.37 ms per token,  2720.95 tokens per second)
+llama_print_timings:        eval time =    8384.00 ms /   646 runs   (   12.98 ms per token,    77.05 tokens per second)
+llama_print_timings:       total time =   10230.89 ms /  1280 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     250.91 ms /   647 runs   (    0.39 ms per token,  2578.67 tokens per second)
+llama_print_timings: prompt eval time =     242.23 ms /   660 tokens (    0.37 ms per token,  2724.72 tokens per second)
+llama_print_timings:        eval time =    8408.00 ms /   646 runs   (   13.02 ms per token,    76.83 tokens per second)
+llama_print_timings:       total time =   10260.96 ms /  1306 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     147.35 ms /   334 runs   (    0.44 ms per token,  2266.76 tokens per second)
+llama_print_timings: prompt eval time =     484.10 ms /  1485 tokens (    0.33 ms per token,  3067.53 tokens per second)
+llama_print_timings:        eval time =    4569.10 ms /   333 runs   (   13.72 ms per token,    72.88 tokens per second)
+llama_print_timings:       total time =    5837.05 ms /  1818 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     185.99 ms /   467 runs   (    0.40 ms per token,  2510.93 tokens per second)
+llama_print_timings: prompt eval time =     272.50 ms /   773 tokens (    0.35 ms per token,  2836.69 tokens per second)
+llama_print_timings:        eval time =    6057.82 ms /   466 runs   (   13.00 ms per token,    76.93 tokens per second)
+llama_print_timings:       total time =    7442.66 ms /  1239 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     189.39 ms /   475 runs   (    0.40 ms per token,  2508.00 tokens per second)
+llama_print_timings: prompt eval time =     300.66 ms /   924 tokens (    0.33 ms per token,  3073.26 tokens per second)
+llama_print_timings:        eval time =    6246.27 ms /   474 runs   (   13.18 ms per token,    75.89 tokens per second)
+llama_print_timings:       total time =    7679.96 ms /  1398 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     189.15 ms /   475 runs   (    0.40 ms per token,  2511.25 tokens per second)
+llama_print_timings: prompt eval time =     151.33 ms /   493 tokens (    0.31 ms per token,  3257.82 tokens per second)
+llama_print_timings:        eval time =    6041.69 ms /   474 runs   (   12.75 ms per token,    78.45 tokens per second)
+llama_print_timings:       total time =    7323.98 ms /   967 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     188.73 ms /   475 runs   (    0.40 ms per token,  2516.82 tokens per second)
+llama_print_timings: prompt eval time =     150.31 ms /   488 tokens (    0.31 ms per token,  3246.67 tokens per second)
+llama_print_timings:        eval time =    6069.81 ms /   474 runs   (   12.81 ms per token,    78.09 tokens per second)
+llama_print_timings:       total time =    7350.30 ms /   962 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     188.34 ms /   436 runs   (    0.43 ms per token,  2314.93 tokens per second)
+llama_print_timings: prompt eval time =     479.64 ms /  1463 tokens (    0.33 ms per token,  3050.19 tokens per second)
+llama_print_timings:        eval time =    5950.86 ms /   435 runs   (   13.68 ms per token,    73.10 tokens per second)
+llama_print_timings:       total time =    7479.91 ms /  1898 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     221.18 ms /   551 runs   (    0.40 ms per token,  2491.18 tokens per second)
+llama_print_timings: prompt eval time =     285.03 ms /   875 tokens (    0.33 ms per token,  3069.81 tokens per second)
+llama_print_timings:        eval time =    7215.60 ms /   550 runs   (   13.12 ms per token,    76.22 tokens per second)
+llama_print_timings:       total time =    8845.45 ms /  1425 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     233.78 ms /   589 runs   (    0.40 ms per token,  2519.48 tokens per second)
+llama_print_timings: prompt eval time =     395.81 ms /  1110 tokens (    0.36 ms per token,  2804.38 tokens per second)
+llama_print_timings:        eval time =    7909.07 ms /   588 runs   (   13.45 ms per token,    74.35 tokens per second)
+llama_print_timings:       total time =    9755.40 ms /  1698 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     232.75 ms /   589 runs   (    0.40 ms per token,  2530.57 tokens per second)
+llama_print_timings: prompt eval time =     230.02 ms /   607 tokens (    0.38 ms per token,  2638.86 tokens per second)
+llama_print_timings:        eval time =    7626.06 ms /   588 runs   (   12.97 ms per token,    77.10 tokens per second)
+llama_print_timings:       total time =    9303.96 ms /  1195 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     232.45 ms /   589 runs   (    0.39 ms per token,  2533.92 tokens per second)
+llama_print_timings: prompt eval time =     230.37 ms /   602 tokens (    0.38 ms per token,  2613.16 tokens per second)
+llama_print_timings:        eval time =    7626.96 ms /   588 runs   (   12.97 ms per token,    77.09 tokens per second)
+llama_print_timings:       total time =    9306.05 ms /  1190 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     248.05 ms /   573 runs   (    0.43 ms per token,  2310.05 tokens per second)
+llama_print_timings: prompt eval time =     410.59 ms /  1178 tokens (    0.35 ms per token,  2869.06 tokens per second)
+llama_print_timings:        eval time =    7700.35 ms /   572 runs   (   13.46 ms per token,    74.28 tokens per second)
+llama_print_timings:       total time =    9544.34 ms /  1750 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     204.73 ms /   498 runs   (    0.41 ms per token,  2432.48 tokens per second)
+llama_print_timings: prompt eval time =     311.09 ms /  1012 tokens (    0.31 ms per token,  3253.11 tokens per second)
+llama_print_timings:        eval time =    6582.85 ms /   497 runs   (   13.25 ms per token,    75.50 tokens per second)
+llama_print_timings:       total time =    8094.80 ms /  1509 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     212.63 ms /   525 runs   (    0.41 ms per token,  2469.11 tokens per second)
+llama_print_timings: prompt eval time =     411.27 ms /  1194 tokens (    0.34 ms per token,  2903.17 tokens per second)
+llama_print_timings:        eval time =    7081.24 ms /   524 runs   (   13.51 ms per token,    74.00 tokens per second)
+llama_print_timings:       total time =    8765.96 ms /  1718 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     231.08 ms /   575 runs   (    0.40 ms per token,  2488.33 tokens per second)
+llama_print_timings: prompt eval time =     252.15 ms /   543 tokens (    0.46 ms per token,  2153.52 tokens per second)
+llama_print_timings:        eval time =    7372.16 ms /   574 runs   (   12.84 ms per token,    77.86 tokens per second)
+llama_print_timings:       total time =    9036.59 ms /  1117 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     236.31 ms /   588 runs   (    0.40 ms per token,  2488.28 tokens per second)
+llama_print_timings: prompt eval time =      72.42 ms /    69 tokens (    1.05 ms per token,   952.76 tokens per second)
+llama_print_timings:        eval time =    7599.48 ms /   587 runs   (   12.95 ms per token,    77.24 tokens per second)
+llama_print_timings:       total time =    9119.85 ms /   656 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     184.18 ms /   430 runs   (    0.43 ms per token,  2334.74 tokens per second)
+llama_print_timings: prompt eval time =     472.59 ms /  1415 tokens (    0.33 ms per token,  2994.12 tokens per second)
+llama_print_timings:        eval time =    5849.47 ms /   429 runs   (   13.64 ms per token,    73.34 tokens per second)
+llama_print_timings:       total time =    7352.79 ms /  1844 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     263.44 ms /   688 runs   (    0.38 ms per token,  2611.56 tokens per second)
+llama_print_timings: prompt eval time =     283.85 ms /   869 tokens (    0.33 ms per token,  3061.50 tokens per second)
+llama_print_timings:        eval time =    9059.48 ms /   687 runs   (   13.19 ms per token,    75.83 tokens per second)
+llama_print_timings:       total time =   11070.96 ms /  1556 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     265.72 ms /   681 runs   (    0.39 ms per token,  2562.82 tokens per second)
+llama_print_timings: prompt eval time =     420.52 ms /  1241 tokens (    0.34 ms per token,  2951.09 tokens per second)
+llama_print_timings:        eval time =    9271.29 ms /   680 runs   (   13.63 ms per token,    73.34 tokens per second)
+llama_print_timings:       total time =   11406.95 ms /  1921 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     269.99 ms /   694 runs   (    0.39 ms per token,  2570.46 tokens per second)
+llama_print_timings: prompt eval time =     245.62 ms /   699 tokens (    0.35 ms per token,  2845.84 tokens per second)
+llama_print_timings:        eval time =    9105.34 ms /   693 runs   (   13.14 ms per token,    76.11 tokens per second)
+llama_print_timings:       total time =   11102.63 ms /  1392 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     269.59 ms /   694 runs   (    0.39 ms per token,  2574.27 tokens per second)
+llama_print_timings: prompt eval time =     248.18 ms /   708 tokens (    0.35 ms per token,  2852.83 tokens per second)
+llama_print_timings:        eval time =    9115.21 ms /   693 runs   (   13.15 ms per token,    76.03 tokens per second)
+llama_print_timings:       total time =   11113.74 ms /  1401 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     158.49 ms /   366 runs   (    0.43 ms per token,  2309.37 tokens per second)
+llama_print_timings: prompt eval time =     447.87 ms /  1313 tokens (    0.34 ms per token,  2931.69 tokens per second)
+llama_print_timings:        eval time =    4934.95 ms /   365 runs   (   13.52 ms per token,    73.96 tokens per second)
+llama_print_timings:       total time =    6246.16 ms /  1678 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     536.96 ms /  1278 runs   (    0.42 ms per token,  2380.06 tokens per second)
+llama_print_timings: prompt eval time =     276.80 ms /   805 tokens (    0.34 ms per token,  2908.19 tokens per second)
+llama_print_timings:        eval time =   17157.17 ms /  1277 runs   (   13.44 ms per token,    74.43 tokens per second)
+llama_print_timings:       total time =   21246.68 ms /  2082 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     543.66 ms /  1300 runs   (    0.42 ms per token,  2391.18 tokens per second)
+llama_print_timings: prompt eval time =     600.14 ms /  1767 tokens (    0.34 ms per token,  2944.31 tokens per second)
+llama_print_timings:        eval time =   18786.89 ms /  1299 runs   (   14.46 ms per token,    69.14 tokens per second)
+llama_print_timings:       total time =   23285.90 ms /  3066 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     535.29 ms /  1301 runs   (    0.41 ms per token,  2430.47 tokens per second)
+llama_print_timings: prompt eval time =     450.12 ms /  1318 tokens (    0.34 ms per token,  2928.13 tokens per second)
+llama_print_timings:        eval time =   18334.13 ms /  1300 runs   (   14.10 ms per token,    70.91 tokens per second)
+llama_print_timings:       total time =   22638.22 ms /  2618 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     535.47 ms /  1301 runs   (    0.41 ms per token,  2429.65 tokens per second)
+llama_print_timings: prompt eval time =     404.78 ms /  1089 tokens (    0.37 ms per token,  2690.38 tokens per second)
+llama_print_timings:        eval time =   18263.79 ms /  1300 runs   (   14.05 ms per token,    71.18 tokens per second)
+llama_print_timings:       total time =   22511.57 ms /  2389 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     188.14 ms /   441 runs   (    0.43 ms per token,  2344.02 tokens per second)
+llama_print_timings: prompt eval time =     446.84 ms /  1308 tokens (    0.34 ms per token,  2927.23 tokens per second)
+llama_print_timings:        eval time =    5985.02 ms /   440 runs   (   13.60 ms per token,    73.52 tokens per second)
+llama_print_timings:       total time =    7493.68 ms /  1748 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     377.29 ms /   945 runs   (    0.40 ms per token,  2504.68 tokens per second)
+llama_print_timings: prompt eval time =     285.64 ms /   880 tokens (    0.32 ms per token,  3080.77 tokens per second)
+llama_print_timings:        eval time =   12640.43 ms /   944 runs   (   13.39 ms per token,    74.68 tokens per second)
+llama_print_timings:       total time =   15483.42 ms /  1824 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     384.55 ms /   967 runs   (    0.40 ms per token,  2514.65 tokens per second)
+llama_print_timings: prompt eval time =     485.11 ms /  1509 tokens (    0.32 ms per token,  3110.63 tokens per second)
+llama_print_timings:        eval time =   13519.73 ms /   966 runs   (   14.00 ms per token,    71.45 tokens per second)
+llama_print_timings:       total time =   16640.30 ms /  2475 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     381.91 ms /   967 runs   (    0.39 ms per token,  2532.01 tokens per second)
+llama_print_timings: prompt eval time =     315.99 ms /   985 tokens (    0.32 ms per token,  3117.17 tokens per second)
+llama_print_timings:        eval time =   13076.16 ms /   966 runs   (   13.54 ms per token,    73.87 tokens per second)
+llama_print_timings:       total time =   16011.20 ms /  1951 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     381.96 ms /   967 runs   (    0.39 ms per token,  2531.65 tokens per second)
+llama_print_timings: prompt eval time =     314.13 ms /   977 tokens (    0.32 ms per token,  3110.16 tokens per second)
+llama_print_timings:        eval time =   13073.50 ms /   966 runs   (   13.53 ms per token,    73.89 tokens per second)
+llama_print_timings:       total time =   16007.94 ms /  1943 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     223.79 ms /   514 runs   (    0.44 ms per token,  2296.83 tokens per second)
+llama_print_timings: prompt eval time =     408.43 ms /  1158 tokens (    0.35 ms per token,  2835.27 tokens per second)
+llama_print_timings:        eval time =    6908.30 ms /   513 runs   (   13.47 ms per token,    74.26 tokens per second)
+llama_print_timings:       total time =    8582.58 ms /  1671 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     248.20 ms /   646 runs   (    0.38 ms per token,  2602.77 tokens per second)
+llama_print_timings: prompt eval time =     306.19 ms /   953 tokens (    0.32 ms per token,  3112.49 tokens per second)
+llama_print_timings:        eval time =    8589.89 ms /   645 runs   (   13.32 ms per token,    75.09 tokens per second)
+llama_print_timings:       total time =   10505.73 ms /  1598 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     258.75 ms /   670 runs   (    0.39 ms per token,  2589.38 tokens per second)
+llama_print_timings: prompt eval time =     444.34 ms /  1283 tokens (    0.35 ms per token,  2887.40 tokens per second)
+llama_print_timings:        eval time =    9112.95 ms /   669 runs   (   13.62 ms per token,    73.41 tokens per second)
+llama_print_timings:       total time =   11238.09 ms /  1952 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     256.76 ms /   670 runs   (    0.38 ms per token,  2609.48 tokens per second)
+llama_print_timings: prompt eval time =     244.66 ms /   688 tokens (    0.36 ms per token,  2812.02 tokens per second)
+llama_print_timings:        eval time =    8736.11 ms /   669 runs   (   13.06 ms per token,    76.58 tokens per second)
+llama_print_timings:       total time =   10659.51 ms /  1357 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     257.00 ms /   671 runs   (    0.38 ms per token,  2610.85 tokens per second)
+llama_print_timings: prompt eval time =     233.50 ms /   626 tokens (    0.37 ms per token,  2680.92 tokens per second)
+llama_print_timings:        eval time =    8751.07 ms /   670 runs   (   13.06 ms per token,    76.56 tokens per second)
+llama_print_timings:       total time =   10665.78 ms /  1296 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     177.41 ms /   403 runs   (    0.44 ms per token,  2271.59 tokens per second)
+llama_print_timings: prompt eval time =     409.63 ms /  1185 tokens (    0.35 ms per token,  2892.86 tokens per second)
+llama_print_timings:        eval time =    5405.31 ms /   402 runs   (   13.45 ms per token,    74.37 tokens per second)
+llama_print_timings:       total time =    6779.93 ms /  1587 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     252.98 ms /   649 runs   (    0.39 ms per token,  2565.43 tokens per second)
+llama_print_timings: prompt eval time =     281.29 ms /   842 tokens (    0.33 ms per token,  2993.41 tokens per second)
+llama_print_timings:        eval time =    8589.04 ms /   648 runs   (   13.25 ms per token,    75.44 tokens per second)
+llama_print_timings:       total time =   10546.14 ms /  1490 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     276.56 ms /   694 runs   (    0.40 ms per token,  2509.37 tokens per second)
+llama_print_timings: prompt eval time =     409.75 ms /  1175 tokens (    0.35 ms per token,  2867.60 tokens per second)
+llama_print_timings:        eval time =    9404.68 ms /   693 runs   (   13.57 ms per token,    73.69 tokens per second)
+llama_print_timings:       total time =   11637.75 ms /  1868 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     264.70 ms /   694 runs   (    0.38 ms per token,  2621.84 tokens per second)
+llama_print_timings: prompt eval time =     249.55 ms /   712 tokens (    0.35 ms per token,  2853.18 tokens per second)
+llama_print_timings:        eval time =    9084.12 ms /   693 runs   (   13.11 ms per token,    76.29 tokens per second)
+llama_print_timings:       total time =   11087.03 ms /  1405 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     272.58 ms /   694 runs   (    0.39 ms per token,  2546.07 tokens per second)
+llama_print_timings: prompt eval time =       0.00 ms /     1 tokens (    0.00 ms per token,      inf tokens per second)
+llama_print_timings:        eval time =    9106.43 ms /   694 runs   (   13.12 ms per token,    76.21 tokens per second)
+llama_print_timings:       total time =   10906.96 ms /   695 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     306.45 ms /   688 runs   (    0.45 ms per token,  2245.06 tokens per second)
+llama_print_timings: prompt eval time =     447.54 ms /  1334 tokens (    0.34 ms per token,  2980.75 tokens per second)
+llama_print_timings:        eval time =    9453.54 ms /   687 runs   (   13.76 ms per token,    72.67 tokens per second)
+llama_print_timings:       total time =   11708.06 ms /  2021 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     174.31 ms /   460 runs   (    0.38 ms per token,  2638.90 tokens per second)
+llama_print_timings: prompt eval time =     395.44 ms /  1127 tokens (    0.35 ms per token,  2850.00 tokens per second)
+llama_print_timings:        eval time =    6129.12 ms /   459 runs   (   13.35 ms per token,    74.89 tokens per second)
+llama_print_timings:       total time =    7615.28 ms /  1586 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     186.79 ms /   486 runs   (    0.38 ms per token,  2601.88 tokens per second)
+llama_print_timings: prompt eval time =     422.82 ms /  1271 tokens (    0.33 ms per token,  3005.99 tokens per second)
+llama_print_timings:        eval time =    6599.57 ms /   485 runs   (   13.61 ms per token,    73.49 tokens per second)
+llama_print_timings:       total time =    8197.87 ms /  1756 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     183.81 ms /   486 runs   (    0.38 ms per token,  2644.06 tokens per second)
+llama_print_timings: prompt eval time =     152.72 ms /   504 tokens (    0.30 ms per token,  3300.24 tokens per second)
+llama_print_timings:        eval time =    6196.10 ms /   485 runs   (   12.78 ms per token,    78.28 tokens per second)
+llama_print_timings:       total time =    7506.54 ms /   989 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     183.70 ms /   486 runs   (    0.38 ms per token,  2645.65 tokens per second)
+llama_print_timings: prompt eval time =     151.96 ms /   499 tokens (    0.30 ms per token,  3283.76 tokens per second)
+llama_print_timings:        eval time =    6218.55 ms /   485 runs   (   12.82 ms per token,    77.99 tokens per second)
+llama_print_timings:       total time =    7527.11 ms /   984 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     207.51 ms /   476 runs   (    0.44 ms per token,  2293.87 tokens per second)
+llama_print_timings: prompt eval time =     420.48 ms /  1251 tokens (    0.34 ms per token,  2975.17 tokens per second)
+llama_print_timings:        eval time =    6417.05 ms /   475 runs   (   13.51 ms per token,    74.02 tokens per second)
+llama_print_timings:       total time =    8004.71 ms /  1726 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     302.18 ms /   779 runs   (    0.39 ms per token,  2577.91 tokens per second)
+llama_print_timings: prompt eval time =     300.80 ms /   915 tokens (    0.33 ms per token,  3041.88 tokens per second)
+llama_print_timings:        eval time =   10339.29 ms /   778 runs   (   13.29 ms per token,    75.25 tokens per second)
+llama_print_timings:       total time =   12657.56 ms /  1693 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     318.04 ms /   821 runs   (    0.39 ms per token,  2581.40 tokens per second)
+llama_print_timings: prompt eval time =     457.40 ms /  1378 tokens (    0.33 ms per token,  3012.69 tokens per second)
+llama_print_timings:        eval time =   11362.09 ms /   820 runs   (   13.86 ms per token,    72.17 tokens per second)
+llama_print_timings:       total time =   13969.39 ms /  2198 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     316.37 ms /   817 runs   (    0.39 ms per token,  2582.39 tokens per second)
+llama_print_timings: prompt eval time =     281.30 ms /   839 tokens (    0.34 ms per token,  2982.54 tokens per second)
+llama_print_timings:        eval time =   10905.67 ms /   816 runs   (   13.36 ms per token,    74.82 tokens per second)
+llama_print_timings:       total time =   13326.49 ms /  1655 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     314.54 ms /   817 runs   (    0.38 ms per token,  2597.42 tokens per second)
+llama_print_timings: prompt eval time =     276.87 ms /   782 tokens (    0.35 ms per token,  2824.42 tokens per second)
+llama_print_timings:        eval time =   10900.27 ms /   816 runs   (   13.36 ms per token,    74.86 tokens per second)
+llama_print_timings:       total time =   13307.17 ms /  1598 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     162.48 ms /   374 runs   (    0.43 ms per token,  2301.81 tokens per second)
+llama_print_timings: prompt eval time =     487.24 ms /  1508 tokens (    0.32 ms per token,  3094.98 tokens per second)
+llama_print_timings:        eval time =    5110.08 ms /   373 runs   (   13.70 ms per token,    72.99 tokens per second)
+llama_print_timings:       total time =    6487.38 ms /  1881 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     190.76 ms /   462 runs   (    0.41 ms per token,  2421.94 tokens per second)
+llama_print_timings: prompt eval time =     277.93 ms /   813 tokens (    0.34 ms per token,  2925.23 tokens per second)
+llama_print_timings:        eval time =    5988.20 ms /   461 runs   (   12.99 ms per token,    76.98 tokens per second)
+llama_print_timings:       total time =    7378.16 ms /  1274 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     190.11 ms /   468 runs   (    0.41 ms per token,  2461.68 tokens per second)
+llama_print_timings: prompt eval time =     306.51 ms /   959 tokens (    0.32 ms per token,  3128.75 tokens per second)
+llama_print_timings:        eval time =    6150.43 ms /   467 runs   (   13.17 ms per token,    75.93 tokens per second)
+llama_print_timings:       total time =    7580.44 ms /  1426 tokens
+Llama.generate: prefix-match hit
+
+llama_print_timings:        load time =      91.66 ms
+llama_print_timings:      sample time =     187.87 ms /   468 runs   (    0.40 ms per token,  2491.10 tokens per second)
+llama_print_timings: prompt eval time =     150.19 ms /   486 tokens (    0.31 ms per token,  3235.88 tokens per second)
+llama_print_timings:        eval time =    5975.75 ms /   467 runs   (   12.80 ms per token,    78.15 tokens per second)
+llama_print_timings:       total time =    7242.77 ms /   953 tokens
+Llama.generate: prefix-match hit
