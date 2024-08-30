@@ -528,8 +528,9 @@ def graph_Louvain (G,
     # Assuming G is your graph and data_dir is defined
     
     # Compute the best partition using the Louvain algorithm
-    partition = community_louvain.best_partition(G)
-    
+    G_undir = G.to_undirected()
+    partition = community_louvain.best_partition(G_undir)
+
     # Organize nodes into communities based on the Louvain partition
     communities = {}
     for node, comm_id in partition.items():
@@ -616,8 +617,11 @@ def remove_small_fragents (G_new, size_threshold):
     if size_threshold >0:
         
         # Find all connected components, returned as sets of nodes
-        components = list(nx.connected_components(G_new))
-        
+        try:
+            components = list(nx.connected_components(G_new))
+        except:
+            print("using weakly connected components...")
+            components = list(nx.weakly_connected_components(G_new))
         # Iterate through components and remove those smaller than the threshold
         for component in components:
             if len(component) < size_threshold:

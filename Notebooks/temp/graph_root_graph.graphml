@@ -1,0 +1,377 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d2" for="edge" attr.name="weight" attr.type="double" />
+  <key id="d1" for="edge" attr.name="chunk_id" attr.type="string" />
+  <key id="d0" for="edge" attr.name="title" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="chemical solution" />
+    <node id="chemical treatments" />
+    <node id="cleaning" />
+    <node id="etching" />
+    <node id="exposed semiconductor material" />
+    <node id="exposure" />
+    <node id="materials science" />
+    <node id="microelectronic devices" />
+    <node id="microfabrication" />
+    <node id="patterned mask" />
+    <node id="photolithography" />
+    <node id="photomask" />
+    <node id="photosensitive material" />
+    <node id="physical processes" />
+    <node id="semiconductor devices" />
+    <node id="semiconductor manufacturing" />
+    <node id="semiconductor manufacturing process" />
+    <node id="silicon" />
+    <node id="silicon wafer production" />
+    <node id="silicon wafers" />
+    <node id="testing and inspection processes" />
+    <node id="material removal" />
+    <node id="final semiconductor device" />
+    <node id="precise control" />
+    <node id="remove unwanted material" />
+    <node id="involves removing impurities or contaminants from surface" />
+    <node id="also typically involved to create smooth, flat surface" />
+    <node id="patterned layer" />
+    <node id="silicon wafer" />
+    <node id="chemistry" />
+    <node id="engineering" />
+    <node id="applications" />
+    <node id="light" />
+    <node id="mask" />
+    <node id="deposition" />
+    <node id="specialized equipment" />
+    <node id="specialized materials" />
+    <node id="computers" />
+    <node id="other electronic devices" />
+    <node id="smartphones" />
+    <node id="critical steps" />
+    <node id="deep understanding" />
+    <node id="highly specialized" />
+    <node id="process" />
+    <node id="testing" />
+    <node id="wafer fabrication" />
+    <node id="chemical etchant" />
+    <node id="chemical vapor deposition (cvd)" />
+    <node id="highly skilled personnel" />
+    <node id="highly specialized and complex process" />
+    <node id="physical vapor deposition (pvd)" />
+    <node id="revolutionized electronics industry" />
+    <node id="sophisticated equipment and materials" />
+    <node id="common material used in semiconductors" />
+    <node id="first step in semiconductor manufacturing" />
+    <node id="cleaned and prepared for next steps" />
+    <node id="produced by melting silicon in a furnace" />
+    <node id="critical" />
+    <node id="inspection" />
+    <edge source="chemical solution" target="material removal">
+      <data key="d0">involves using</data>
+      <data key="d1">8047725fc5d44893b6528f145e7c1242</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="chemical treatments" target="final semiconductor device">
+      <data key="d0">meets desired specifications</data>
+      <data key="d1">fb383f90e41c45ddb6dfdf9c44b9d79d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="chemical treatments" target="precise control">
+      <data key="d0">required</data>
+      <data key="d1">fb383f90e41c45ddb6dfdf9c44b9d79d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="chemical treatments" target="remove unwanted material">
+      <data key="d0">create desired electrical properties</data>
+      <data key="d1">fb383f90e41c45ddb6dfdf9c44b9d79d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="cleaning" target="involves removing impurities or contaminants from surface">
+      <data key="d0">of the wafer</data>
+      <data key="d1">6c89d355838b4cee9798cf04ee3adc2d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="etching" target="also typically involved to create smooth, flat surface">
+      <data key="d0">ready for the next step</data>
+      <data key="d1">6c89d355838b4cee9798cf04ee3adc2d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="etching" target="microfabrication">
+      <data key="d0">is the next step,are used in microfabrication</data>
+      <data key="d1">8047725fc5d44893b6528f145e7c1242,8047725fc5d44893b6528f145e7c1242</data>
+      <data key="d2">2.0</data>
+    </edge>
+    <edge source="etching" target="patterned layer">
+      <data key="d0">creates the desired pattern</data>
+      <data key="d1">8047725fc5d44893b6528f145e7c1242</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="exposed semiconductor material" target="chemical treatments">
+      <data key="d0">subjected to</data>
+      <data key="d1">fb383f90e41c45ddb6dfdf9c44b9d79d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="exposure" target="photosensitive material">
+      <data key="d0">is either exposed to light or heated</data>
+      <data key="d1">8047725fc5d44893b6528f145e7c1242</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="exposure" target="silicon wafer">
+      <data key="d0">involves using light</data>
+      <data key="d1">8047725fc5d44893b6528f145e7c1242</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="materials science" target="chemistry">
+      <data key="d0">require deep understanding</data>
+      <data key="d1">fb383f90e41c45ddb6dfdf9c44b9d79d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="materials science" target="engineering">
+      <data key="d0">require deep understanding</data>
+      <data key="d1">fb383f90e41c45ddb6dfdf9c44b9d79d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="microelectronic devices" target="applications">
+      <data key="d0">are used in a wide range,are used in a wide range,are used in a wide range of</data>
+      <data key="d1">8047725fc5d44893b6528f145e7c1242,8047725fc5d44893b6528f145e7c1242,8047725fc5d44893b6528f145e7c1242</data>
+      <data key="d2">3.0</data>
+    </edge>
+    <edge source="microfabrication" target="microelectronic devices">
+      <data key="d0">allow for the creation of complex patterns and structures,allow for the creation of,allow for the creation of,allow for the creation of,allow for the creation of,allow for the creation of,allow for the creation of,allow for the creation of,allow for the creation of,allow for the creation of,allow for the creation of,allow for the creation of</data>
+      <data key="d1">8047725fc5d44893b6528f145e7c1242,8047725fc5d44893b6528f145e7c1242,8047725fc5d44893b6528f145e7c1242,8047725fc5d44893b6528f145e7c1242,8047725fc5d44893b6528f145e7c1242,8047725fc5d44893b6528f145e7c1242,8047725fc5d44893b6528f145e7c1242,8047725fc5d44893b6528f145e7c1242,8047725fc5d44893b6528f145e7c1242,8047725fc5d44893b6528f145e7c1242,8047725fc5d44893b6528f145e7c1242,8047725fc5d44893b6528f145e7c1242</data>
+      <data key="d2">12.0</data>
+    </edge>
+    <edge source="patterned mask" target="silicon wafer">
+      <data key="d0">blocks some parts</data>
+      <data key="d1">8047725fc5d44893b6528f145e7c1242</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="photolithography" target="etching">
+      <data key="d0">are essential for the creation,are critical processes,are used in microfabrication,are used in microfabrication,are used in microfabrication,are used in microfabrication,are used in microfabrication,are used in microfabrication,are used in microfabrication,are used in microfabrication,are used in microfabrication,are used in microfabrication,are used in microfabrication</data>
+      <data key="d1">8047725fc5d44893b6528f145e7c1242,8047725fc5d44893b6528f145e7c1242,8047725fc5d44893b6528f145e7c1242,8047725fc5d44893b6528f145e7c1242,8047725fc5d44893b6528f145e7c1242,8047725fc5d44893b6528f145e7c1242,8047725fc5d44893b6528f145e7c1242,8047725fc5d44893b6528f145e7c1242,8047725fc5d44893b6528f145e7c1242,8047725fc5d44893b6528f145e7c1242,8047725fc5d44893b6528f145e7c1242,8047725fc5d44893b6528f145e7c1242,8047725fc5d44893b6528f145e7c1242</data>
+      <data key="d2">13.0</data>
+    </edge>
+    <edge source="photolithography" target="microfabrication">
+      <data key="d0">is a crucial process,are used in microfabrication</data>
+      <data key="d1">8047725fc5d44893b6528f145e7c1242,8047725fc5d44893b6528f145e7c1242</data>
+      <data key="d2">2.0</data>
+    </edge>
+    <edge source="photomask" target="light">
+      <data key="d0">exposes semiconductor material</data>
+      <data key="d1">fb383f90e41c45ddb6dfdf9c44b9d79d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="photomask" target="mask">
+      <data key="d0">used to define features</data>
+      <data key="d1">fb383f90e41c45ddb6dfdf9c44b9d79d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="photosensitive material" target="patterned layer">
+      <data key="d0">is treated with</data>
+      <data key="d1">8047725fc5d44893b6528f145e7c1242</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="physical processes" target="deposition">
+      <data key="d0">create electrical connections</data>
+      <data key="d1">fb383f90e41c45ddb6dfdf9c44b9d79d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="physical processes" target="etching">
+      <data key="d0">create desired features</data>
+      <data key="d1">fb383f90e41c45ddb6dfdf9c44b9d79d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="physical processes" target="final semiconductor device">
+      <data key="d0">meets desired specifications</data>
+      <data key="d1">fb383f90e41c45ddb6dfdf9c44b9d79d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="physical processes" target="precise control">
+      <data key="d0">required</data>
+      <data key="d1">fb383f90e41c45ddb6dfdf9c44b9d79d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="physical processes" target="specialized equipment">
+      <data key="d0">require</data>
+      <data key="d1">fb383f90e41c45ddb6dfdf9c44b9d79d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="physical processes" target="specialized materials">
+      <data key="d0">require</data>
+      <data key="d1">fb383f90e41c45ddb6dfdf9c44b9d79d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="semiconductor devices" target="computers">
+      <data key="d0">Electronic devices used in computers</data>
+      <data key="d1">5597a03e0140420893978af2b9d5193c</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="semiconductor devices" target="other electronic devices">
+      <data key="d0">Electronic devices used in other applications</data>
+      <data key="d1">5597a03e0140420893978af2b9d5193c</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="semiconductor devices" target="smartphones">
+      <data key="d0">Electronic devices used in smartphones</data>
+      <data key="d1">5597a03e0140420893978af2b9d5193c</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="semiconductor manufacturing" target="chemistry">
+      <data key="d0">require</data>
+      <data key="d1">fb383f90e41c45ddb6dfdf9c44b9d79d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="semiconductor manufacturing" target="critical steps">
+      <data key="d0">involve</data>
+      <data key="d1">fb383f90e41c45ddb6dfdf9c44b9d79d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="semiconductor manufacturing" target="deep understanding">
+      <data key="d0">required</data>
+      <data key="d1">fb383f90e41c45ddb6dfdf9c44b9d79d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="semiconductor manufacturing" target="deposition">
+      <data key="d0">Stage where layer of material is deposited on wafer</data>
+      <data key="d1">5597a03e0140420893978af2b9d5193c</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="semiconductor manufacturing" target="engineering">
+      <data key="d0">require</data>
+      <data key="d1">fb383f90e41c45ddb6dfdf9c44b9d79d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="semiconductor manufacturing" target="etching">
+      <data key="d0">Stage where pattern is etched into underlying silicon material</data>
+      <data key="d1">5597a03e0140420893978af2b9d5193c</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="semiconductor manufacturing" target="final semiconductor device">
+      <data key="d0">create</data>
+      <data key="d1">fb383f90e41c45ddb6dfdf9c44b9d79d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="semiconductor manufacturing" target="highly specialized">
+      <data key="d0">process</data>
+      <data key="d1">fb383f90e41c45ddb6dfdf9c44b9d79d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="semiconductor manufacturing" target="materials science">
+      <data key="d0">require</data>
+      <data key="d1">fb383f90e41c45ddb6dfdf9c44b9d79d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="semiconductor manufacturing" target="photolithography">
+      <data key="d0">Stage where pattern is created on wafer using photoresist material</data>
+      <data key="d1">5597a03e0140420893978af2b9d5193c</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="semiconductor manufacturing" target="precise control">
+      <data key="d0">required</data>
+      <data key="d1">fb383f90e41c45ddb6dfdf9c44b9d79d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="semiconductor manufacturing" target="process">
+      <data key="d0">involves</data>
+      <data key="d1">fb383f90e41c45ddb6dfdf9c44b9d79d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="semiconductor manufacturing" target="semiconductor devices">
+      <data key="d0">Production process for semiconductor devices</data>
+      <data key="d1">5597a03e0140420893978af2b9d5193c</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="semiconductor manufacturing" target="specialized equipment">
+      <data key="d0">required</data>
+      <data key="d1">fb383f90e41c45ddb6dfdf9c44b9d79d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="semiconductor manufacturing" target="specialized materials">
+      <data key="d0">required</data>
+      <data key="d1">fb383f90e41c45ddb6dfdf9c44b9d79d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="semiconductor manufacturing" target="testing">
+      <data key="d0">Final stage where semiconductor device is tested</data>
+      <data key="d1">5597a03e0140420893978af2b9d5193c</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="semiconductor manufacturing" target="wafer fabrication">
+      <data key="d0">First stage of semiconductor manufacturing</data>
+      <data key="d1">5597a03e0140420893978af2b9d5193c</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="semiconductor manufacturing process" target="chemical etchant">
+      <data key="d0">Chemical used to selectively remove silicon material</data>
+      <data key="d1">5597a03e0140420893978af2b9d5193c</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="semiconductor manufacturing process" target="chemical vapor deposition (cvd)">
+      <data key="d0">Process used to deposit layer of material on wafer</data>
+      <data key="d1">5597a03e0140420893978af2b9d5193c</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="semiconductor manufacturing process" target="highly skilled personnel">
+      <data key="d0">Involves highly skilled personnel</data>
+      <data key="d1">5597a03e0140420893978af2b9d5193c</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="semiconductor manufacturing process" target="highly specialized and complex process">
+      <data key="d0">Requires significant expertise and advanced technology</data>
+      <data key="d1">5597a03e0140420893978af2b9d5193c</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="semiconductor manufacturing process" target="mask">
+      <data key="d0">Defines pattern to be created on wafer</data>
+      <data key="d1">5597a03e0140420893978af2b9d5193c</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="semiconductor manufacturing process" target="physical vapor deposition (pvd)">
+      <data key="d0">Process used to deposit layer of material on wafer</data>
+      <data key="d1">5597a03e0140420893978af2b9d5193c</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="semiconductor manufacturing process" target="revolutionized electronics industry">
+      <data key="d0">Has had a profound impact on our daily lives</data>
+      <data key="d1">5597a03e0140420893978af2b9d5193c</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="semiconductor manufacturing process" target="sophisticated equipment and materials">
+      <data key="d0">Involves the use of sophisticated equipment and materials</data>
+      <data key="d1">5597a03e0140420893978af2b9d5193c</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="silicon" target="common material used in semiconductors">
+      <data key="d0">due to its properties that make it useful for electronics</data>
+      <data key="d1">6c89d355838b4cee9798cf04ee3adc2d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="silicon wafer production" target="first step in semiconductor manufacturing">
+      <data key="d0">is</data>
+      <data key="d1">6c89d355838b4cee9798cf04ee3adc2d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="silicon wafers" target="cleaned and prepared for next steps">
+      <data key="d0">once produced</data>
+      <data key="d1">6c89d355838b4cee9798cf04ee3adc2d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="silicon wafers" target="produced by melting silicon in a furnace">
+      <data key="d0">and then cooling it rapidly to form a thin, flat sheet of material</data>
+      <data key="d1">6c89d355838b4cee9798cf04ee3adc2d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="testing and inspection processes" target="critical">
+      <data key="d0">processes</data>
+      <data key="d1">fb383f90e41c45ddb6dfdf9c44b9d79d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="testing and inspection processes" target="inspection">
+      <data key="d0">ensure device free from defects</data>
+      <data key="d1">fb383f90e41c45ddb6dfdf9c44b9d79d</data>
+      <data key="d2">1.0</data>
+    </edge>
+    <edge source="testing and inspection processes" target="testing">
+      <data key="d0">ensure device meets specifications</data>
+      <data key="d1">fb383f90e41c45ddb6dfdf9c44b9d79d</data>
+      <data key="d2">1.0</data>
+    </edge>
+  </graph>
+</graphml>

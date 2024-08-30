@@ -1,0 +1,90 @@
+node_1|node_2|edge|chunk_id
+semiconductor manufacturing|semiconductor devices|Production process for semiconductor devices|5597a03e0140420893978af2b9d5193c
+semiconductor manufacturing|wafer fabrication|First stage of semiconductor manufacturing|5597a03e0140420893978af2b9d5193c
+semiconductor manufacturing|photolithography|Stage where pattern is created on wafer using photoresist material|5597a03e0140420893978af2b9d5193c
+semiconductor manufacturing|etching|Stage where pattern is etched into underlying silicon material|5597a03e0140420893978af2b9d5193c
+semiconductor manufacturing|deposition|Stage where layer of material is deposited on wafer|5597a03e0140420893978af2b9d5193c
+semiconductor manufacturing|testing|Final stage where semiconductor device is tested|5597a03e0140420893978af2b9d5193c
+semiconductor devices|computers|Electronic devices used in computers|5597a03e0140420893978af2b9d5193c
+semiconductor devices|smartphones|Electronic devices used in smartphones|5597a03e0140420893978af2b9d5193c
+semiconductor devices|other electronic devices|Electronic devices used in other applications|5597a03e0140420893978af2b9d5193c
+semiconductor manufacturing process|highly specialized and complex process|Requires significant expertise and advanced technology|5597a03e0140420893978af2b9d5193c
+semiconductor manufacturing process|sophisticated equipment and materials|Involves the use of sophisticated equipment and materials|5597a03e0140420893978af2b9d5193c
+semiconductor manufacturing process|highly skilled personnel|Involves highly skilled personnel|5597a03e0140420893978af2b9d5193c
+semiconductor manufacturing process|revolutionized electronics industry|Has had a profound impact on our daily lives|5597a03e0140420893978af2b9d5193c
+semiconductor manufacturing process|chemical vapor deposition (cvd)|Process used to deposit layer of material on wafer|5597a03e0140420893978af2b9d5193c
+semiconductor manufacturing process|physical vapor deposition (pvd)|Process used to deposit layer of material on wafer|5597a03e0140420893978af2b9d5193c
+semiconductor manufacturing process|chemical etchant|Chemical used to selectively remove silicon material|5597a03e0140420893978af2b9d5193c
+semiconductor manufacturing process|mask|Defines pattern to be created on wafer|5597a03e0140420893978af2b9d5193c
+silicon wafer production|first step in semiconductor manufacturing|is|6c89d355838b4cee9798cf04ee3adc2d
+silicon|common material used in semiconductors|due to its properties that make it useful for electronics|6c89d355838b4cee9798cf04ee3adc2d
+silicon wafers|produced by melting silicon in a furnace|and then cooling it rapidly to form a thin, flat sheet of material|6c89d355838b4cee9798cf04ee3adc2d
+silicon wafers|cleaned and prepared for next steps|once produced|6c89d355838b4cee9798cf04ee3adc2d
+cleaning|involves removing impurities or contaminants from surface|of the wafer|6c89d355838b4cee9798cf04ee3adc2d
+etching|also typically involved to create smooth, flat surface|ready for the next step|6c89d355838b4cee9798cf04ee3adc2d
+photolithography|microfabrication|is a crucial process|8047725fc5d44893b6528f145e7c1242
+exposure|silicon wafer|involves using light|8047725fc5d44893b6528f145e7c1242
+patterned mask|silicon wafer|blocks some parts|8047725fc5d44893b6528f145e7c1242
+photosensitive material|patterned layer|is treated with|8047725fc5d44893b6528f145e7c1242
+exposure|photosensitive material|is either exposed to light or heated|8047725fc5d44893b6528f145e7c1242
+etching|microfabrication|is the next step|8047725fc5d44893b6528f145e7c1242
+chemical solution|material removal|involves using|8047725fc5d44893b6528f145e7c1242
+etching|patterned layer|creates the desired pattern|8047725fc5d44893b6528f145e7c1242
+microelectronic devices|applications|are used in a wide range|8047725fc5d44893b6528f145e7c1242
+photolithography|etching|are essential for the creation|8047725fc5d44893b6528f145e7c1242
+microfabrication|microelectronic devices|allow for the creation of complex patterns and structures|8047725fc5d44893b6528f145e7c1242
+photolithography|etching|are critical processes|8047725fc5d44893b6528f145e7c1242
+microelectronic devices|applications|are used in a wide range|8047725fc5d44893b6528f145e7c1242
+photolithography|microfabrication|are used in microfabrication|8047725fc5d44893b6528f145e7c1242
+etching|microfabrication|are used in microfabrication|8047725fc5d44893b6528f145e7c1242
+photolithography|etching|are used in microfabrication|8047725fc5d44893b6528f145e7c1242
+microfabrication|microelectronic devices|allow for the creation of|8047725fc5d44893b6528f145e7c1242
+microelectronic devices|applications|are used in a wide range of|8047725fc5d44893b6528f145e7c1242
+photolithography|etching|are used in microfabrication|8047725fc5d44893b6528f145e7c1242
+microfabrication|microelectronic devices|allow for the creation of|8047725fc5d44893b6528f145e7c1242
+photolithography|etching|are used in microfabrication|8047725fc5d44893b6528f145e7c1242
+microfabrication|microelectronic devices|allow for the creation of|8047725fc5d44893b6528f145e7c1242
+photolithography|etching|are used in microfabrication|8047725fc5d44893b6528f145e7c1242
+microfabrication|microelectronic devices|allow for the creation of|8047725fc5d44893b6528f145e7c1242
+photolithography|etching|are used in microfabrication|8047725fc5d44893b6528f145e7c1242
+microfabrication|microelectronic devices|allow for the creation of|8047725fc5d44893b6528f145e7c1242
+photolithography|etching|are used in microfabrication|8047725fc5d44893b6528f145e7c1242
+microfabrication|microelectronic devices|allow for the creation of|8047725fc5d44893b6528f145e7c1242
+photolithography|etching|are used in microfabrication|8047725fc5d44893b6528f145e7c1242
+microfabrication|microelectronic devices|allow for the creation of|8047725fc5d44893b6528f145e7c1242
+photolithography|etching|are used in microfabrication|8047725fc5d44893b6528f145e7c1242
+microfabrication|microelectronic devices|allow for the creation of|8047725fc5d44893b6528f145e7c1242
+photolithography|etching|are used in microfabrication|8047725fc5d44893b6528f145e7c1242
+microfabrication|microelectronic devices|allow for the creation of|8047725fc5d44893b6528f145e7c1242
+photolithography|etching|are used in microfabrication|8047725fc5d44893b6528f145e7c1242
+microfabrication|microelectronic devices|allow for the creation of|8047725fc5d44893b6528f145e7c1242
+photolithography|etching|are used in microfabrication|8047725fc5d44893b6528f145e7c1242
+microfabrication|microelectronic devices|allow for the creation of|8047725fc5d44893b6528f145e7c1242
+semiconductor manufacturing|process|involves|fb383f90e41c45ddb6dfdf9c44b9d79d
+photomask|mask|used to define features|fb383f90e41c45ddb6dfdf9c44b9d79d
+photomask|light|exposes semiconductor material|fb383f90e41c45ddb6dfdf9c44b9d79d
+exposed semiconductor material|chemical treatments|subjected to|fb383f90e41c45ddb6dfdf9c44b9d79d
+chemical treatments|remove unwanted material|create desired electrical properties|fb383f90e41c45ddb6dfdf9c44b9d79d
+chemical treatments|precise control|required|fb383f90e41c45ddb6dfdf9c44b9d79d
+chemical treatments|final semiconductor device|meets desired specifications|fb383f90e41c45ddb6dfdf9c44b9d79d
+physical processes|etching|create desired features|fb383f90e41c45ddb6dfdf9c44b9d79d
+physical processes|deposition|create electrical connections|fb383f90e41c45ddb6dfdf9c44b9d79d
+physical processes|specialized equipment|require|fb383f90e41c45ddb6dfdf9c44b9d79d
+physical processes|specialized materials|require|fb383f90e41c45ddb6dfdf9c44b9d79d
+physical processes|precise control|required|fb383f90e41c45ddb6dfdf9c44b9d79d
+physical processes|final semiconductor device|meets desired specifications|fb383f90e41c45ddb6dfdf9c44b9d79d
+testing and inspection processes|testing|ensure device meets specifications|fb383f90e41c45ddb6dfdf9c44b9d79d
+testing and inspection processes|inspection|ensure device free from defects|fb383f90e41c45ddb6dfdf9c44b9d79d
+testing and inspection processes|critical|processes|fb383f90e41c45ddb6dfdf9c44b9d79d
+materials science|chemistry|require deep understanding|fb383f90e41c45ddb6dfdf9c44b9d79d
+materials science|engineering|require deep understanding|fb383f90e41c45ddb6dfdf9c44b9d79d
+semiconductor manufacturing|highly specialized|process|fb383f90e41c45ddb6dfdf9c44b9d79d
+semiconductor manufacturing|critical steps|involve|fb383f90e41c45ddb6dfdf9c44b9d79d
+semiconductor manufacturing|final semiconductor device|create|fb383f90e41c45ddb6dfdf9c44b9d79d
+semiconductor manufacturing|precise control|required|fb383f90e41c45ddb6dfdf9c44b9d79d
+semiconductor manufacturing|specialized equipment|required|fb383f90e41c45ddb6dfdf9c44b9d79d
+semiconductor manufacturing|specialized materials|required|fb383f90e41c45ddb6dfdf9c44b9d79d
+semiconductor manufacturing|deep understanding|required|fb383f90e41c45ddb6dfdf9c44b9d79d
+semiconductor manufacturing|materials science|require|fb383f90e41c45ddb6dfdf9c44b9d79d
+semiconductor manufacturing|chemistry|require|fb383f90e41c45ddb6dfdf9c44b9d79d
+semiconductor manufacturing|engineering|require|fb383f90e41c45ddb6dfdf9c44b9d79d
