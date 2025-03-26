@@ -2,12 +2,12 @@
 #SBATCH --job-name="KGs"
 ###SBATCH --partition=sched_mit_buehler
 #SBATCH --partition=sched_mit_buehler_gpu
-#SBATCH --gres=gpu:1
+#SBATCH --gres=gpu:4
 
 #SBATCH -N 1
 #SBATCH -n 8
 
-#SBATCH --mem-per-cpu=32G
+#SBATCH --mem-per-cpu=4G
 
 #SBATCH --time=12:0:0
 #SBATCH --output=cout.txt
@@ -19,8 +19,8 @@ source ~/.bashrc
 source ~/ml.sh
 rm core*
 #conda deactivate
-conda activate LLM
+conda activate llm
 
-python make_graphs_TSMC.py
+python make_graphs_TSMC.py $1
 
 
