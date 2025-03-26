@@ -1,6 +1,12 @@
 import os
 import re
  
+def extract (string, start='[', end=']'):
+    start_index = string.find(start)
+    end_index = string.rfind(end)
+     
+    return string[start_index :end_index+1]
+
 def contains_phrase(main_string, phrase):
     return phrase in main_string
 

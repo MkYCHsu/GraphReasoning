@@ -1577,3 +1577,22 @@ def use_graph_and_reason_over_triples (path_graph, generate,
     display(Markdown("**Response:** "+response ))
 
     return response ,  path_graph, shortest_path_length, fname, graph_GraphML
+
+    
+def node_report(graph):
+    nodes=sorted(list(graph.nodes), key=lambda x: -len(x.split()))
+    in_degrees=[graph.in_degree(node) for node in nodes]
+    out_degrees=[graph.out_degree(node) for node in nodes]
+    lengths = [len(node.split()) for node in nodes]
+
+    import pandas as pd
+
+    # dictionary of lists 
+    dict = {'Node': nodes, 'In_Degree': in_degrees, 'Out_Degree': out_degrees, 'Degree': np.array(in_degrees)+np.array(out_degrees), 'Length': lengths} 
+    
+    df = pd.DataFrame(dict)
+    
+    print(df) 
+    df.to_csv('book_length_degree.csv', sep = ';')
+
+    return nodes, in_degrees, out_degrees, lengths
