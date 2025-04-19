@@ -1,0 +1,441 @@
+/var/spool/slurmd/job65099117/slurm_script: line 21: /home/mkychsu/clean_trash.sh: No such file or directory
+Fail to get yarn configuration. /nfs/home/mkychsu/.local/lib/python3.11/site-packages/jupyterlab/staging/yarn.js:4
+(()=>{var Qge=Object.create;var AS=Object.defineProperty;var bge=Object.getOwnPropertyDescriptor;var Sge=Object.getOwnPropertyNames;var vge=Object.getPrototypeOf,xge=Object.prototype.hasOwnProperty;var J=(r=>typeof require<"u"?require:typeof Proxy<"u"?new Proxy(r,{get:(e,t)=>(typeof require<"u"?require:e)[t]}):r)(function(r){if(typeof require<"u")return require.apply(this,arguments);throw new Error('Dynamic require of "'+r+'" is not supported')});var Pge=(r,e)=>()=>(r&&(e=r(r=0)),e);var w=(r,e)=>()=>(e||r((e={exports:{}}).exports,e),e.exports),ut=(r,e)=>{for(var t in e)AS(r,t,{get:e[t],enumerable:!0})},Dge=(r,e,t,i)=>{if(e&&typeof e=="object"||typeof e=="function")for(let n of Sge(e))!xge.call(r,n)&&n!==t&&AS(r,n,{get:()=>e[n],enumerable:!(i=bge(e,n))||i.enumerable});return r};var Pe=(r,e,t)=>(t=r!=null?Qge(vge(r)):{},Dge(e||!r||!r.__esModule?AS(t,"default",{value:r,enumerable:!0}):t,r));var QK=w((GXe,BK)=>{BK.exports=wK;wK.s
+
+SyntaxError: Unexpected token {
+    at createScript (vm.js:56:10)
+    at Object.runInThisContext (vm.js:97:10)
+    at Module._compile (module.js:549:28)
+    at Object.Module._extensions..js (module.js:586:10)
+    at Module.load (module.js:494:32)
+    at tryModuleLoad (module.js:453:12)
+    at Function.Module._load (module.js:445:3)
+    at Module.runMain (module.js:611:10)
+    at run (bootstrap_node.js:394:7)
+    at startup (bootstrap_node.js:160:9)
+
+[I 2025-04-14 00:28:11.394 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2025-04-14 00:28:11.400 ServerApp] jupyter_server_fileid | extension was successfully linked.
+[I 2025-04-14 00:28:11.403 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2025-04-14 00:28:11.406 ServerApp] jupyter_server_ydoc | extension was successfully linked.
+[W 2025-04-14 00:28:11.409 LabApp] 'token' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2025-04-14 00:28:11.409 LabApp] 'password' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2025-04-14 00:28:11.409 LabApp] 'password' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2025-04-14 00:28:11.411 ServerApp] ServerApp.token config is deprecated in 2.0. Use IdentityProvider.token.
+[I 2025-04-14 00:28:11.411 ServerApp] jupyterlab | extension was successfully linked.
+[I 2025-04-14 00:28:11.415 ServerApp] nbclassic | extension was successfully linked.
+[I 2025-04-14 00:28:11.839 ServerApp] notebook_shim | extension was successfully linked.
+[I 2025-04-14 00:28:11.839 ServerApp] panel.io.jupyter_server_extension | extension was successfully linked.
+[W 2025-04-14 00:28:11.927 ServerApp] All authentication is disabled.  Anyone who can connect to this server will be able to run code.
+[I 2025-04-14 00:28:11.927 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2025-04-14 00:28:11.929 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2025-04-14 00:28:11.929 FileIdExtension] Configured File ID manager: ArbitraryFileIdManager
+[I 2025-04-14 00:28:11.929 FileIdExtension] ArbitraryFileIdManager : Configured root dir: /nfs/home/mkychsu/workspace/LLM/GraphReasoning_TSMC
+[I 2025-04-14 00:28:11.929 FileIdExtension] ArbitraryFileIdManager : Configured database path: /nfs/home/mkychsu/.local/share/jupyter/file_id_manager.db
+[I 2025-04-14 00:28:12.051 FileIdExtension] ArbitraryFileIdManager : Successfully connected to database file.
+[I 2025-04-14 00:28:12.051 FileIdExtension] ArbitraryFileIdManager : Creating File ID tables and indices with journal_mode = DELETE
+[I 2025-04-14 00:28:12.058 FileIdExtension] Attached event listeners.
+[I 2025-04-14 00:28:12.058 ServerApp] jupyter_server_fileid | extension was successfully loaded.
+[I 2025-04-14 00:28:12.060 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2025-04-14 00:28:12.061 ServerApp] jupyter_server_ydoc | extension was successfully loaded.
+[I 2025-04-14 00:28:12.068 LabApp] JupyterLab extension loaded from /home/mkychsu/.local/lib/python3.11/site-packages/jupyterlab
+[I 2025-04-14 00:28:12.068 LabApp] JupyterLab application directory is /nfs/home/mkychsu/.local/share/jupyter/lab
+[I 2025-04-14 00:28:12.069 LabApp] Extension Manager is 'pypi'.
+[I 2025-04-14 00:28:12.091 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2025-04-14 00:28:12.099 ServerApp] nbclassic | extension was successfully loaded.
+[I 2025-04-14 00:28:12.100 ServerApp] panel.io.jupyter_server_extension | extension was successfully loaded.
+[I 2025-04-14 00:28:12.100 ServerApp] Serving notebooks from local directory: /nfs/home/mkychsu/workspace/LLM/GraphReasoning_TSMC
+[I 2025-04-14 00:28:12.100 ServerApp] Jupyter Server 2.5.0 is running at:
+[I 2025-04-14 00:28:12.100 ServerApp] http://node1228:8888/lab
+[I 2025-04-14 00:28:12.100 ServerApp]     http://127.0.0.1:8888/lab
+[I 2025-04-14 00:28:12.100 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[I 2025-04-14 00:28:12.653 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2025-04-14 00:40:36.580 LabApp] 301 GET /lab/tree/ (7605790236cd40a9bd84fd89f537cfc4@10.1.10.107) 1.30ms
+[W 2025-04-14 00:40:52.392 ServerApp] 404 GET /api/contents/make_mainKG_TSMC-Copy1.ipynb?content=0&hash=0&1744605652013 (10.1.10.107): No such file or directory: make_mainKG_TSMC-Copy1.ipynb
+[W 2025-04-14 00:40:52.392 ServerApp] wrote error: 'No such file or directory: make_mainKG_TSMC-Copy1.ipynb'
+    Traceback (most recent call last):
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/tornado/web.py", line 1713, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_server/services/contents/handlers.py", line 121, in get
+        model = await ensure_async(
+                ^^^^^^^^^^^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 182, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_server/services/contents/filemanager.py", line 877, in get
+        raise web.HTTPError(404, "No such file or directory: %s" % path)
+    tornado.web.HTTPError: HTTP 404: Not Found (No such file or directory: make_mainKG_TSMC-Copy1.ipynb)
+[W 2025-04-14 00:40:52.397 ServerApp] 404 GET /api/contents/make_mainKG_TSMC-Copy1.ipynb?content=0&hash=0&1744605652013 (7605790236cd40a9bd84fd89f537cfc4@10.1.10.107) 6.99ms referer=http://localhost:8888/
+[W 2025-04-14 00:40:52.405 ServerApp] 404 GET /api/contents/graphRAG_TSMC-Copy1.ipynb?content=0&hash=0&1744605652013 (10.1.10.107): No such file or directory: graphRAG_TSMC-Copy1.ipynb
+[W 2025-04-14 00:40:52.405 ServerApp] wrote error: 'No such file or directory: graphRAG_TSMC-Copy1.ipynb'
+    Traceback (most recent call last):
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/tornado/web.py", line 1713, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_server/services/contents/handlers.py", line 121, in get
+        model = await ensure_async(
+                ^^^^^^^^^^^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 182, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_server/services/contents/filemanager.py", line 877, in get
+        raise web.HTTPError(404, "No such file or directory: %s" % path)
+    tornado.web.HTTPError: HTTP 404: Not Found (No such file or directory: graphRAG_TSMC-Copy1.ipynb)
+[W 2025-04-14 00:40:52.406 ServerApp] 404 GET /api/contents/graphRAG_TSMC-Copy1.ipynb?content=0&hash=0&1744605652013 (7605790236cd40a9bd84fd89f537cfc4@10.1.10.107) 2.50ms referer=http://localhost:8888/
+[W 2025-04-14 00:40:52.410 ServerApp] 404 GET /api/contents/make_graphs_TSMC.py?content=0&hash=0&1744605652014 (10.1.10.107): No such file or directory: make_graphs_TSMC.py
+[W 2025-04-14 00:40:52.410 ServerApp] wrote error: 'No such file or directory: make_graphs_TSMC.py'
+    Traceback (most recent call last):
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/tornado/web.py", line 1713, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_server/services/contents/handlers.py", line 121, in get
+        model = await ensure_async(
+                ^^^^^^^^^^^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 182, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_server/services/contents/filemanager.py", line 877, in get
+        raise web.HTTPError(404, "No such file or directory: %s" % path)
+    tornado.web.HTTPError: HTTP 404: Not Found (No such file or directory: make_graphs_TSMC.py)
+[W 2025-04-14 00:40:52.411 ServerApp] 404 GET /api/contents/make_graphs_TSMC.py?content=0&hash=0&1744605652014 (7605790236cd40a9bd84fd89f537cfc4@10.1.10.107) 2.18ms referer=http://localhost:8888/
+[W 2025-04-14 00:40:52.599 ServerApp] 404 GET /api/contents/make_mainKG_TSMC-Copy1.ipynb?content=0&hash=0&1744605652014 (10.1.10.107): No such file or directory: make_mainKG_TSMC-Copy1.ipynb
+[W 2025-04-14 00:40:52.599 ServerApp] wrote error: 'No such file or directory: make_mainKG_TSMC-Copy1.ipynb'
+    Traceback (most recent call last):
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/tornado/web.py", line 1713, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_server/services/contents/handlers.py", line 121, in get
+        model = await ensure_async(
+                ^^^^^^^^^^^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 182, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_server/services/contents/filemanager.py", line 877, in get
+        raise web.HTTPError(404, "No such file or directory: %s" % path)
+    tornado.web.HTTPError: HTTP 404: Not Found (No such file or directory: make_mainKG_TSMC-Copy1.ipynb)
+[W 2025-04-14 00:40:52.600 ServerApp] 404 GET /api/contents/make_mainKG_TSMC-Copy1.ipynb?content=0&hash=0&1744605652014 (7605790236cd40a9bd84fd89f537cfc4@10.1.10.107) 3.16ms referer=http://localhost:8888/
+[W 2025-04-14 00:40:52.601 ServerApp] 404 GET /api/contents/make_graphs_TSMC.py?content=0&hash=0&1744605652014 (10.1.10.107): No such file or directory: make_graphs_TSMC.py
+[W 2025-04-14 00:40:52.601 ServerApp] wrote error: 'No such file or directory: make_graphs_TSMC.py'
+    Traceback (most recent call last):
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/tornado/web.py", line 1713, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_server/services/contents/handlers.py", line 121, in get
+        model = await ensure_async(
+                ^^^^^^^^^^^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 182, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_server/services/contents/filemanager.py", line 877, in get
+        raise web.HTTPError(404, "No such file or directory: %s" % path)
+    tornado.web.HTTPError: HTTP 404: Not Found (No such file or directory: make_graphs_TSMC.py)
+[W 2025-04-14 00:40:52.603 ServerApp] 404 GET /api/contents/make_graphs_TSMC.py?content=0&hash=0&1744605652014 (7605790236cd40a9bd84fd89f537cfc4@10.1.10.107) 4.79ms referer=http://localhost:8888/
+[W 2025-04-14 00:40:52.615 ServerApp] 404 GET /api/contents/graphRAG_TSMC-Copy1.ipynb?content=0&hash=0&1744605652099 (10.1.10.107): No such file or directory: graphRAG_TSMC-Copy1.ipynb
+[W 2025-04-14 00:40:52.615 ServerApp] wrote error: 'No such file or directory: graphRAG_TSMC-Copy1.ipynb'
+    Traceback (most recent call last):
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/tornado/web.py", line 1713, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_server/services/contents/handlers.py", line 121, in get
+        model = await ensure_async(
+                ^^^^^^^^^^^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 182, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_server/services/contents/filemanager.py", line 877, in get
+        raise web.HTTPError(404, "No such file or directory: %s" % path)
+    tornado.web.HTTPError: HTTP 404: Not Found (No such file or directory: graphRAG_TSMC-Copy1.ipynb)
+[W 2025-04-14 00:40:52.616 ServerApp] 404 GET /api/contents/graphRAG_TSMC-Copy1.ipynb?content=0&hash=0&1744605652099 (7605790236cd40a9bd84fd89f537cfc4@10.1.10.107) 2.16ms referer=http://localhost:8888/
+[W 2025-04-14 00:40:52.811 ServerApp] 404 GET /api/contents/make_mainKG_TSMC-Copy1.ipynb?content=0&hash=0&1744605652099 (10.1.10.107): No such file or directory: make_mainKG_TSMC-Copy1.ipynb
+[W 2025-04-14 00:40:52.811 ServerApp] wrote error: 'No such file or directory: make_mainKG_TSMC-Copy1.ipynb'
+    Traceback (most recent call last):
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/tornado/web.py", line 1713, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_server/services/contents/handlers.py", line 121, in get
+        model = await ensure_async(
+                ^^^^^^^^^^^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 182, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_server/services/contents/filemanager.py", line 877, in get
+        raise web.HTTPError(404, "No such file or directory: %s" % path)
+    tornado.web.HTTPError: HTTP 404: Not Found (No such file or directory: make_mainKG_TSMC-Copy1.ipynb)
+[W 2025-04-14 00:40:52.812 ServerApp] 404 GET /api/contents/make_mainKG_TSMC-Copy1.ipynb?content=0&hash=0&1744605652099 (7605790236cd40a9bd84fd89f537cfc4@10.1.10.107) 2.69ms referer=http://localhost:8888/
+[I 2025-04-14 00:40:53.046 ServerApp] New terminal with automatic name: 1
+[W 2025-04-14 00:40:53.225 ServerApp] 404 GET /api/contents/temp?1744605653064 (10.1.10.107): No such file or directory: temp
+[W 2025-04-14 00:40:53.225 ServerApp] wrote error: 'No such file or directory: temp'
+    Traceback (most recent call last):
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/tornado/web.py", line 1713, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_server/services/contents/handlers.py", line 121, in get
+        model = await ensure_async(
+                ^^^^^^^^^^^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 182, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_server/services/contents/filemanager.py", line 877, in get
+        raise web.HTTPError(404, "No such file or directory: %s" % path)
+    tornado.web.HTTPError: HTTP 404: Not Found (No such file or directory: temp)
+[W 2025-04-14 00:40:53.227 ServerApp] 404 GET /api/contents/temp?1744605653064 (7605790236cd40a9bd84fd89f537cfc4@10.1.10.107) 3.62ms referer=http://localhost:8888/
+[W 2025-04-14 00:40:53.243 LabApp] Could not determine jupyterlab build status without nodejs
+[I 2025-04-14 00:41:11.157 ServerApp] Kernel started: 4709682d-3b28-4e53-9c7b-170e5cce3c92
+[W 2025-04-14 00:42:11.957 ServerApp] Timeout waiting for kernel_info reply from 4709682d-3b28-4e53-9c7b-170e5cce3c92
+[I 2025-04-14 00:42:11.959 ServerApp] Connecting to kernel 4709682d-3b28-4e53-9c7b-170e5cce3c92.
+[W 2025-04-14 00:42:12.351 ServerApp] Timeout waiting for kernel_info reply from 4709682d-3b28-4e53-9c7b-170e5cce3c92
+[I 2025-04-14 00:42:12.352 ServerApp] Connecting to kernel 4709682d-3b28-4e53-9c7b-170e5cce3c92.
+[W 2025-04-14 00:42:16.480 ServerApp] Nudge: attempt 10 on kernel 4709682d-3b28-4e53-9c7b-170e5cce3c92
+[W 2025-04-14 00:42:16.875 ServerApp] Nudge: attempt 10 on kernel 4709682d-3b28-4e53-9c7b-170e5cce3c92
+Exception in callback _chain_future.<locals>._set_state(<Future finished result={}>, <Future at 0x...returned dict>) at /home/software/anaconda3/2023.07/lib/python3.11/asyncio/futures.py:381
+handle: <Handle _chain_future.<locals>._set_state(<Future finished result={}>, <Future at 0x...returned dict>) at /home/software/anaconda3/2023.07/lib/python3.11/asyncio/futures.py:381>
+Traceback (most recent call last):
+  File "/home/software/anaconda3/2023.07/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/software/anaconda3/2023.07/lib/python3.11/asyncio/futures.py", line 383, in _set_state
+    _copy_future_state(other, future)
+  File "/home/software/anaconda3/2023.07/lib/python3.11/asyncio/futures.py", line 353, in _copy_future_state
+    assert not dest.done()
+AssertionError
+Exception in callback _chain_future.<locals>._set_state(<Future finished result={}>, <Future at 0x...returned dict>) at /home/software/anaconda3/2023.07/lib/python3.11/asyncio/futures.py:381
+handle: <Handle _chain_future.<locals>._set_state(<Future finished result={}>, <Future at 0x...returned dict>) at /home/software/anaconda3/2023.07/lib/python3.11/asyncio/futures.py:381>
+Traceback (most recent call last):
+  File "/home/software/anaconda3/2023.07/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/software/anaconda3/2023.07/lib/python3.11/asyncio/futures.py", line 383, in _set_state
+    _copy_future_state(other, future)
+  File "/home/software/anaconda3/2023.07/lib/python3.11/asyncio/futures.py", line 353, in _copy_future_state
+    assert not dest.done()
+AssertionError
+[I 2025-04-14 00:42:19.719 ServerApp] Connecting to kernel 4709682d-3b28-4e53-9c7b-170e5cce3c92.
+[I 2025-04-14 00:43:10.057 ServerApp] Saving file at /Notebooks/make_mainKG_TSMC-Copy1.ipynb
+[I 2025-04-14 00:43:47.392 ServerApp] Saving file at /Notebooks/make_mainKG_TSMC-Copy1.ipynb
+[I 2025-04-14 00:43:48.991 ServerApp] Saving file at /Notebooks/make_mainKG_TSMC-Copy1.ipynb
+[I 2025-04-14 00:43:52.459 ServerApp] Kernel interrupted: 4709682d-3b28-4e53-9c7b-170e5cce3c92
+[I 2025-04-14 00:44:01.033 ServerApp] Kernel restarted: 4709682d-3b28-4e53-9c7b-170e5cce3c92
+[I 2025-04-14 00:44:01.650 ServerApp] Connecting to kernel 4709682d-3b28-4e53-9c7b-170e5cce3c92.
+[W 2025-04-14 00:44:06.168 ServerApp] Nudge: attempt 10 on kernel 4709682d-3b28-4e53-9c7b-170e5cce3c92
+[W 2025-04-14 00:44:11.185 ServerApp] Nudge: attempt 20 on kernel 4709682d-3b28-4e53-9c7b-170e5cce3c92
+[W 2025-04-14 00:44:16.209 ServerApp] Nudge: attempt 30 on kernel 4709682d-3b28-4e53-9c7b-170e5cce3c92
+[W 2025-04-14 00:44:21.226 ServerApp] Nudge: attempt 40 on kernel 4709682d-3b28-4e53-9c7b-170e5cce3c92
+[W 2025-04-14 00:44:26.241 ServerApp] Nudge: attempt 50 on kernel 4709682d-3b28-4e53-9c7b-170e5cce3c92
+[W 2025-04-14 00:44:31.184 ServerApp] Got events for closed stream <zmq.eventloop.zmqstream.ZMQStream object at 0x2aaae6625290>
+[I 2025-04-14 00:45:08.219 ServerApp] Saving file at /Notebooks/make_mainKG_TSMC-Copy1.ipynb
+[I 2025-04-14 00:45:29.829 ServerApp] Saving file at /Notebooks/make_graphs_TSMC.py
+[I 2025-04-14 00:46:43.297 ServerApp] Kernel started: 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451
+[I 2025-04-14 00:47:26.797 ServerApp] Connecting to kernel 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451.
+[I 2025-04-14 00:56:46.160 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 00:56:53.588 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 00:56:56.252 ServerApp] Kernel interrupted: 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451
+[I 2025-04-14 00:57:00.351 ServerApp] Kernel restarted: 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451
+[I 2025-04-14 00:57:00.557 ServerApp] Starting buffering for 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451:39974c88-26af-45e4-abb3-826da4cf9f8e
+[I 2025-04-14 00:57:00.956 ServerApp] Connecting to kernel 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451.
+[I 2025-04-14 00:57:00.956 ServerApp] Restoring connection for 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451:39974c88-26af-45e4-abb3-826da4cf9f8e
+[W 2025-04-14 00:57:05.471 ServerApp] Nudge: attempt 10 on kernel 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451
+[W 2025-04-14 00:57:10.484 ServerApp] Nudge: attempt 20 on kernel 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451
+[W 2025-04-14 00:57:15.498 ServerApp] Nudge: attempt 30 on kernel 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451
+[W 2025-04-14 00:57:20.512 ServerApp] Nudge: attempt 40 on kernel 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451
+[W 2025-04-14 00:57:25.527 ServerApp] Nudge: attempt 50 on kernel 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451
+[I 2025-04-14 00:58:55.012 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 01:00:55.848 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 01:11:07.918 ServerApp] Starting buffering for 4709682d-3b28-4e53-9c7b-170e5cce3c92:e273e46d-fba5-4a94-ab1e-670c5b3046b4
+[I 2025-04-14 01:11:07.920 ServerApp] Starting buffering for 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451:39974c88-26af-45e4-abb3-826da4cf9f8e
+[I 2025-04-14 01:12:16.179 ServerApp] Connecting to kernel 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451.
+[I 2025-04-14 01:12:16.180 ServerApp] Restoring connection for 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451:39974c88-26af-45e4-abb3-826da4cf9f8e
+[I 2025-04-14 01:12:16.843 ServerApp] Connecting to kernel 4709682d-3b28-4e53-9c7b-170e5cce3c92.
+[I 2025-04-14 01:12:16.843 ServerApp] Restoring connection for 4709682d-3b28-4e53-9c7b-170e5cce3c92:e273e46d-fba5-4a94-ab1e-670c5b3046b4
+[I 2025-04-14 01:12:17.704 ServerApp] Starting buffering for 4709682d-3b28-4e53-9c7b-170e5cce3c92:e273e46d-fba5-4a94-ab1e-670c5b3046b4
+[I 2025-04-14 01:18:07.840 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 01:34:48.173 ServerApp] Starting buffering for 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451:39974c88-26af-45e4-abb3-826da4cf9f8e
+[I 2025-04-14 01:34:48.582 ServerApp] Connecting to kernel 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451.
+[I 2025-04-14 01:34:48.582 ServerApp] Restoring connection for 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451:39974c88-26af-45e4-abb3-826da4cf9f8e
+[I 2025-04-14 03:40:52.230 ServerApp] Kernel restarted: 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451
+[I 2025-04-14 03:40:52.450 ServerApp] Starting buffering for 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451:39974c88-26af-45e4-abb3-826da4cf9f8e
+[I 2025-04-14 03:40:52.857 ServerApp] Connecting to kernel 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451.
+[I 2025-04-14 03:40:52.857 ServerApp] Restoring connection for 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451:39974c88-26af-45e4-abb3-826da4cf9f8e
+[W 2025-04-14 03:40:57.376 ServerApp] Nudge: attempt 10 on kernel 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451
+[W 2025-04-14 03:41:02.395 ServerApp] Nudge: attempt 20 on kernel 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451
+[W 2025-04-14 03:41:07.411 ServerApp] Nudge: attempt 30 on kernel 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451
+[I 2025-04-14 03:41:09.936 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 03:41:16.865 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 03:43:19.215 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[W 2025-04-14 03:59:55.546 ServerApp] delete /Notebooks/tmp
+[E 2025-04-14 03:59:56.087 ServerApp] Uncaught exception DELETE /api/contents/Notebooks/tmp?1744617595277 (10.1.10.107)
+    HTTPServerRequest(protocol='http', host='localhost:8888', method='DELETE', uri='/api/contents/Notebooks/tmp?1744617595277', version='HTTP/1.1', remote_ip='10.1.10.107')
+    Traceback (most recent call last):
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/send2trash/plat_other.py", line 155, in find_ext_volume_fallback_trash
+        check_create(trash_dir)
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/send2trash/plat_other.py", line 95, in check_create
+        os.makedirs(dir, 0o700)
+      File "<frozen os>", line 225, in makedirs
+    PermissionError: [Errno 13] Permission denied: b'/nfs/home/.Trash-206682'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/tornado/web.py", line 1713, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_server/services/contents/handlers.py", line 282, in delete
+        await ensure_async(cm.delete(path))
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 182, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_server/services/contents/manager.py", line 882, in delete
+        await self.delete_file(path)
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_server/services/contents/filemanager.py", line 1008, in delete_file
+        send2trash(os_path)
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/send2trash/plat_other.py", line 210, in send2trash
+        dest_trash = find_ext_volume_trash(topdir)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/send2trash/plat_other.py", line 166, in find_ext_volume_trash
+        trash_dir = find_ext_volume_fallback_trash(volume_root)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/send2trash/plat_other.py", line 158, in find_ext_volume_fallback_trash
+        raise TrashPermissionError(e.filename)
+    send2trash.exceptions.TrashPermissionError: [Errno 13] Permission denied: b'/nfs/home/.Trash-206682'
+[W 2025-04-14 03:59:56.093 ServerApp] wrote error: 'Unhandled error'
+    Traceback (most recent call last):
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/send2trash/plat_other.py", line 155, in find_ext_volume_fallback_trash
+        check_create(trash_dir)
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/send2trash/plat_other.py", line 95, in check_create
+        os.makedirs(dir, 0o700)
+      File "<frozen os>", line 225, in makedirs
+    PermissionError: [Errno 13] Permission denied: b'/nfs/home/.Trash-206682'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/tornado/web.py", line 1713, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_server/services/contents/handlers.py", line 282, in delete
+        await ensure_async(cm.delete(path))
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 182, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_server/services/contents/manager.py", line 882, in delete
+        await self.delete_file(path)
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_server/services/contents/filemanager.py", line 1008, in delete_file
+        send2trash(os_path)
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/send2trash/plat_other.py", line 210, in send2trash
+        dest_trash = find_ext_volume_trash(topdir)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/send2trash/plat_other.py", line 166, in find_ext_volume_trash
+        trash_dir = find_ext_volume_fallback_trash(volume_root)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/send2trash/plat_other.py", line 158, in find_ext_volume_fallback_trash
+        raise TrashPermissionError(e.filename)
+    send2trash.exceptions.TrashPermissionError: [Errno 13] Permission denied: b'/nfs/home/.Trash-206682'
+[E 2025-04-14 03:59:56.095 ServerApp] {
+      "Host": "localhost:8888",
+      "Accept": "*/*",
+      "Referer": "http://localhost:8888/lab/tree/Notebooks/graphRAG_TSMC-Copy1.ipynb",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+    }
+[E 2025-04-14 03:59:56.095 ServerApp] 500 DELETE /api/contents/Notebooks/tmp?1744617595277 (7605790236cd40a9bd84fd89f537cfc4@10.1.10.107) 550.39ms referer=http://localhost:8888/lab/tree/Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 04:00:00.654 ServerApp] New terminal with automatic name: 2
+[I 2025-04-14 04:00:15.232 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[W 2025-04-14 04:02:02.437 ServerApp] delete /Notebooks/GRAPHDATA_TSMC_OUTPUT_v1/chroma/b9acee2f-dd11-4939-81cc-d1c334ac2fc3
+[W 2025-04-14 04:02:02.439 ServerApp] Skipping trash for /nfs/home/mkychsu/workspace/LLM/GraphReasoning_TSMC/Notebooks/GRAPHDATA_TSMC_OUTPUT_v1/chroma/b9acee2f-dd11-4939-81cc-d1c334ac2fc3, on different device to home directory
+[W 2025-04-14 04:02:02.440 ServerApp] 400 DELETE /api/contents/Notebooks/GRAPHDATA_TSMC_OUTPUT_v1/chroma/b9acee2f-dd11-4939-81cc-d1c334ac2fc3?1744617722175 (10.1.10.107): Directory /nfs/home/mkychsu/workspace/LLM/GraphReasoning_TSMC/Notebooks/GRAPHDATA_TSMC_OUTPUT_v1/chroma/b9acee2f-dd11-4939-81cc-d1c334ac2fc3 not empty
+[W 2025-04-14 04:02:02.440 ServerApp] wrote error: 'Directory /nfs/home/mkychsu/workspace/LLM/GraphReasoning_TSMC/Notebooks/GRAPHDATA_TSMC_OUTPUT_v1/chroma/b9acee2f-dd11-4939-81cc-d1c334ac2fc3 not empty'
+    Traceback (most recent call last):
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/tornado/web.py", line 1713, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_server/services/contents/handlers.py", line 282, in delete
+        await ensure_async(cm.delete(path))
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 182, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_server/services/contents/manager.py", line 882, in delete
+        await self.delete_file(path)
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_server/services/contents/filemanager.py", line 1019, in delete_file
+        raise web.HTTPError(400, "Directory %s not empty" % os_path)
+    tornado.web.HTTPError: HTTP 400: Bad Request (Directory /nfs/home/mkychsu/workspace/LLM/GraphReasoning_TSMC/Notebooks/GRAPHDATA_TSMC_OUTPUT_v1/chroma/b9acee2f-dd11-4939-81cc-d1c334ac2fc3 not empty)
+[W 2025-04-14 04:02:02.444 ServerApp] 400 DELETE /api/contents/Notebooks/GRAPHDATA_TSMC_OUTPUT_v1/chroma/b9acee2f-dd11-4939-81cc-d1c334ac2fc3?1744617722175 (7605790236cd40a9bd84fd89f537cfc4@10.1.10.107) 8.26ms referer=http://localhost:8888/lab/tree/Notebooks/graphRAG_TSMC-Copy1.ipynb
+[W 2025-04-14 04:02:02.626 ServerApp] delete /Notebooks/GRAPHDATA_TSMC_OUTPUT_v1/chroma/chroma.sqlite3
+[W 2025-04-14 04:02:02.628 ServerApp] Skipping trash for /nfs/home/mkychsu/workspace/LLM/GraphReasoning_TSMC/Notebooks/GRAPHDATA_TSMC_OUTPUT_v1/chroma/chroma.sqlite3, on different device to home directory
+[W 2025-04-14 04:02:02.749 ServerApp] delete /Notebooks/GRAPHDATA_TSMC_OUTPUT_v1/chroma/chroma.sqlite3-journal
+[W 2025-04-14 04:02:02.750 ServerApp] Skipping trash for /nfs/home/mkychsu/workspace/LLM/GraphReasoning_TSMC/Notebooks/GRAPHDATA_TSMC_OUTPUT_v1/chroma/chroma.sqlite3-journal, on different device to home directory
+[W 2025-04-14 04:03:09.835 ServerApp] 404 GET /api/contents/GRAPHDATA_TSMC_OUTPUT/community_data_70b.pkl?content=0&hash=0&1744617789291 (10.1.10.107): No such file or directory: GRAPHDATA_TSMC_OUTPUT/community_data_70b.pkl
+[W 2025-04-14 04:03:09.835 ServerApp] wrote error: 'No such file or directory: GRAPHDATA_TSMC_OUTPUT/community_data_70b.pkl'
+    Traceback (most recent call last):
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/tornado/web.py", line 1713, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_server/services/contents/handlers.py", line 121, in get
+        model = await ensure_async(
+                ^^^^^^^^^^^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 182, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/home/software/anaconda3/2023.07/lib/python3.11/site-packages/jupyter_server/services/contents/filemanager.py", line 877, in get
+        raise web.HTTPError(404, "No such file or directory: %s" % path)
+    tornado.web.HTTPError: HTTP 404: Not Found (No such file or directory: GRAPHDATA_TSMC_OUTPUT/community_data_70b.pkl)
+[W 2025-04-14 04:03:09.837 ServerApp] 404 GET /api/contents/GRAPHDATA_TSMC_OUTPUT/community_data_70b.pkl?content=0&hash=0&1744617789291 (7605790236cd40a9bd84fd89f537cfc4@10.1.10.107) 72.04ms referer=http://localhost:8888/lab/tree/Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 04:03:10.498 ServerApp] Kernel started: 5c06957c-245a-4b84-9c74-f8630f1852f7
+[I 2025-04-14 04:03:18.051 ServerApp] Connecting to kernel 5c06957c-245a-4b84-9c74-f8630f1852f7.
+[I 2025-04-14 04:04:02.694 ServerApp] Kernel restarted: 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451
+[I 2025-04-14 04:04:02.898 ServerApp] Starting buffering for 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451:39974c88-26af-45e4-abb3-826da4cf9f8e
+[I 2025-04-14 04:04:03.304 ServerApp] Connecting to kernel 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451.
+[I 2025-04-14 04:04:03.304 ServerApp] Restoring connection for 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451:39974c88-26af-45e4-abb3-826da4cf9f8e
+[I 2025-04-14 04:04:23.773 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 04:04:28.274 ServerApp] Kernel restarted: 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451
+[I 2025-04-14 04:04:28.480 ServerApp] Starting buffering for 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451:39974c88-26af-45e4-abb3-826da4cf9f8e
+[I 2025-04-14 04:04:28.674 ServerApp] Connecting to kernel 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451.
+[I 2025-04-14 04:04:28.674 ServerApp] Restoring connection for 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451:39974c88-26af-45e4-abb3-826da4cf9f8e
+[I 2025-04-14 04:05:10.184 ServerApp] Saving file at /Notebooks/make_mainKG_TSMC.ipynb
+[I 2025-04-14 04:06:26.041 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 04:07:56.528 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 04:15:57.770 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 04:17:58.907 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 04:20:01.039 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 04:22:03.058 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 04:24:05.051 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 04:26:07.061 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 04:28:09.051 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 04:30:11.046 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 04:32:13.032 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 04:34:15.080 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 04:36:17.064 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 04:38:19.228 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 04:40:21.049 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 04:42:34.115 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 04:44:49.276 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 04:47:17.043 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 04:49:53.305 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 04:52:33.695 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 04:55:27.664 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 04:58:21.749 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 05:01:17.454 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 05:04:31.871 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 05:08:01.889 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 05:11:43.047 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 05:15:25.344 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 05:19:25.846 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 05:23:29.592 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 05:27:41.072 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 05:32:09.581 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 05:36:53.745 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 05:41:50.745 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 05:47:08.868 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 05:52:41.958 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 05:58:36.452 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 06:04:37.859 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 06:08:53.057 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 06:10:59.053 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 06:13:05.222 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 06:15:11.550 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 06:17:17.288 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 06:19:23.636 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 06:21:29.402 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 06:23:35.433 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 06:25:41.472 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 06:28:22.153 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 06:35:46.953 ServerApp] Saving file at /Notebooks/graphRAG_TSMC-Copy1.ipynb
+[I 2025-04-14 06:50:02.268 ServerApp] Starting buffering for 5c06957c-245a-4b84-9c74-f8630f1852f7:9ef9fbe9-7681-42ac-875c-f31a07e686d3
+[I 2025-04-14 06:50:02.270 ServerApp] Starting buffering for 3a40e9a5-e8a7-4a8e-9d86-540ff18b8451:39974c88-26af-45e4-abb3-826da4cf9f8e
+slurmstepd: error: *** JOB 65099117 ON node1228 CANCELLED AT 2025-04-14T11:23:30 ***

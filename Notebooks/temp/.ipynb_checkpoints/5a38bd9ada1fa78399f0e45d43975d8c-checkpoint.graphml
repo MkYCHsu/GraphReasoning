@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d2" for="edge" attr.name="chunk_id" attr.type="string" />
+  <key id="d1" for="edge" attr.name="relation" attr.type="string" />
+  <key id="d0" for="node" attr.name="type" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="Dynamic Cycle Time Prediction">
+      <data key="d0">Concept</data>
+    </node>
+    <node id="Semiconductor Manufacturing Systems">
+      <data key="d0">System</data>
+    </node>
+    <node id="Finite Capacity Projection Engines">
+      <data key="d0">Tool</data>
+    </node>
+    <node id="Simulation">
+      <data key="d0">Method</data>
+    </node>
+    <node id="Variability">
+      <data key="d0">Concept</data>
+    </node>
+    <node id="Clearing Functions">
+      <data key="d0">Model</data>
+    </node>
+    <node id="Queuing Theory">
+      <data key="d0">Theory</data>
+    </node>
+    <node id="Product Mix Changes">
+      <data key="d0">Source of Variability</data>
+    </node>
+    <node id="Lot Priorities">
+      <data key="d0">Source of Variability</data>
+    </node>
+    <node id="Toolset Behavior">
+      <data key="d0">Source of Variability</data>
+    </node>
+    <node id="Intrinsic Variability">
+      <data key="d0">Concept</data>
+    </node>
+    <edge source="Dynamic Cycle Time Prediction" target="Semiconductor Manufacturing Systems">
+      <data key="d1">Applies to</data>
+      <data key="d2">5a38bd9ada1fa78399f0e45d43975d8c</data>
+    </edge>
+    <edge source="Finite Capacity Projection Engines" target="Dynamic Cycle Time Prediction">
+      <data key="d1">Requires improvement</data>
+      <data key="d2">5a38bd9ada1fa78399f0e45d43975d8c</data>
+    </edge>
+    <edge source="Simulation" target="Dynamic Cycle Time Prediction">
+      <data key="d1">Used for</data>
+      <data key="d2">5a38bd9ada1fa78399f0e45d43975d8c</data>
+    </edge>
+    <edge source="Variability" target="Dynamic Cycle Time Prediction">
+      <data key="d1">Affects</data>
+      <data key="d2">5a38bd9ada1fa78399f0e45d43975d8c</data>
+    </edge>
+    <edge source="Clearing Functions" target="Dynamic Cycle Time Prediction">
+      <data key="d1">Based on</data>
+      <data key="d2">5a38bd9ada1fa78399f0e45d43975d8c</data>
+    </edge>
+    <edge source="Queuing Theory" target="Dynamic Cycle Time Prediction">
+      <data key="d1">Contrasted with</data>
+      <data key="d2">5a38bd9ada1fa78399f0e45d43975d8c</data>
+    </edge>
+    <edge source="Product Mix Changes" target="Variability">
+      <data key="d1">Contributes to</data>
+      <data key="d2">5a38bd9ada1fa78399f0e45d43975d8c</data>
+    </edge>
+    <edge source="Lot Priorities" target="Variability">
+      <data key="d1">Contributes to</data>
+      <data key="d2">5a38bd9ada1fa78399f0e45d43975d8c</data>
+    </edge>
+    <edge source="Toolset Behavior" target="Variability">
+      <data key="d1">Contributes to</data>
+      <data key="d2">5a38bd9ada1fa78399f0e45d43975d8c</data>
+    </edge>
+    <edge source="Intrinsic Variability" target="Variability">
+      <data key="d1">Type of</data>
+      <data key="d2">5a38bd9ada1fa78399f0e45d43975d8c</data>
+    </edge>
+  </graph>
+</graphml>

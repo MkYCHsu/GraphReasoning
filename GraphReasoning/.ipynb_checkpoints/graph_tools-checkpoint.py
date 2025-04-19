@@ -30,19 +30,52 @@ from langchain.document_loaders import (
     DirectoryLoader
 )
 from langchain.text_splitter import RecursiveCharacterTextSplitter
+from GraphReasoning.utils import *
 
 logging.set_verbosity_error()
 
 palette = "hls"
-  
+
 # Function to generate embeddings
-def generate_node_embeddings(graph, tokenizer, model):
-    embeddings = {}
-    for node in tqdm(graph.nodes()):
-        inputs = tokenizer(str(node), return_tensors="pt")
+def generate_node_embeddings(nodes, tokenizer, model, embeddings = {}):
+    # embeddings = {}
+    if type(nodes) == str: # one node
+        inputs = tokenizer(nodes,
+        padding=True,
+        truncation=True,
+        return_tensors="pt",
+        ).to('cuda')
         outputs = model(**inputs)
-        embeddings[node] = outputs.last_hidden_state.mean(dim=1).detach().numpy()
+        try:
+            embeddings = outputs.last_hidden_state.mean(dim=1).detach().numpy()
+        except:
+            embeddings = outputs.hidden_states[-1].mean(dim=1).detach().to(torch.float).cpu().numpy()
+    else:
+        for node in tqdm(nodes):
+            inputs = tokenizer(str(node),
+            padding=True,
+            truncation=True,
+            return_tensors="pt"
+            ).to('cuda')
+            outputs = model(**inputs)
+            try:
+                embeddings[node] = outputs.last_hidden_state.mean(dim=1).detach().numpy()
+            except:
+                embeddings[node] = outputs.hidden_states[-1].mean(dim=1).detach().to(torch.float).cpu().numpy()
+ 
     return embeddings
+
+# def regenerate_node_embeddings(graph, nodes_to_recalculate, tokenizer, model):  deprecated -> use generate_node_embeddings
+#     """
+#     Regenerate embeddings for specific nodes.
+#     """
+#     new_embeddings = {}
+#     for node in tqdm(nodes_to_recalculate):
+#         inputs = tokenizer(node, return_tensors="pt")
+#         outputs = model(**inputs)
+#         new_embeddings[node] = outputs.last_hidden_state.mean(dim=1).detach().numpy()
+#     return new_embeddings
+
 
 import pickle
 
@@ -55,9 +88,9 @@ def load_embeddings(file_path):
     return embeddings
  
 def find_best_fitting_node(keyword, embeddings, tokenizer, model):
-    inputs = tokenizer(keyword, return_tensors="pt")
-    outputs = model(**inputs)
-    keyword_embedding = outputs.last_hidden_state.mean(dim=1).detach().numpy().flatten()  # Flatten to ensure 1-D
+ 
+    keyword_embedding = generate_node_embeddings(keyword, tokenizer, model).flatten()
+    # keyword_embedding = outputs.last_hidden_state.mean(dim=1).detach().numpy().flatten()  # Flatten to ensure 1-D
     
     # Calculate cosine similarity and find the best match
     best_node = None
@@ -72,11 +105,10 @@ def find_best_fitting_node(keyword, embeddings, tokenizer, model):
             
     return best_node, best_similarity
 
-def find_best_fitting_node_list(keyword, embeddings, tokenizer, model, N_samples=5):
-    inputs = tokenizer(keyword, return_tensors="pt")
-    outputs = model(**inputs)
-    keyword_embedding = outputs.last_hidden_state.mean(dim=1).detach().numpy().flatten()  # Flatten to ensure 1-D
-    
+
+def find_best_fitting_node_list(keyword, embeddings, tokenizer, model, N_samples=5, similarity_threshold=0.9):
+    keyword_embedding = generate_node_embeddings(keyword, tokenizer, model).flatten()
+
     # Initialize a min-heap
     min_heap = []
     heapq.heapify(min_heap)
@@ -85,7 +117,7 @@ def find_best_fitting_node_list(keyword, embeddings, tokenizer, model, N_samples
         # Ensure embedding is 1-D
         embedding = embedding.flatten()  # Flatten to ensure 1-D
         similarity = 1 - cosine(keyword_embedding, embedding)  # Cosine similarity
-        
+
         # If the heap is smaller than N_samples, just add the current node and similarity
         if len(min_heap) < N_samples:
             heapq.heappush(min_heap, (similarity, node))
@@ -98,6 +130,10 @@ def find_best_fitting_node_list(keyword, embeddings, tokenizer, model, N_samples
     # Convert the min-heap to a sorted list in descending order of similarity
     best_nodes = sorted(min_heap, key=lambda x: -x[0])
     
+    for (similarity, node) in best_nodes[1:]: 
+        if similarity < similarity_threshold:
+            best_nodes.remove((similarity, node))
+
     # Return a list of tuples (node, similarity)
     return [(node, similarity) for similarity, node in best_nodes]
 
@@ -528,8 +564,9 @@ def graph_Louvain (G,
     # Assuming G is your graph and data_dir is defined
     
     # Compute the best partition using the Louvain algorithm
-    partition = community_louvain.best_partition(G)
-    
+    G_undir = G.to_undirected()
+    partition = community_louvain.best_partition(G_undir)
+
     # Organize nodes into communities based on the Louvain partition
     communities = {}
     for node, comm_id in partition.items():
@@ -590,16 +627,17 @@ def update_node_embeddings(embeddings, graph_new, tokenizer, model, remove_embed
     # Create a deep copy of the original embeddings
     embeddings_updated = copy.deepcopy(embeddings)
     
-    # Iterate through new graph nodes
-    for node in tqdm(graph_new.nodes()):
-        # Check if the node already has an embedding in the copied dictionary
-        if node not in embeddings_updated:
-            if verbatim:
-                print(f"Generating embedding for new node: {node}")
-            inputs = tokenizer(node, return_tensors="pt")
-            outputs = model(**inputs)
-            # Update the copied embeddings dictionary with the new node's embedding
-            embeddings_updated[node] = outputs.last_hidden_state.mean(dim=1).detach().numpy()
+    embeddings_updated = generate_node_embeddings(graph_new.nodes(), tokenizer, model, embeddings_updated)
+    # # Iterate through new graph nodes
+    # for node in tqdm(graph_new.nodes()):
+    #     # Check if the node already has an embedding in the copied dictionary
+    #     if node not in embeddings_updated:
+    #         if verbatim:
+    #             print(f"Generating embedding for new node: {node}")
+    #         inputs = tokenizer(node, return_tensors="pt")
+    #         outputs = model(**inputs)
+    #         # Update the copied embeddings dictionary with the new node's embedding
+    #         embeddings_updated[node] = outputs.last_hidden_state.mean(dim=1).detach().numpy()
     
     if remove_embeddings_for_nodes_no_longer_in_graph:
         # Remove embeddings for nodes that no longer exist in the graph from the copied dictionary
@@ -616,8 +654,11 @@ def remove_small_fragents (G_new, size_threshold):
     if size_threshold >0:
         
         # Find all connected components, returned as sets of nodes
-        components = list(nx.connected_components(G_new))
-        
+        try:
+            components = list(nx.connected_components(G_new))
+        except:
+            print("using weakly connected components...")
+            components = list(nx.weakly_connected_components(G_new))
         # Iterate through components and remove those smaller than the threshold
         for component in components:
             if len(component) < size_threshold:
@@ -647,6 +688,10 @@ def simplify_graph_simple(graph_, node_embeddings, tokenizer, model, similarity_
                   ):
     graph = graph_.copy()
     nodes = list(node_embeddings.keys())
+    for node in nodes:
+        if '.png' in node:
+            nodes.remove(node)
+            
     embeddings_matrix = np.array([node_embeddings[node].flatten() for node in nodes])
 
     similarity_matrix = cosine_similarity(embeddings_matrix)
@@ -674,9 +719,9 @@ def simplify_graph_simple(graph_, node_embeddings, tokenizer, model, similarity_
             node_mapping[node_to_merge] = node_to_keep
 
     new_graph = nx.relabel_nodes(graph, node_mapping, copy=True)
-
+    new_graph.subgraph(nodes_to_recalculate)
     # Recalculate embeddings for nodes that have been merged or renamed
-    recalculated_embeddings = regenerate_node_embeddings(new_graph, nodes_to_recalculate, tokenizer, model)
+    recalculated_embeddings = generate_node_embeddings(new_graph.nodes(), tokenizer, model)
     
     # Update the embeddings dictionary with the recalculated embeddings
     updated_embeddings = {**node_embeddings, **recalculated_embeddings}
@@ -706,22 +751,11 @@ import networkx as nx
 from sklearn.metrics.pairwise import cosine_similarity
 from tqdm import tqdm
 
-def simplify_node_name_with_llm(node_name, max_tokens, temperature):
-    # This is a placeholder for the actual function that uses a language model
-    # to generate a simplified or more descriptive node name.
-    return node_name  
+# def simplify_node_name_with_llm(node_name, max_tokens, temperature):
+#     # This is a placeholder for the actual function that uses a language model
+#     # to generate a simplified or more descriptive node name.
+#     return node_name  
 
-def regenerate_node_embeddings(graph, nodes_to_recalculate, tokenizer, model):
-    """
-    Regenerate embeddings for specific nodes.
-    """
-    new_embeddings = {}
-    for node in tqdm(nodes_to_recalculate):
-        inputs = tokenizer(node, return_tensors="pt")
-        outputs = model(**inputs)
-        new_embeddings[node] = outputs.last_hidden_state.mean(dim=1).detach().numpy()
-    return new_embeddings
-    
 def simplify_graph(graph_, node_embeddings, tokenizer, model, similarity_threshold=0.9, use_llm=False,
                    data_dir_output='./', graph_root='simple_graph', verbatim=False, max_tokens=2048, 
                    temperature=0.3, generate=None):
@@ -770,8 +804,9 @@ def simplify_graph(graph_, node_embeddings, tokenizer, model, similarity_thresho
     new_graph = nx.relabel_nodes(graph, node_mapping, copy=True)
     if verbatim:
         print ("New graph generated, nodes relabled. ")
+    new_graph.subgraph(nodes_to_recalculate)
     # Recalculate embeddings for nodes that have been merged or renamed.
-    recalculated_embeddings = regenerate_node_embeddings(new_graph, nodes_to_recalculate, tokenizer, model)
+    recalculated_embeddings = generate_node_embeddings(new_graph.nodes(), tokenizer, model)
     if verbatim:
         print ("Relcaulated embeddings... ")
     # Update the embeddings dictionary with the recalculated embeddings.
@@ -1094,16 +1129,7 @@ from tqdm import tqdm
 import networkx as nx
 from sklearn.metrics.pairwise import cosine_similarity
 
-def regenerate_node_embeddings(graph, nodes_to_recalculate, tokenizer, model):
-    """
-    Regenerate embeddings for specific nodes.
-    """
-    new_embeddings = {}
-    for node in tqdm(nodes_to_recalculate):
-        inputs = tokenizer(node, return_tensors="pt")
-        outputs = model(**inputs)
-        new_embeddings[node] = outputs.last_hidden_state.mean(dim=1).detach().numpy()
-    return new_embeddings
+
     
 def simplify_graph_with_text(graph_, node_embeddings, tokenizer, model, similarity_threshold=0.9, use_llm=False,
                    data_dir_output='./', graph_root='simple_graph', verbatim=False, max_tokens=2048, 
@@ -1157,7 +1183,8 @@ def simplify_graph_with_text(graph_, node_embeddings, tokenizer, model, similari
     if verbatim:
         print ("New graph generated, nodes relabled. ")
     # Recalculate embeddings for nodes that have been merged or renamed.
-    recalculated_embeddings = regenerate_node_embeddings(new_graph, nodes_to_recalculate, tokenizer, model)
+    new_graph=graph.subgraph(nodes_to_recalculate)
+    recalculated_embeddings = generate_node_embeddings(new_graph.nodes(), tokenizer, model)
     if verbatim:
         print ("Relcaulated embeddings... ")
     # Update the embeddings dictionary with the recalculated embeddings.
@@ -1179,3 +1206,154 @@ def simplify_graph_with_text(graph_, node_embeddings, tokenizer, model, similari
         print(f"Graph simplified and saved to {graph_path}")
 
     return new_graph, updated_embeddings
+
+
+def find_shortest_path_subgraph_between_nodes(graph, nodes):
+    subgraph=set()
+    found=0
+    all_path=0
+    for i in range(len(nodes)):
+        for j in range(i+1, len(nodes)):
+            all_path+=1
+            try:
+                path = nx.shortest_path(graph, nodes[i], nodes[j])
+                print(f'Path between {nodes[i]}, {nodes[j]} found as {path}') 
+                subgraph.update(path)
+                found+=1
+            except:
+                print(f'No path between {nodes[i]}, {nodes[j]} found')
+    print(f'Path found ratio = {found/all_path}')
+    return graph.subgraph(list(subgraph))
+
+def collect_entities(graph):
+    nodes = list(graph.nodes)
+    edges = list(graph.out_edges(data=True))
+    
+    try:
+        relationships = [ f"{edge[0]} {edge[2]['title']} {edge[1]}." for edge in edges]
+    except:
+        relationships = [ f"{edge[0]} {edge[2][ list(edges[0][2].keys())[0] ]} {edge[1]}." for edge in edges]
+
+    return " ".join(relationships)
+
+def detect_communities(graph):    
+    communities = community_louvain.best_partition(graph)
+    return communities
+
+def summarize_communities(graph, communities, generate):
+    community_summaries = []
+    for index, community in tqdm(enumerate(communities)):
+        description = collect_entities(graph.subgraph(community))
+#         nodes = list(subgraph.nodes)
+#         edges = list(subgraph.out_edges(data=True))
+#         description = "Relationships: "
+#         relationships = []
+#         for edge in edges:
+#             relationships.append(
+#                 f"{edge[0]} {edge[2]['title']} {edge[1]}.")
+            
+#         description += " ".join(relationships)
+
+        response = generate(system_prompt= "You are an expert in multiple engineering fields. Summarize the following relationships and make a professional report.",
+                                       prompt= description)
+
+        print(description)
+        summary = response.strip()
+        community_summaries.append(summary)
+    return community_summaries
+
+# #--- this is not done yet
+# def graph_rag_pipeline(documents, query, chunk_size=600, overlap_size=100):
+#     # chunks = split_documents_into_chunks(documents, chunk_size, overlap_size)
+#     # elements = extract_elements_from_chunks(chunks)
+#     # summaries = summarize_elements(elements)
+#     # graph = build_graph_from_summaries(summaries)
+    
+#     communities = detect_communities(graph)
+#     if verbatim:
+#         print("Number of Communities = ", len(communities))
+#     community_summaries = summarize_communities(communities, graph, generate)
+#     final_answer = generate_answers_from_communities(community_summaries, generate, query)
+#     return final_answer
+
+EXTRACT_PROMPT = '''
+Extract as many meaningful keywords as possible into a JSON list for the given question. See the following:
+Examples:
+Context: ```What is the capital of the united states?```
+'   {\n'
+'  "keywords": ["captital", "the united states"] '
+'   }\n'
+'Context: ```What is the technology Taiwan is famous for?```'
+'   {\n'
+'  "keywords": ["technology, Taiwan, famous, semiconductor"] '
+'   }\n'
+'Context: ```What is cvd uniformity and etching uniformity?```'
+'   {\n'
+'  "keywords": ["cvd", "etching", "uniformity"] '
+'   }\n'
+'''
+
+def extract_keywords_to_nodes(question, generate, node_embeddings, embedding_tokenizer, embedding_model, N_samples=5, similarity_threshold=0.9):
+    response = generate(system_prompt=EXTRACT_PROMPT,
+                        prompt=f'Context: ```{question}```')
+    # keywords = response.replace('[',' ').replace(']',' ').replace(',',' ').split()
+    # print(f'Extracted {keywords} in {question}')
+    
+    response = extract(response)
+    keywords = json.loads(response)
+    print(f'Extract keywords: {keywords}')
+    elements = [ np.array(find_best_fitting_node_list(keyword, node_embeddings, embedding_tokenizer, embedding_model, N_samples=N_samples, similarity_threshold=similarity_threshold))[:, 0] for keyword in keywords]
+
+    nodes = []
+    for element in elements:
+        nodes += list(element)
+    print(f'Found {nodes} in node_embeddings')
+
+    return nodes
+
+def local_search(question, generate, graph, node_embeddings, embedding_tokenizer, embedding_model, N_samples=5, similarity_threshold=0.9):
+    
+    nodes = extract_keywords_to_nodes(question, generate, node_embeddings, embedding_tokenizer, embedding_model, N_samples, similarity_threshold)
+    #------ local search on the subgraph from shortest path search
+
+    subgraph = find_shortest_path_subgraph_between_nodes(graph.to_directed(), nodes)
+    information = collect_entities(subgraph)
+
+    response = generate(system_prompt= "Answer the query detailedly based on the collected information and the provided current thought. If you think the report doesn't help, you should just keep the current thought.",
+                               prompt=f"Based on the following... Report: {information}. I can give you the detailed answer to the query: {question}")
+    #--- validation ---
+    reason = generate(system_prompt= "You are a senior professional in the field. Answer yes or no whether the answer is good enough for the question. You only provide reason when you think it is not answering the question.",
+                               prompt=f"Question: {question} Answer: {response}")
+    if 'yes' in reason.lower():
+        return response
+    else:
+        return reason
+
+def global_search(question, generate, graph, communities, community_summaries, node_embeddings, embedding_tokenizer, embedding_model, N_samples=5, similarity_threshold=0.9):
+    
+    nodes = extract_keywords_to_nodes(question, generate, node_embeddings, embedding_tokenizer, embedding_model, N_samples, similarity_threshold)
+
+    #------ global search on the subgraph from communities
+    subgraph = find_shortest_path_subgraph_between_nodes(graph.to_directed(), nodes)
+    information = collect_entities(subgraph)
+
+    target_community=set()
+    for i, community in enumerate(communities):
+        for node in nodes:
+            if node in community:
+                target_community.add(i)
+    print(target_community)
+
+    last_response=''
+    # all_responses=[]    
+    for i, summary in enumerate(np.array(community_summaries)[list(target_community)]):
+        response = generate(system_prompt= "Answer the query detailedly based on the collected information and the provided current thought. If you think the report doesn't help, you should just keep the current thought.",
+                                   prompt=f"Based on the following... Report:{summary}. Information: {information}. Current thought: {last_response}. I can give you the detailed answer to the query: {question}")
+    #     all_responses.append(response)
+        last_response=response
+        
+    # response = generate(system_prompt= "Answer the query detailedly based on the collected information and the provided current thought.",
+    #                                prompt=f"Based on the following... Previous thoughts:{' '.join(all_responses)}. Information: {information}. I can give you the detailed answer to the query: {question}")
+     
+    
+    return response

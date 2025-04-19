@@ -6,9 +6,9 @@ with open('README.md', 'r', encoding='utf-8') as f:
 
 setup(
     name='GraphReasoning',
-    version='0.2.0',
-    author='Markus J. Buehler',
-    author_email='mbuehler@mit.edu',
+    version='0.3.0',
+    author='Markus J. Buehler, Yu-Chuan Hsu',
+    author_email='mbuehler@mit.edu, mkychsu@mit.edu',
     packages=find_packages(),
     install_requires=[
         'numpy',
@@ -27,6 +27,8 @@ setup(
         'torchaudio',
         'huggingface_hub',
         'langchain',
+        'langchain-community',
+        'openai',
         'pyvis',
         'yachalk',
         'pytesseract',

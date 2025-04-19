@@ -10,31 +10,13 @@ import seaborn as sns
 import community as community_louvain
 import networkx as nx
 import pandas as pd
-from IPython.display import display, Markdown
-import markdown2
-import pdfkit
-import time
-import uuid
 import os
-from pathlib import Path
 import random
 from pyvis.network import Network
 from tqdm.notebook import tqdm
-from transformers import AutoTokenizer, AutoModel
-from transformers import logging
-from langchain.document_loaders import (
-    PyPDFLoader,
-    UnstructuredPDFLoader,
-    PyPDFium2Loader,
-    PyPDFDirectoryLoader,
-    DirectoryLoader
-)
-from langchain.text_splitter import RecursiveCharacterTextSplitter
 from GraphReasoning.utils import *
-
-logging.set_verbosity_error()
-
 palette = "hls"
+
 
 # Function to generate embeddings
 def generate_node_embeddings(nodes, tokenizer, model, embeddings = {}):
@@ -688,6 +670,9 @@ def simplify_graph_simple(graph_, node_embeddings, tokenizer, model, similarity_
                   ):
     graph = graph_.copy()
     nodes = list(node_embeddings.keys())
+    for node in nodes:
+        if '.png' in node:
+            nodes.remove(node)
     embeddings_matrix = np.array([node_embeddings[node].flatten() for node in nodes])
 
     similarity_matrix = cosine_similarity(embeddings_matrix)
@@ -762,6 +747,19 @@ def simplify_graph(graph_, node_embeddings, tokenizer, model, similarity_thresho
     graph = graph_.copy()
     
     nodes = list(node_embeddings.keys())
+    nodes_png = []
+    
+    for node in nodes:
+        if '.png' in node:
+            nodes_png.append(node)
+            
+    for node_ in nodes_png:
+        nodes.remove(node_)
+
+    for node in nodes:
+        if '.png' in node:
+            print(node)
+
     embeddings_matrix = np.array([node_embeddings[node].flatten() for node in nodes])
 
     similarity_matrix = cosine_similarity(embeddings_matrix)
@@ -1138,6 +1136,9 @@ def simplify_graph_with_text(graph_, node_embeddings, tokenizer, model, similari
     graph = deepcopy(graph_)
     
     nodes = list(node_embeddings.keys())
+    for node in nodes:
+        if '.png' in node:
+            nodes.remove(node)
     embeddings_matrix = np.array([node_embeddings[node].flatten() for node in nodes])
 
     similarity_matrix = cosine_similarity(embeddings_matrix)

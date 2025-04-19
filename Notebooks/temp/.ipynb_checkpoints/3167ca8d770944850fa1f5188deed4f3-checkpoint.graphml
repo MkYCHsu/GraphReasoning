@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d2" for="edge" attr.name="chunk_id" attr.type="string" />
+  <key id="d1" for="edge" attr.name="relation" attr.type="string" />
+  <key id="d0" for="node" attr.name="type" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="Semiconductor Manufacturing">
+      <data key="d0">Process</data>
+    </node>
+    <node id="Reentrant Process Flows">
+      <data key="d0">Characteristic</data>
+    </node>
+    <node id="Microchips">
+      <data key="d0">Product</data>
+    </node>
+    <node id="Metals">
+      <data key="d0">Material</data>
+    </node>
+    <node id="Insulators">
+      <data key="d0">Material</data>
+    </node>
+    <node id="Semiconductor Materials">
+      <data key="d0">Material</data>
+    </node>
+    <node id="Silicon Substrates">
+      <data key="d0">Material</data>
+    </node>
+    <node id="Wafers">
+      <data key="d0">Material</data>
+    </node>
+    <node id="Machine Cost and Utilization">
+      <data key="d0">Characteristic</data>
+    </node>
+    <node id="Toolsets">
+      <data key="d0">Machine</data>
+    </node>
+    <node id="High Volume Low Mix Manufacturing">
+      <data key="d0">Characteristic</data>
+    </node>
+    <node id="Memory Fabs">
+      <data key="d0">Facility</data>
+    </node>
+    <node id="Batching and Resource Sharing">
+      <data key="d0">Characteristic</data>
+    </node>
+    <node id="Deposition Furnaces">
+      <data key="d0">Machine</data>
+    </node>
+    <node id="Diffusion Furnaces">
+      <data key="d0">Machine</data>
+    </node>
+    <node id="Cluster Tools">
+      <data key="d0">Machine</data>
+    </node>
+    <node id="Legacy Manufacturing Units">
+      <data key="d0">Characteristic</data>
+    </node>
+    <node id="Machines" />
+    <edge source="Semiconductor Manufacturing" target="Reentrant Process Flows">
+      <data key="d1">characterized by</data>
+      <data key="d2">3167ca8d770944850fa1f5188deed4f3</data>
+    </edge>
+    <edge source="Semiconductor Manufacturing" target="Machine Cost and Utilization">
+      <data key="d1">characterized by</data>
+      <data key="d2">3167ca8d770944850fa1f5188deed4f3</data>
+    </edge>
+    <edge source="Semiconductor Manufacturing" target="High Volume Low Mix Manufacturing">
+      <data key="d1">operates in</data>
+      <data key="d2">3167ca8d770944850fa1f5188deed4f3</data>
+    </edge>
+    <edge source="Semiconductor Manufacturing" target="Batching and Resource Sharing">
+      <data key="d1">characterized by</data>
+      <data key="d2">3167ca8d770944850fa1f5188deed4f3</data>
+    </edge>
+    <edge source="Semiconductor Manufacturing" target="Legacy Manufacturing Units">
+      <data key="d1">still uses</data>
+      <data key="d2">3167ca8d770944850fa1f5188deed4f3</data>
+    </edge>
+    <edge source="Reentrant Process Flows" target="Microchips">
+      <data key="d1">produce</data>
+      <data key="d2">3167ca8d770944850fa1f5188deed4f3</data>
+    </edge>
+    <edge source="Microchips" target="Metals">
+      <data key="d1">composed of</data>
+      <data key="d2">3167ca8d770944850fa1f5188deed4f3</data>
+    </edge>
+    <edge source="Microchips" target="Insulators">
+      <data key="d1">composed of</data>
+      <data key="d2">3167ca8d770944850fa1f5188deed4f3</data>
+    </edge>
+    <edge source="Microchips" target="Semiconductor Materials">
+      <data key="d1">composed of</data>
+      <data key="d2">3167ca8d770944850fa1f5188deed4f3</data>
+    </edge>
+    <edge source="Microchips" target="Silicon Substrates">
+      <data key="d1">stacked on</data>
+      <data key="d2">3167ca8d770944850fa1f5188deed4f3</data>
+    </edge>
+    <edge source="Silicon Substrates" target="Wafers">
+      <data key="d1">also known as</data>
+      <data key="d2">3167ca8d770944850fa1f5188deed4f3</data>
+    </edge>
+    <edge source="Machine Cost and Utilization" target="Toolsets">
+      <data key="d1">leads to</data>
+      <data key="d2">3167ca8d770944850fa1f5188deed4f3</data>
+    </edge>
+    <edge source="Toolsets" target="Machines">
+      <data key="d1">groups of</data>
+      <data key="d2">3167ca8d770944850fa1f5188deed4f3</data>
+    </edge>
+    <edge source="High Volume Low Mix Manufacturing" target="Memory Fabs">
+      <data key="d1">found in</data>
+      <data key="d2">3167ca8d770944850fa1f5188deed4f3</data>
+    </edge>
+    <edge source="Batching and Resource Sharing" target="Deposition Furnaces">
+      <data key="d1">processes in</data>
+      <data key="d2">3167ca8d770944850fa1f5188deed4f3</data>
+    </edge>
+    <edge source="Batching and Resource Sharing" target="Diffusion Furnaces">
+      <data key="d1">processes in</data>
+      <data key="d2">3167ca8d770944850fa1f5188deed4f3</data>
+    </edge>
+    <edge source="Batching and Resource Sharing" target="Cluster Tools">
+      <data key="d1">consists of</data>
+      <data key="d2">3167ca8d770944850fa1f5188deed4f3</data>
+    </edge>
+  </graph>
+</graphml>

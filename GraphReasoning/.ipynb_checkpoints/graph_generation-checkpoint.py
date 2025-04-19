@@ -2,23 +2,25 @@ from GraphReasoning.graph_tools import *
 from GraphReasoning.utils import *
 from GraphReasoning.graph_analysis import *
 
-import copy
-import re
+# import copy
+# import re
 from IPython.display import display, Markdown
-import markdown2
-import pdfkit
+# import markdown2
+# import pdfkit
 import uuid
 import pandas as pd
 import numpy as np
 import networkx as nx
 import os
-from langchain.document_loaders import (
-    PyPDFLoader,
-    UnstructuredPDFLoader,
-    PyPDFium2Loader,
-    PyPDFDirectoryLoader,
-    DirectoryLoader,
-)
+
+import asyncio
+# from langchain.document_loaders import (
+#     PyPDFLoader,
+#     UnstructuredPDFLoader,
+#     PyPDFium2Loader,
+#     PyPDFDirectoryLoader,
+#     DirectoryLoader,
+# )
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from pathlib import Path
 import random
@@ -32,28 +34,27 @@ from transformers import (
     AutoModel,
     logging
 )
-import torch
-from scipy.spatial.distance import cosine
-from sklearn.decomposition import PCA
-from sklearn.cluster import KMeans
+
+from hashlib import md5
+
+# import torch
+# from scipy.spatial.distance import cosine
+# from sklearn.decomposition import PCA
+# from sklearn.cluster import KMeans
 
 logging.set_verbosity_error()
 
 palette = "hls"
 # Code based on: https://github.com/rahulnyk/knowledge_graph
 
-def extract (string, start='[', end=']'):
-    start_index = string.find(start)
-    end_index = string.rfind(end)
-     
-    return string[start_index :end_index+1]
+
 def documents2Dataframe(documents) -> pd.DataFrame:
     rows = []
     for chunk in documents:
         row = {
             "text": chunk,
            # **chunk.metadata,
-            "chunk_id": uuid.uuid4().hex,
+            "chunk_id": md5(chunk.encode()).hexdigest(),#uuid.uuid4().hex,
         }
         rows = rows + [row]
 
@@ -71,22 +72,53 @@ def concepts2Df(concepts_list) -> pd.DataFrame:
     return concepts_dataframe
 
 
-def df2Graph(dataframe: pd.DataFrame, generate, repeat_refine=0, do_distill=True, verbatim=False,
+def df2Graph(dataframe: pd.DataFrame, generate, generate_figure=None, image_list=None, repeat_refine=0, do_distill=True, verbatim=False,
           
             ) -> list:
-  
-    results = dataframe.apply(
-        lambda row: graphPrompt(row.text, generate, {"chunk_id": row.chunk_id}, do_distill=do_distill,repeat_refine=repeat_refine, 
-                                verbatim=verbatim,#model
-                               ),
-        axis=1, engine = 'numba'
-    )
-    # invalid json results in NaN
-    results = results.dropna()
-    results = results.reset_index(drop=True)
+    
+    os.makedirs('temp', exist_ok = True) 
+    cache_file_name = (f'temp/{md5("".join(list(str(dataframe["chunk_id"]))).encode()).hexdigest()}.csv')
 
-    ## Flatten the list of lists to one single list of entities.
+    try:
+        results = pd.read_csv(cache_file_name,engine='python', on_bad_lines ='warn') 
+
+    except FileNotFoundError:
+        results = dataframe
+        results['result']='empty'
+
+    remaining_indices = np.where(results['result']=='empty')[0]
+    random.shuffle(remaining_indices)
+    for index in remaining_indices:
+        try:
+            results = pd.read_csv(cache_file_name,engine='python', on_bad_lines ='warn') 
+        except FileNotFoundError:
+            pass
+        
+        if results.loc[index,'result']!='empty':
+            continue
+        row = dataframe.iloc[index]
+        results.loc[index, 'result'] = str(graphPrompt(
+            row.text, 
+            generate,
+            generate_figure, 
+            image_list,
+            {"chunk_id": row.chunk_id}, 
+            do_distill=do_distill,
+            repeat_refine=repeat_refine, 
+            verbatim=verbatim,
+        ))
+        # results.loc[index, 'result']= str(result)
+        results.to_csv(cache_file_name, index=False)
+            
+    # Process results
+    
+    results = results.dropna().reset_index(drop=True)
+    import ast
+    results = results.apply(lambda row: ast.literal_eval(row.result), axis=1)
+    
+    # Flatten the list of lists to one single list of entities
     concept_list = np.concatenate(results).ravel().tolist()
+    
     return concept_list
 
 
@@ -105,23 +137,42 @@ sys.path.append("..")
 
 import json
 
-def graphPrompt(input: str, generate, metadata={}, #model="mistral-openorca:latest",
+def graphPrompt(input: str, generate, generate_figure=None, image_list=None, metadata={}, #model="mistral-openorca:latest",
                 do_distill=True, repeat_refine=0,verbatim=False,
                ):
+    
+    SYS_PROMPT_DISTILL = f'You are provided with a context chunk (delimited by ```) Your task is to respond with a concise scientific heading, summary, and a bullited list to your best understaninding and all of them should include reasoning. You should ignore human-names, references, or citations.'
+    
+    USER_PROMPT_DISTILL = f'In a matter-of-fact voice, rewrite this ```{input}```. The writing must stand on its own and provide all background needed, and include details. Ignore references. Extract the table if you think this is relevant and organize the information. Focus on scientific facts and includes citation in academic style if you see any.'
+        
+    SYS_PROMPT_FIGURE = f'You are provided a figure that contains important information. Your task is to analyze the figure very detailedly and report the scientific facts in this figure. If this figure is not an academic figure you should return "". Always return the full image location.'
+    
+    USER_PROMPT_FIGURE = f'In a matter-of-fact voice, rewrite this ```{input}```. The writing must stand on its own and provide all background needed, and include details. Extract the image if you think this is relevant and organize the information. Focus on scientific facts and includes citation in academic style if you see any.'
+    input_fig = ''
+    if generate_figure: # if image in the chunk
+        
+        for image_name in image_list:
+            _image_name = image_name.split('/')[-1]
+            if _image_name.lower() in input.lower():  
+                input_fig =  f'Here is the information in the image: {image_name}' + \
+                generate_figure( image = image_name, system_prompt=SYS_PROMPT_FIGURE, prompt=USER_PROMPT_FIGURE)
+    
     if do_distill:
-        SYS_PROMPT_DISTILL = (
-            'You are provided with a context chunk (delimited by ```) Your task is to respond with a concise scientific heading, summary, and a bullited list to your best understaninding and all of them should include reasoning. You should ignore human-names, references, or citations.')
-            
-        USER_PROMPT = f'In a matter-of-fact voice, rewrite this ```{input}```. The writing must stand on its own and provide all background needed, and include details. Ignore Table of contents and References. Focusing on scientific facts and includes citation in academic style if you see any.'
         #Do not include names, figures, plots or citations in your response, only facts."
-        input =  generate( system_prompt=SYS_PROMPT_DISTILL, prompt=USER_PROMPT)
+        input = generate( system_prompt=SYS_PROMPT_DISTILL, prompt=USER_PROMPT_DISTILL)
 
+    if input_fig:
+        input += input_fig
+    
+    
+    print(f'Refine input: {input[:100]}')
     SYS_PROMPT_GRAPHMAKER = (
-        'You are a happy and smart network ontology graph maker who extracts terms and their relations from a given context, using category theory. '
+        'You are a network ontology graph maker who extracts terms and their relations from a given context, using category theory. '
         'You are provided with a context chunk (delimited by ```) Your task is to extract the ontology of terms mentioned in the given context, representing the key concepts as per the context with well-defined and widely used names of materials, systems, methods.'
         'You always report a technical term or abbreviation and keep it as it is.'
-        'Analyze the text carefully and produce at least 20 pairs, making sure they reflect consistent ontologies.'
+        'Analyze the text carefully and produce around 10 pairs, also make sure they reflect consistent ontologies.'
         'You must format your output as a list of JSON where each element of the list contains a pair of terms packed in \", <node_1>, <node_2>, and <edge>. For details, see the following: \n'
+        'You must focus on the information around the nodes you find and try to keep the nodes concise and elaborate on the edges. In other words, the node information should be concise while the edge information should be detailed.'
         '[\n'
         '   {\n'
         '       "node_1": "A concept from extracted ontology",\n'
@@ -137,8 +188,8 @@ def graphPrompt(input: str, generate, metadata={}, #model="mistral-openorca:late
         '       "node_1": "Alice",\n'
         '       "node_2": "Marc",\n'
         '       "edge": "is mother of"\n'
-        '   }, '
-        '{...}\n'
+        '   },'
+        '   {...}\n'
         ']'
         'Context: ```Silk is a strong natural fiber used to catch prey in a web. Beta-sheets control its strength.```\n'
         '[\n'
@@ -157,87 +208,74 @@ def graphPrompt(input: str, generate, metadata={}, #model="mistral-openorca:late
         '       "node_2": "prey",\n'
         '       "edge": "catches"\n'
         '   },'
-        '{...}\n'
+        '   {...}\n'
         ']\n'
+        'Context: ```Semiconductor has an unique electrical conductive behavior between a conductor and an insulator that allows us to control its conductivity.```\n'
+        '[\n'
+        '   {\n'
+        '       "node_1": "semiconductor",\n'
+        '       "node_2": "unique electrical conductive behavior",\n'
+        '       "edge": "has"\n'
+        '   },'
+        '   {\n'
+        '       "node_1": "semiconductor",\n'
+        '       "node_2": "a conductor and an insulator ",\n'
+        '       "edge": "can be"\n'
+        '   },' 
+        '   {\n'
+        '       "node_1": "unique electrical conductive behavior",\n'
+        '       "node_2": "conductivity",\n'
+        '       "edge": "allows us to control"\n'
+        '   },'  
+        '   {...}\n'
+        ']\n'
+        'Context: ```Samples consisted of pre-patterned photoresist on bulk silicon. A variety of trench and via structures were patterned (Fig. 1), but only 2 and 20 um width structures were characterized. The line density characterized was 4:1, although higher density 2:1 structures were also present and showed similar results (i.e., local loading effects were minimal). ![1_image_0.png](1_image_0.png)```\n'
+        '[\n'
+        '   {\n'
+        '       "node_1": "<The full path to the image>",\n'
+        '       "node_2": "trench",\n'
+        '       "edge": "related to"\n'
+        '   },'
+        '   {\n'
+        '       "node_1": "<The full path to the image>",\n'
+        '       "node_2": "2 and 20 um width structure",\n'
+        '       "edge": "characterizes"\n'
+        '   },' 
+        '   {...}\n'
+        ']\n'
+
         )
         
     USER_PROMPT = f'Context: ```{input}``` \n\nOutput: '
     
-    print ('First-time generating...', end ='')
+    print ('Generating triplets...')
     response  =  generate( system_prompt=SYS_PROMPT_GRAPHMAKER, prompt=USER_PROMPT)
     
+    # Two-shots policy
     try:
         response=extract (response)
         result = json.loads(response)
-        print (result)
+        # print (result)
         result = [dict(item, **metadata) for item in result]
+
     except:
         
         if verbatim:
             print ('--------------------\n Fail to extract from ', response)
+    
 
-        SYS_PROMPT_FORMAT = ('You are a happy and smart network ontology graph maker who extracts terms and their relations from a given context, using category theory. 
-                             'You always format your output as a list of JSON where each element of the list contains a pair of terms packed in \", <node_1>, <node_2>, and <edge>. For details, see the following: \n'
-            '[\n'
-            '   {\n'
-            '       "node_1": "A concept from extracted ontology",\n'
-            '       "node_2": "A related concept from extracted ontology",\n'
-            '       "edge": "Directed, succinct relationship between the two concepts, node_1 and node_2 and it must make sense when read from node_1 to edge and then to node_2," \n'
-            '   }, {...}\n'
-            ']'
-                            )    
-        USER_PROMPT = (f'Read this context: ```{input}```.'
-                      f'Read this ontology: ```{response}```'
-                     f'\n\n Not only try improving the ontology by renaming nodes so that they have consistent labels that are widely used in the field of materials science, but also, to add any information you missed in the context to the ontology you just made. If you see a technical term or abbreviation, you mush report it and keep it as it is.')
-
-        response  =  generate( system_prompt=SYS_PROMPT_FORMAT, prompt=USER_PROMPT)
-        if verbatim:
-            print ('---------------------\nAfter improve: ', response)
-
-        # USER_PROMPT = f'Context: ```{response}``` \n\n Fix to make sure it is proper format. '
-        # response =   response.replace ('\\', '' )
-        # if verbatim:
-        #     print ("---------------------\nAfter clean: ", response)
-
-        if repeat_refine>0:
-            for rep in tqdm(range (repeat_refine)):
-
-                USER_PROMPT = (f'Insert new triplets into the original ontology. Read this context: ```{input}```.'
-                              f'Read this ontology: ```{response}```'
-                              f'\n\nInsert additional triplets to the original list, in the same JSON format. Repeat original AND new triplets.\n'
-                             '') 
-                response  =  generate( system_prompt=SYS_PROMPT_GRAPHMAKER, 
-                                      prompt=USER_PROMPT)
-                if verbatim:
-                    print ("---------------------\nAfter adding triplets: ", response)
-                USER_PROMPT = f"Context: ```{response}``` \n\n Fix to make sure it is proper format. "
-                response  =  generate( system_prompt=SYS_PROMPT_FORMAT, prompt=USER_PROMPT)
-                response =   response.replace ('\\', '' )
-                USER_PROMPT = (f'Read this context: ```{input}```.'
-                              f'Read this ontology: ```{response}```'
-                             f'\n\nRevise the ontology by renaming nodes and edges so that they have consistent and concise labels.'''
-
-                             '') 
-                response  =  generate( system_prompt=SYS_PROMPT_FORMAT,  
-                                      prompt=USER_PROMPT)            
-                if verbatim:
-                    print (f"---------------------\nAfter refine {rep}/{repeat_refine}: ", response)
-
-
-        USER_PROMPT = f"Context: ```{response}``` \n\n Fix to make sure it is proper format. "
-        response  =  generate( system_prompt=SYS_PROMPT_FORMAT, prompt=USER_PROMPT)
-        response =   response.replace ('\\', '' )
-        print (end='')
+        USER_PROMPT = f'Context: ```{input}``` \n\n Your last output: ```{response}``` \n\n Corrected output:'
+        response  =  generate( system_prompt=f'Make sure your output is proper json format. The node information should be concise while the edge information should be detailed, as explained as follows: {SYS_PROMPT_GRAPHMAKER}', prompt=USER_PROMPT)
 
         try:
             response=extract (response)
             result = json.loads(response)
-            print (result)
+            # print (result)
             result = [dict(item, **metadata) for item in result]
         except:
             print('\n\nERROR ### Here is the buggy response: ', response, '\n\n')
             result = None
-        
+
     return result
 
 def colors2Community(communities) -> pd.DataFrame:
@@ -282,7 +320,7 @@ def contextual_proximity(df: pd.DataFrame) -> pd.DataFrame:
     dfg2["edge"] = "contextual proximity"
     return dfg2
     
-def make_graph_from_text (txt,generate,
+def make_graph_from_text (txt,generate, generate_figure=None, image_list=None,
                           include_contextual_proximity=False,
                           graph_root='graph_root',
                           chunk_size=2500,chunk_overlap=0,do_distill=True,
@@ -318,7 +356,7 @@ def make_graph_from_text (txt,generate,
     regenerate = True
     
     if regenerate:
-        concepts_list = df2Graph(df,generate, do_distill =do_distill, repeat_refine=repeat_refine,verbatim=verbatim) #model='zephyr:latest' )
+        concepts_list = df2Graph(df,generate, generate_figure, image_list, do_distill =do_distill, repeat_refine=repeat_refine,verbatim=verbatim) #model='zephyr:latest' )
         
         
         dfg1 = graph2Df(concepts_list)
@@ -328,7 +366,7 @@ def make_graph_from_text (txt,generate,
         dfg1.to_csv(outputdirectory/f"{graph_root}_graph.csv", sep="|", index=False)
         df.to_csv(outputdirectory/f"{graph_root}_chunks.csv", sep="|", index=False)
         dfg1.to_csv(outputdirectory/f"{graph_root}_graph_clean.csv", #sep="|", index=False
-                   )
+                 )
         df.to_csv(outputdirectory/f"{graph_root}_chunks_clean.csv", #sep="|", index=False
                  )
     else:
@@ -466,7 +504,8 @@ def make_graph_from_text (txt,generate,
 import time
 from copy import deepcopy
 
-def add_new_subgraph_from_text(txt,generate,node_embeddings,tokenizer, model, original_graph,
+def add_new_subgraph_from_text(txt=None,generate=None,generate_figure=None, image_list=None, 
+                               node_embeddings=None,tokenizer=None, model=None, original_graph=None,
                                data_dir_output='./data_temp/',graph_root='graph_root',
                                chunk_size=10000,chunk_overlap=2000,
                                do_update_node_embeddings=True, do_distill=True,
@@ -523,7 +562,7 @@ def add_new_subgraph_from_text(txt,generate,node_embeddings,tokenizer, model, or
         G = nx.read_graphml(original_graph)
     else:
         G = deepcopy(original_graph)
-
+    print(G, G_to_add)
     G_new = nx.compose(G, G_to_add)
 
     if save_common_graph:
