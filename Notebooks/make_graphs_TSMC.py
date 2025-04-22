@@ -421,31 +421,7 @@ with torch.no_grad():
             print(f'No. {i}: {title} got something wrong.')
             continue
 
-        elif os.path.exists(f'{data_dir}/{graph_root}_graph.graphml'):
-            print(f'Found a graph fragment to merge: {graph_root}: {doc}.')
-            graph_GraphML = f'{data_dir}/{graph_root}_graph.graphml'
-
-            print(f'Merging graph No. {i}: {doc} to the main one')
-            # try:
-            print(G)
-            _, G, _, node_embeddings, _ = add_new_subgraph_from_text(txt='',
-                               node_embeddings=node_embeddings,
-                               tokenizer=embedding_tokenizer,
-                               model=embedding_model,
-                               original_graph=G, data_dir_output=data_dir_output, graph_root=graph_root,
-                               do_simplify_graph=True,size_threshold=10,
-                               repeat_refine=0,similarity_threshold=0.97,
-                               do_Louvain_on_new_graph=True,
-                               #whether or not to simplify, uses similiraty_threshold defined above
-                               return_only_giant_component=False,
-                               save_common_graph=False,G_to_add=None,graph_GraphML_to_add=graph_GraphML,
-                               verbatim=True,)
-            save_embeddings(node_embeddings, f'{data_dir}/{embedding_file}')
-                
-
-
         else:
-            # continue
             print(f'Generating a knowledge graph from {doc}')
             with open(doc, "r") as f:
                 txt = " ".join(f.read().splitlines())  # separate lines with a single space

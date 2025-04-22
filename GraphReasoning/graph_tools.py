@@ -19,14 +19,14 @@ palette = "hls"
 
 
 # Function to generate embeddings
-def generate_node_embeddings(nodes, tokenizer, model, embeddings = {}):
+def generate_node_embeddings(nodes, tokenizer, model, embeddings = {}, device='cuda:0'):
     # embeddings = {}
     if type(nodes) == str: # one node
         inputs = tokenizer(nodes,
         padding=True,
         truncation=True,
         return_tensors="pt",
-        ).to('cuda')
+        ).to(device)
         outputs = model(**inputs)
         try:
             embeddings = outputs.last_hidden_state.mean(dim=1).detach().numpy()
@@ -38,7 +38,7 @@ def generate_node_embeddings(nodes, tokenizer, model, embeddings = {}):
             padding=True,
             truncation=True,
             return_tensors="pt"
-            ).to('cuda')
+            ).to(device)
             outputs = model(**inputs)
             try:
                 embeddings[node] = outputs.last_hidden_state.mean(dim=1).detach().numpy()
