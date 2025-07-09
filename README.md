@@ -48,9 +48,6 @@ def visualize_embeddings_(embeddings, G, data_dir='./', alpha=0.7, edgecolors='n
     pos_centers = {}
     for i in range(n_communities):
         pos_comm = vectors[labels == i, :]
-        node_comm = np.array(node_ids)[labels == i]pos_centers = {}
-    for i in range(n_communities):
-        pos_comm = vectors[labels == i, :]
         node_comm = np.array(node_ids)[labels == i]
 
         center_idx = np.argmax([nodes_size[node] for node in node_comm ])
@@ -59,7 +56,8 @@ def visualize_embeddings_(embeddings, G, data_dir='./', alpha=0.7, edgecolors='n
     
     palette = sns.color_palette("Set3", n_communities)
 
-    pos = {}
+    # pos = {}
+    pos = dict(zip(node_ids, vectors)) 
     for center, comm in zip(pos_centers.values(), communities.values()):
         pos.update(nx.kamada_kawai_layout(nx.subgraph(G, comm), scale=10, center=center))#, seed=1430))
 
