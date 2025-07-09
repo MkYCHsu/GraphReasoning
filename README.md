@@ -1,4 +1,19 @@
 ```
+                embeddings=[]
+                for i in tqdm( range(0, len(nodes), batch_size)  ):
+                    batch_text = nodes[i: i+batch_size]
+                    inputs = tokenizer(batch_text,
+
+                    try:
+                        batch_embeddings = outputs.last_hidden_state.mean(dim=1).detach().numpy()
+                    except:
+                        batch_embeddings = outputs.hidden_states[-1].mean(dim=1).detach().to(torch.float).cpu().numpy()
+                    embeddings.append(batch_embeddings)
+                embeddings = dict(zip(nodes, list(torch.cat(embeddings, dim = 0))))
+```
+
+
+```
 from scipy.spatial.distance import cdist
 import community as community_louvain
 import math
