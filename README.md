@@ -1,8 +1,9 @@
+```
 from scipy.spatial.distance import cdist
 import community as community_louvain
 import math
 def visualize_embeddings_(embeddings, G, data_dir='./', alpha=0.7, edgecolors='none', s=50,):
-  # Extract the embedding vectors
+    # Extract the embedding vectors
     node_ids = list(G.nodes) # list(embeddings.keys()) # using G.nodes to make sure the order is consistent
     vectors_ = np.array([embeddings[node].flatten() for node in node_ids])
 
@@ -67,8 +68,8 @@ def visualize_embeddings_(embeddings, G, data_dir='./', alpha=0.7, edgecolors='n
     nx.draw_networkx_labels(nx.subgraph(G, pos_show.keys()), pos=pos_show, font_color = dict(zip(pos_show.keys(), palette_show)))
     
     plt.tight_layout()
-    plt.show()   
-                              
+    plt.show()
+```                           
 # GraphReasoning: Scientific Discovery through Knowledge Extraction and Multimodal Graph-based Representation and Reasoning
 
 Markus J. Buehler, MIT, 2024
