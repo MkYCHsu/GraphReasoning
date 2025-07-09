@@ -1,3 +1,10 @@
+`21dasdasd``````
+
+```
+center_labels.append(generate(system_prompt = "You are a senior semiconductor enginner", prompt = generate(prompt=f"Summarize this list of the nodes into only one keyword to me: {comm}")))
+labels_show[i] = center_labels[i]
+```
+
 ```
                 embeddings=[]
                 for i in tqdm( range(0, len(nodes), batch_size)  ):
