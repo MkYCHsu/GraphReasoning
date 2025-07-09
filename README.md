@@ -1,3 +1,74 @@
+from scipy.spatial.distance import cdist
+import community as community_louvain
+import math
+def visualize_embeddings_(embeddings, G, data_dir='./', alpha=0.7, edgecolors='none', s=50,):
+  # Extract the embedding vectors
+    node_ids = list(G.nodes) # list(embeddings.keys()) # using G.nodes to make sure the order is consistent
+    vectors_ = np.array([embeddings[node].flatten() for node in node_ids])
+
+    degrees = dict(G.degree())
+    max_degree = max(degrees.values())
+    min_degree = min(degrees.values())
+
+    normalized_degrees = {node: (deg - min_degree) / (max_degree - min_degree) if (max_degree - min_degree) > 0 else 0 for node, deg in degrees.items()}
+    nodes_size = [np.exp(5 * normalized_degrees[node]) * 50 for node in G.nodes()] # Multiply by 50 to make sizes visible
+    nodes_size = dict(zip(node_ids, nodes_size))
+
+    # Reduce dimensions to 2D using PCA
+    pca = PCA(n_components=2)
+    vectors = pca.fit_transform(vectors_)
+
+    # Detect communities using the Louvain method  
+    partition = community_louvain.best_partition(G.to_undirected())
+    labels = np.array(list(partition.values()))
+    n_communities = max(labels)
+
+    communities = {}
+    for node, comm_id in partition.items():
+        communities.setdefault(comm_id, []).append(node)
+
+    plt.figure(figsize=(10, 8))
+    sns.set(style='whitegrid')
+    pos_centers = {}
+    for i in range(n_communities):
+        pos_comm = vectors[labels == i, :]
+        node_comm = np.array(node_ids)[labels == i]pos_centers = {}
+    for i in range(n_communities):
+        pos_comm = vectors[labels == i, :]
+        node_comm = np.array(node_ids)[labels == i]
+
+        center_idx = np.argmax([nodes_size[node] for node in node_comm ])
+        
+        pos_centers[ node_comm[center_idx] ] = pos_comm[center_idx]
+    
+    palette = sns.color_palette("Set3", n_communities)
+
+    pos = {}
+    for center, comm in zip(pos_centers.values(), communities.values()):
+        pos.update(nx.kamada_kawai_layout(nx.subgraph(G, comm), scale=10, center=center))#, seed=1430))
+
+    for nodes, clr in zip(communities.values(), palette):
+        node_size = [nodes_size[node] for node in nodes]
+        nx.draw_networkx_nodes(G,
+                               pos=pos,
+                               nodelist=nodes,
+                               node_color=clr,
+                               node_size=node_size,
+                               alpha=alpha,
+                              )
+    
+    nx.draw_networkx_edges(G, pos=pos, arrowsize=0.01, alpha=alpha)
+    
+    pos_show ={}
+    for i, (node, pos) in enumerate(pos_centers.items()):
+        if degrees[node]>=15:
+            pos_show[node] = pos
+            palette_show.append(palette[i]*0.5)
+    nx.draw_networkx_labels(nx.subgraph(G, pos_show.keys()), pos=pos_show, font_color = dict(zip(pos_show.keys(), palette_show)))
+    
+    plt.tight_layout()
+    plt.show()   
+                              
 # GraphReasoning: Scientific Discovery through Knowledge Extraction and Multimodal Graph-based Representation and Reasoning
 
 Markus J. Buehler, MIT, 2024
